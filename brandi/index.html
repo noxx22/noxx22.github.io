@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Brandi Home</title>
+  <link href="./assets/img/favicon.ico" rel="icon"
+        type="image/vnd.microsoft.icon">
+  <link href="assets/css/libs.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: #111;
+    }
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+<button class="btn-top" title="Go To Top"><span
+        aria-hidden="true" class="fa fa-chevron-up"></span></button>
+<!--======begin HEADER======-->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-items">
+      <div class="header-logo__holder">
+        <a class="header-logo__link" href="/"><img alt="picture" class="header__logo"
+                                                   src="./assets/img/logo/logo-brandi.png"></a>
+      </div>
+      <ul class="nav">
+        <li class="nav__item"><a class="nav__link" href="#header">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#features">Features</a></li>
+        <li class="nav__item"><a class="nav__link" href="#works">Works</a>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="#team">Team</a>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="#facts">Facts</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#discuss">Contact</a></li>
+      </ul>
+      <div class="header__icon">
+        <div class="menu-icon menu-icon-3">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--======end HEADER======-->
+<!--=======begin HERO section======-->
+<section class="hero"
+         style="background-image: url(assets/img/background/hero-bg.jpg)">
+  <div class="hero-content">
+    <ul class="hero-slider">
+      <!--#-->
+      <li>
+        <div class="hero__item">
+          <h1 class="hero__title"><span>Meet</span> Brandi<span>!</span>
+          </h1>
+          <h2 class="hero__subtitle"><span>/creative</span> one page
+                                                            template.</h2>
+          <p class="hero__description">We are a team of professionals</p>
+          <ul class="hero-social">
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-twitter"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-facebook"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-google-plus"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-dribbble"></span></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!--#-->
+      <li>
+        <div class="hero__item">
+          <h1 class="hero__title"><span>Meet</span> Brandi<span>!</span>
+          </h1>
+          <h2 class="hero__subtitle"><span>/creative</span> one page
+                                                            template.</h2>
+          <p class="hero__description">We are a team of professionals</p>
+          <ul class="hero-social">
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-twitter"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-facebook"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-google-plus"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-dribbble"></span></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!--#-->
+      <li>
+        <div class="hero__item">
+          <h1 class="hero__title"><span>Meet</span> Brandi<span>!</span>
+          </h1>
+          <h2 class="hero__subtitle"><span>/creative</span> one page
+                                                            template.</h2>
+          <p class="hero__description">We are a team of professionals</p>
+          <ul class="hero-social">
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-twitter"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-facebook"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-google-plus"></span></a>
+            </li>
+            <li class="hero-social__item">
+              <a class="hero-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                           class="fa fa-dribbble"></span></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!--#-->
+    </ul>
+    <div class="hero-slider-pager">
+      <a data-slide-index="0" href=""></a><a data-slide-index="1" href=""></a><a data-slide-index="2" href=""></a>
+    </div>
+  </div>
+</section>
+<!--=======end HERO section======-->
+<!--======begin FEATURES section======-->
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section__title features__title">features</h2><span
+          class="features__ico-heart section__ico-heart"><i aria-hidden="true" class="fa fa-heart-o"></i></span>
+    <div class="features-carousel owl-carousel">
+      <!--#-->
+      <div class="features-item">
+        <div class="features-item__text">
+          <div class="features-item__title-wrap">
+            <div class="features__ico features__ico--brand"></div>
+            <h4 class="features-item__title">Branding</h4>
+          </div>
+          <p class="features-item__description">Sed ut perspiciatis unde
+                                                omnis iste natus error sit voluptatem accusantium doloremque
+                                                laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                                inventore</p>
+        </div>
+      </div>
+      <!--#-->
+      <div class="features-item">
+        <div class="features-item__text">
+          <div class="features-item__title-wrap">
+            <div class="features__ico features__ico--develop"></div>
+            <h4 class="features-item__title">Development</h4>
+          </div>
+          <p class="features-item__description">Sed ut perspiciatis unde
+                                                omnis iste natus error sit voluptatem accusantium doloremque
+                                                laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                                inventore</p>
+        </div>
+      </div>
+      <!--#-->
+      <div class="features-item">
+        <div class="features-item__text">
+          <div class="features-item__title-wrap">
+            <div class="features__ico features__ico--consult"></div>
+            <h4 class="features-item__title">Consulting</h4>
+          </div>
+          <p class="features-item__description">Sed ut perspiciatis unde
+                                                omnis iste natus error sit voluptatem accusantium doloremque
+                                                laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                                inventore</p>
+        </div>
+      </div>
+    </div>
+    <!--#-->
+    <div class="features-carousel-dots"></div>
+  </div>
+</section>
+<!--======end FEATURES section======-->
+<!--======begin WORKS section======-->
+<section class="works" id="works">
+  <div class="container">
+    <h2 class="section__title works__title">works</h2><span
+          class="section__ico-heart works__ico-heart"><i aria-hidden="true" class="fa fa-heart-o"></i></span>
+    <h3 class="section__subtitle works__subtitle">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium doloremque
+                                                  laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+    </h3>
+  </div>
+  <div class="container-fluid">
+    <div class="works__tabs">
+      <ul class="resp-tabs-list hor_1">
+        <li>All</li>
+        <li>Branding</li>
+        <li>Web</li>
+        <li>Logo Design</li>
+        <li>Photography</li>
+      </ul>
+      <div class="resp-tabs-container hor_1">
+        <!--#-->
+        <div>
+          <a class="works-link" href="javascript:void(0);">
+            <div class="works-item">
+              <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work1.jpg"/>
+                <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                  Labore et dolore magnam</h5>
+                  <p class="works-item__subtitle">Branding</p></div>
+              </div>
+            </div>
+          </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work2.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Branding</p></div>
+            </div>
+          </div>
+        </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work3.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Web</p></div>
+            </div>
+          </div>
+        </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work4.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Web</p></div>
+            </div>
+          </div>
+        </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work5.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Logo Design</p></div>
+            </div>
+          </div>
+        </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work6.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Logo Design</p></div>
+            </div>
+          </div>
+        </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work7.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Photography</p></div>
+            </div>
+          </div>
+        </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work8.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Photography</p></div>
+            </div>
+          </div>
+        </a>
+        </div>
+        <!--#-->
+        <div>
+          <a class="works-link" href="javascript:void(0);">
+            <div class="works-item">
+              <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work1.jpg"/>
+                <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                  Labore et dolore magnam</h5>
+                  <p class="works-item__subtitle">Branding</p></div>
+              </div>
+            </div>
+          </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work2.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Branding</p></div>
+            </div>
+          </div>
+        </a>
+        </div>
+        <!--#-->
+        <div>
+          <a class="works-link" href="javascript:void(0);">
+            <div class="works-item">
+              <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work3.jpg"/>
+                <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                  Labore et dolore magnam</h5>
+                  <p class="works-item__subtitle">Web</p></div>
+              </div>
+            </div>
+          </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work4.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Web</p></div>
+            </div>
+          </div>
+        </a>
+        </div>
+        <!--#-->
+        <div>
+          <a class="works-link" href="javascript:void(0);">
+            <div class="works-item">
+              <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work5.jpg"/>
+                <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                  Labore et dolore magnam</h5>
+                  <p class="works-item__subtitle">Logo Design</p></div>
+              </div>
+            </div>
+          </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work6.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Logo Design</p></div>
+            </div>
+          </div>
+        </a>
+        </div>
+        <!--#-->
+        <div>
+          <a class="works-link" href="javascript:void(0);">
+            <div class="works-item">
+              <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work7.jpg"/>
+                <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                  Labore et dolore magnam</h5>
+                  <p class="works-item__subtitle">Photography</p></div>
+              </div>
+            </div>
+          </a><a class="works-link" href="javascript:void(0);">
+          <div class="works-item">
+            <div class="works-image__wrapper"><img alt="img" src="assets/img/works/small/work8.jpg"/>
+              <div class="works-item__overlay"><span class="works-item__icon"></span><h5 class="works-item__title">
+                Labore et dolore magnam</h5>
+                <p class="works-item__subtitle">Photography</p></div>
+            </div>
+          </div>
+        </a>
+        </div>
+        <!--#-->
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end WORKS section======-->
+<!--======begin TEAM section======-->
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="section__title team__title">meet our team</h2><span
+          class="section__ico-heart team__ico-heart"><i aria-hidden="true" class="fa fa-heart-o"></i></span>
+    <h3 class="section__subtitle team__subtitle">Sed ut perspiciatis unde
+                                                 omnis iste natus error sit voluptatem accusantium doloremque
+                                                 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+    </h3>
+    <div class="team-content">
+      <div class="team-carousel owl-carousel">
+        <!--#-->
+        <div class="team-item">
+          <div class="team-item__wrapper"><img alt="team member" class="team-item__image"
+                                               src="./assets/img/team/team1.jpg"/>
+            <div class="team-item__content">
+              <p class="team-item__description">Nemo enim ipsam voluptatem
+                                                quia voluptas<span>sit aspernatur aut odit aut fugit, sed
+                      quia consequuntur magni dolores eos qui ratione
+                      voluptatem.</span></p>
+              <ul class="team-social">
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-twitter"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-facebook"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-google-plus"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h5 class="team-item__name">John Filmr Doe</h5>
+          <p class="team-item__job">Managing Director</p>
+        </div>
+        <!--#-->
+        <div class="team-item">
+          <div class="team-item__wrapper"><img alt="team member" class="team-item__image"
+                                               src="./assets/img/team/team2.jpg"/>
+            <div class="team-item__content">
+              <p class="team-item__description">Nemo enim ipsam voluptatem
+                                                quia voluptas<span>sit aspernatur aut odit aut fugit, sed
+                      quia consequuntur magni dolores eos qui ratione
+                      voluptatem.</span></p>
+              <ul class="team-social">
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-twitter"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-facebook"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-google-plus"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h5 class="team-item__name">Chystine Hineu</h5>
+          <p class="team-item__job">Lead Designer</p>
+        </div>
+        <!--#-->
+        <div class="team-item">
+          <div class="team-item__wrapper"><img alt="team member" class="team-item__image"
+                                               src="./assets/img/team/team3.jpg"/>
+            <div class="team-item__content">
+              <p class="team-item__description">Nemo enim ipsam voluptatem
+                                                quia voluptas<span>sit aspernatur aut odit aut fugit, sed
+                      quia consequuntur magni dolores eos qui ratione
+                      voluptatem.</span></p>
+              <ul class="team-social">
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-twitter"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-facebook"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-google-plus"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h5 class="team-item__name">Martin Matrone</h5>
+          <p class="team-item__job">Lead Developer</p>
+        </div>
+        <!--#-->
+        <div class="team-item">
+          <div class="team-item__wrapper"><img alt="team member" class="team-item__image"
+                                               src="./assets/img/team/team4.jpg"/>
+            <div class="team-item__content">
+              <p class="team-item__description">Nemo enim ipsam voluptatem
+                                                quia voluptas<span>sit aspernatur aut odit aut fugit, sed
+                      quia consequuntur magni dolores eos qui ratione
+                      voluptatem.</span></p>
+              <ul class="team-social">
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-twitter"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-facebook"></span></a>
+                </li>
+                <li class="team-social__item">
+                  <a class="team-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                               class="fa fa-google-plus"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h5 class="team-item__name">Steve Flaulkin</h5>
+          <p class="team-item__job">Sr. UI Designer</p>
+        </div>
+      </div>
+    </div>
+    <div class="team-carousel-dots"></div>
+  </div>
+</section>
+<!--======end TEAM section======-->
+<!--======begin FACTS section======-->
+<section class="facts" id="facts"
+         style="background-image:url('./assets/img/background/facts-bg.jpg');">
+  <div class="container">
+    <h2 class="section__title facts__title">some fun facts</h2><span
+          class="section__ico-heart facts__ico-heart"><i aria-hidden="true" class="fa fa-heart-o"></i></span>
+    <div class="facts__items">
+      <div class="facts-item"><span class="facts__icon-clock"></span><span
+              class="facts-item__number">3200</span><span
+              class="facts-item__desc">Hours of Work</span></div>
+      <div class="facts-item"><span
+              class="facts__icon-friends"></span><span
+              class="facts-item__number">120</span><span
+              class="facts-item__desc">Satisfied Clients</span></div>
+      <div class="facts-item"><span
+              class="facts__icon-rocket"></span><span
+              class="facts-item__number">360</span><span
+              class="facts-item__desc">Projects delivered</span></div>
+      <div class="facts-item"><span class="facts__icon-cup"></span><span
+              class="facts-item__number">42</span><span
+              class="facts-item__desc">Awards Won</span></div>
+    </div>
+  </div>
+</section>
+<!--======end FACTS section======-->
+<!--======begin DISCUSS section======-->
+<section class="discuss" id="discuss">
+  <div class="container">
+    <h2 class="section__title discuss__title">Let’s Discuss</h2><span
+          class="section__ico-heart discuss__ico-heart"><i aria-hidden="true" class="fa fa-heart-o"></i></span>
+    <h3 class="section__subtitle discuss__subtitle">Voluptatem accusantium
+                                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                                    inventore</h3>
+    <div class="discuss__content">
+      <div class="discuss-address">
+        <h4 class="discuss-address__title">Cras at ultrices erat, sed
+                                           vulputate!</h4>
+        <p class="discuss-address__info">2345 Setwant natrer,
+                                         1234,<br>Washington. United States.<br>(401) 1234 567<br>hello@brandi.com<br>www.brandi.com
+        </p>
+      </div>
+      <!--#-->
+      <form action="/" autocomplete="off" class="discuss-form"
+            method="get">
+        <p class="discuss-form__title">Say hello!</p>
+        <div class="discuss-form__data"><input id="username" maxlength="100"
+                                               name="username" placeholder="Name" required
+                                               title="Enter Your Name" type="text"><input id="usermail"
+                                                                                          maxlength="150"
+                                                                                          name="usermail"
+                                                                                          placeholder="Email"
+                                                                                          required
+                                                                                          title="Enter Your e-mail"
+                                                                                          type="email"></div>
+        <div class="discuss-form__message"><input id="message"
+                                                  maxlength="400" name="message" placeholder="Message"
+                                                  required title="Enter Your Message" type="text">
+        </div>
+        <button class="discuss-form__button" type="submit"><span
+                class="fa fa-envelope-o"></span>Send message
+        </button>
+      </form>
+      <ul class="discuss-social">
+        <li class="discuss-social__item">
+          <a class="discuss-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                          class="fa fa-behance"></span></a>
+        </li>
+        <li class="discuss-social__item">
+          <a class="discuss-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                          class="fa fa-twitter"></span></a>
+        </li>
+        <li class="discuss-social__item">
+          <a class="discuss-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                          class="fa fa-dribbble"></span></a>
+        </li>
+        <li class="discuss-social__item">
+          <a class="discuss-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                          class="fa fa-bitbucket"></span></a>
+        </li>
+        <li class="discuss-social__item">
+          <a class="discuss-social__link" href="javascript:void(0)"><span aria-hidden="true"
+                                                                          class="fa fa-google-plus"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--======end DISCUSS section======-->
+<!--======begin MAP section======-->
+<div class="map">
+  <div id="map"></div>
+</div>
+<!--======end MAP section======-->
+<!--======begin FOOTER======-->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-items">
+      <div class="footer-item footer-logo">
+        <div class="footer-logo__holder">
+          <a href="#"><img alt="logo" class="footer-logo__image" src="./assets/img/logo/logo-brandi.png"></a>
+        </div>
+        <p class="footer-item__description">eusmod tempor incididunt ut
+                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.</p>
+      </div>
+      <div class="footer-item footer-subscribe">
+        <h5 class="footer-item__title">Subscribe</h5>
+        <form action="/" autocomplete="off" class="footer-subscribe__form"
+              method="get"><label><input class="footer-subscribe__input"
+                                         maxlength="100" name="usermail" placeholder="Your email"
+                                         required title="Enter Your e-mail"
+                                         type="email"></label>
+          <button
+                  class="footer-subscribe__button" type="submit"><span
+                  aria-hidden="true"
+                  class="fa fa-long-arrow-right"></span></button>
+        </form>
+        <p class="footer-item__description">eusmod tempor incididunt ut
+                                            labore et dolore magna aliqua.</p>
+      </div>
+      <div class="footer-item footer-links">
+        <h5 class="footer-item__title">Explore</h5>
+        <div class="footer-links__holder">
+          <!--#-->
+          <ul class="footer-nav__left">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Envato</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Themecurve</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Creativeshowcase</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Freebiescurve</a>
+            </li>
+          </ul>
+          <!--#-->
+          <ul class="footer-nav__right">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Themeforest</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Microsoft</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Google</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="javascript:void(0)">Yahoo</a>
+            </li>
+          </ul>
+          <!--#-->
+        </div>
+      </div>
+      <div class="footer-item footer-copy">
+        <p class="footer-copy__description">Created with <span
+                aria-hidden="true"
+                class="footer-copy__heart fa fa-heart-o"></span> by&nbsp; <span
+                class="footer-copy__author">Designer</span></p>
+        <p class="footer-copy__rights">&copy; 2032 Brandi. All Rights
+                                       Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--======end FOOTER======-->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/libs.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        $("#preloader").fadeOut("slow");
+    });
+</script>
+</body>
+
+</html>
