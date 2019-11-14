@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Web Development Project</title>
+  <link href="assets/img/favicon.png" rel="icon"
+        type="image/vnd.microsoft.icon">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/libs.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: #111;
+    }
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<button class="btn-top"><span class="fa fa-angle-up"></span></button>
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+<!--======begin HEADER======-->
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"><img alt="logo" class="logo" src="assets/img/logo/logo.png"></a>
+      <button
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler" data-target="#navbarContent"
+              data-toggle="collapse" type="button"><span
+              class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Servicing</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#works">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--======end HEADER======-->
+<!--======begin HERO section======-->
+<section class="hero text-center"
+         style="background-image: url(assets/img/background/header.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="hero__title">Web development project</h1>
+        <p class="hero__subtitle">Very suitable to support all web
+                                  development projects</p>
+        <button
+                class="button button--transp">our services
+        </button>
+        <button
+                class="button button--color">hire us now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end HERO section======-->
+<!--======begin ABOUT section======-->
+<section class="about" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="section__title about__title wow rubberBand">About Us
+        </h2>
+        <p class="section__subtitle about__subtitle wow zoomIn">Lorem
+                                                                ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                                do
+                                                                eiusmod tempor incididunt ut labore et dolore magna
+                                                                aliqua. Ut
+                                                                enim ad minim veniam,</p>
+      </div>
+    </div>
+    <div class="row">
+      <!--#1-->
+      <div class="col-md-4 about__item wow slideInLeft"><span
+              class="about__icon icon-internet"></span>
+        <h3 class="item__title">Awesome Icons</h3>
+        <p class="item__text">Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor</p>
+      </div>
+      <!--#2-->
+      <div class="col-md-4 about__item wow zoomInDown"><span
+              class="about__icon icon-transfer"></span>
+        <h3 class="item__title">One Page</h3>
+        <p class="item__text">Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor</p>
+      </div>
+      <!--#3-->
+      <div class="col-md-4 about__item wow slideInRight"><span
+              class="about__icon icon-head"></span>
+        <h3 class="item__title">Fully Responsive</h3>
+        <p class="item__text">Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end ABOUT section======-->
+<!--======begin SERVICES section======-->
+<section class="services" id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="section__title services__title wow rubberBand"
+            data-wow-delay="1s">Our Services</h2>
+        <p class="section__subtitle services__subtitle wow zoomIn">Lorem
+                                                                   ipsum dolor sit amet, consectetur adipisicing elit,
+                                                                   sed do
+                                                                   eiusmod tempor incididunt ut labore et dolore magna
+                                                                   aliqua. Ut
+                                                                   enim ad minim veniam,</p>
+      </div>
+    </div>
+    <div class="row">
+      <!--#1-->
+      <div class="col-lg-4 col-md-6 wow slideInLeft">
+        <div class="services__item"><span
+                class="services__icon icon-smartphone"></span>
+          <h3 class="item__title">Research</h3>
+          <p class="item__desc">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium voluptatum iti
+                                atque corrupti quos.</p>
+          <button
+                  class="button button--serv">Read More
+          </button>
+        </div>
+      </div>
+      <!--#2-->
+      <div class="col-lg-4 col-md-6 wow slideInUp">
+        <div class="services__item"><span
+                class="services__icon icon-smartphone"></span>
+          <h3 class="item__title">Portfolio</h3>
+          <p class="item__desc">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium voluptatum iti
+                                atque corrupti quos.</p>
+          <button
+                  class="button button--serv">Read More
+          </button>
+        </div>
+      </div>
+      <!--#3-->
+      <div class="col-lg-4 col-md-6 wow slideInRight">
+        <div class="services__item"><span
+                class="services__icon icon-smartphone"></span>
+          <h3 class="item__title">Support</h3>
+          <p class="item__desc">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium voluptatum iti
+                                atque corrupti quos.</p>
+          <button
+                  class="button button--serv">Read More
+          </button>
+        </div>
+      </div>
+      <!--#4-->
+      <div class="col-lg-4 col-md-6 wow slideInLeft">
+        <div class="services__item"><span
+                class="services__icon icon-smartphone"></span>
+          <h3 class="item__title">Documentation</h3>
+          <p class="item__desc">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium voluptatum iti
+                                atque corrupti quos.</p>
+          <button
+                  class="button button--serv">Read More
+          </button>
+        </div>
+      </div>
+      <!--#5-->
+      <div class="col-lg-4 col-md-6 wow slideInUp">
+        <div class="services__item"><span
+                class="services__icon icon-smartphone"></span>
+          <h3 class="item__title">Development</h3>
+          <p class="item__desc">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium voluptatum iti
+                                atque corrupti quos.</p>
+          <button
+                  class="button button--serv">Read More
+          </button>
+        </div>
+      </div>
+      <!--#6-->
+      <div class="col-lg-4 col-md-6 wow slideInRight">
+        <div class="services__item"><span
+                class="services__icon icon-smartphone"></span>
+          <h3 class="item__title">Design</h3>
+          <p class="item__desc">At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium voluptatum iti
+                                atque corrupti quos.</p>
+          <button
+                  class="button button--serv">Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end SERVICES section======-->
+<!--======begin WORKS section======-->
+<section class="works" id="works">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="section__title works__title wow rubberBand"
+            data-wow-delay="1s">Latest Works</h2>
+        <p class="section__subtitle works__subtitle wow zoomIn">Lorem
+                                                                ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                                do
+                                                                eiusmod tempor incididunt ut labore et dolore magna
+                                                                aliqua. Ut
+                                                                enim ad minim veniam,</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ul class="tabs_menu">
+          <li class="active">all</li>
+          <li>web design</li>
+          <li>ui/ux design</li>
+          <li>mockups</li>
+        </ul>
+      </div><!-- /.tabs_menu-->
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="tabs">
+          <div class="info active">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 wow slideInLeft">
+                <div class="works__item"><img alt="image" src="assets/img/work/work1.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6 wow zoomInLeft">
+                <div class="works__item"><img alt="image" src="assets/img/work/work2.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6 wow slideInRight">
+                <div class="works__item"><img alt="image" src="assets/img/work/work3.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6 wow slideInLeft">
+                <div class="works__item"><img alt="image" src="assets/img/work/work4.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6 wow zoomInRight">
+                <div class="works__item"><img alt="image" src="assets/img/work/work5.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6 wow slideInRight">
+                <div class="works__item"><img alt="image" src="assets/img/work/work6.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+            </div>
+          </div><!-- /.info-->
+          <div class="info">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="works__item"><img alt="image" src="assets/img/work/work2.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="works__item"><img alt="image" src="assets/img/work/work5.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+            </div>
+          </div><!-- /.info-->
+          <div class="info">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="works__item"><img alt="image" src="assets/img/work/work4.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="works__item"><img alt="image" src="assets/img/work/work6.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+            </div>
+          </div><!-- /.info-->
+          <div class="info">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="works__item"><img alt="image" src="assets/img/work/work3.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="works__item"><img alt="image" src="assets/img/work/work4.jpg">
+                  <div class="works__info">
+                    <p class="works__desc">Hand Watch<br><span>ui/ux
+                            design</span></p>
+                  </div>
+                </div><!-- /.works__item-->
+              </div>
+            </div>
+          </div><!-- /.info-->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="button button--color">view
+                                             all
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end WORKS section======-->
+<!--=======begin PLAN section======-->
+<section class="plan">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="section__title plan__title wow rubberBand">Pricing Plan
+        </h2>
+        <p class="section__subtitle plan__subtitle wow zoomIn">Lorem ipsum
+                                                               dolor sit amet, consectetur adipisicing elit, sed do
+                                                               eiusmod
+                                                               tempor incididunt ut labore et dolore magna aliqua. Ut
+                                                               enim ad
+                                                               minim veniam,</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 wow rollIn">
+        <div class="plan-item">
+          <div class="plan-item__top">
+            <h3 class="plan-item__title">Free Trial</h3>
+            <p class="plan-item__price"><span>$</span>00<span
+                    class="plan-item__period">per month</span></p>
+          </div>
+          <div class="plan-item__options">
+            <p class="plan-item__option">30 free Trial</p>
+            <p class="plan-item__option">5 Free Projects</p>
+            <p class="plan-item__option">PHP 5 Enabled</p>
+            <p class="plan-item__option">24/7 Supports</p>
+          </div>
+          <button class="button button--plan">Order Now</button>
+        </div><!-- /.plan-item-->
+      </div>
+      <div class="col-lg-4 col-sm-6 wow zoomIn">
+        <div class="plan-item">
+          <div class="plan-item__top">
+            <h3 class="plan-item__title">Basic</h3>
+            <p class="plan-item__price"><span>$</span>50<span
+                    class="plan-item__period">per month</span></p>
+          </div>
+          <div class="plan-item__options">
+            <p class="plan-item__option">30 free Trial</p>
+            <p class="plan-item__option">5 Free Projects</p>
+            <p class="plan-item__option">PHP 5 Enabled</p>
+            <p class="plan-item__option">24/7 Supports</p>
+          </div>
+          <button class="button button--plan">Order Now</button>
+        </div><!-- /.plan-item-->
+      </div>
+      <div class="col-lg-4 col-sm-6 wow slideInRight">
+        <div class="plan-item">
+          <div class="plan-item__top">
+            <h3 class="plan-item__title">Ultimate</h3>
+            <p class="plan-item__price"><span>$</span>99<span
+                    class="plan-item__period">per month</span></p>
+          </div>
+          <div class="plan-item__options">
+            <p class="plan-item__option">30 free Trial</p>
+            <p class="plan-item__option">5 Free Projects</p>
+            <p class="plan-item__option">PHP 5 Enabled</p>
+            <p class="plan-item__option">24/7 Supports</p>
+          </div>
+          <button class="button button--plan">Order Now</button>
+        </div><!-- /.plan-item-->
+      </div>
+    </div>
+  </div>
+</section>
+<!--=======end PLAN section======-->
+<!--======begin TEAM section======-->
+<section class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="section__title team__title wow rubberBand">Meet Our
+                                                              Team</h2>
+        <p class="section__subtitle team__subtitle wow zoomIn">Lorem ipsum
+                                                               dolor sit amet, consectetur adipisicing elit, sed do
+                                                               eiusmod
+                                                               tempor incididunt ut labore et dolore magna aliqua. Ut
+                                                               enim ad
+                                                               minim veniam,</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 wow bounce">
+        <div class="team-carousel owl-carousel">
+          <div class="item team-item">
+            <div class="team-item__image-wrap">
+              <img class="team-item__image" src="assets/img/team/team1.png"></div>
+            <div class="team-item__name">John Doe</div>
+            <div class="team-item__job">General Manager</div>
+            <div class="team-item__social">
+              <a class="team-item__link" href="javascript:void(0);"><span class="fa fa-facebook-f"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-twitter"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-comments"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-dribbble"></span></a>
+            </div>
+          </div><!-- /.team-item-->
+          <div class="item team-item">
+            <div class="team-item__image-wrap">
+              <img class="team-item__image" src="assets/img/team/team1.png"></div>
+            <div class="team-item__name">John Doe</div>
+            <div class="team-item__job">General Manager</div>
+            <div class="team-item__social">
+              <a class="team-item__link" href="javascript:void(0);"><span class="fa fa-facebook-f"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-twitter"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-comments"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-dribbble"></span></a>
+            </div>
+          </div><!-- /.team-item-->
+          <div class="item team-item">
+            <div class="team-item__image-wrap">
+              <img class="team-item__image" src="assets/img/team/team2.png"></div>
+            <div class="team-item__name">Alexa Biru</div>
+            <div class="team-item__job">Office Director</div>
+            <div class="team-item__social">
+              <a class="team-item__link" href="javascript:void(0);"><span class="fa fa-facebook-f"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-twitter"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-comments"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-dribbble"></span></a>
+            </div>
+          </div><!-- /.team-item-->
+          <div class="item team-item">
+            <div class="team-item__image-wrap">
+              <img class="team-item__image" src="assets/img/team/team1.png"></div>
+            <div class="team-item__name">Ronobir sing</div>
+            <div class="team-item__job">admin</div>
+            <div class="team-item__social">
+              <a class="team-item__link" href="javascript:void(0);"><span class="fa fa-facebook-f"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-twitter"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-comments"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-dribbble"></span></a>
+            </div>
+          </div><!-- /.team-item-->
+          <div class="item team-item">
+            <div class="team-item__image-wrap">
+              <img class="team-item__image" src="assets/img/team/team3.png"></div>
+            <div class="team-item__name">Ronobir sing</div>
+            <div class="team-item__job">admin</div>
+            <div class="team-item__social">
+              <a class="team-item__link" href="javascript:void(0);"><span class="fa fa-facebook-f"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-twitter"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-comments"></span></a><a
+                    class="team-item__link" href="javascript:void(0);"><span class="fa fa-dribbble"></span></a>
+            </div>
+          </div><!-- /.team-item-->
+        </div>
+      </div>
+    </div>
+    <div class="team-carousel-pager"></div>
+  </div>
+</section>
+<!--======end TEAM section======-->
+<!--======begin BLOG section======-->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="section__title blog__title wow rubberBand">Blog</h2>
+        <p class="section__subtitle blog__subtitle wow zoomIn">Lorem ipsum
+                                                               dolor sit amet, consectetur adipisicing elit, sed do
+                                                               eiusmod
+                                                               tempor incididunt ut labore et dolore magna aliqua. Ut
+                                                               enim ad
+                                                               minim veniam,</p>
+      </div>
+    </div>
+    <div class="row blog-post mb-5 mb-md-0">
+      <div class="col-md-6 wow flipInX">
+        <div class="blog-post__image-wrap">
+          <img alt="post" class="blog-post__image" src="assets/img/blog/blog1.png"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-post__data">
+          <h3 class="blog-post__title wow rotateInUpRight">
+            <a href="javascript:void(0);">SEO Quis Vestibulum</a></h3>
+          <div class="blog-post__info">
+            <p class="blog-post__date"><span
+                    class="fa fa-calendar"></span>14.072017</p>
+            <p class="blog-post__tag"><span
+                    class="fa fa-file"></span>Development</p>
+          </div>
+          <div class="item__text blog-post__desc">Dolore magna aliqua.
+                                                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                                  laboris nisi ut aliquip ex ea commodo consequat...
+          </div>
+        </div>
+      </div>
+    </div><!-- /.blog-post1-->
+    <div class="row blog-post mb-5 mb-md-0">
+      <div class="col-md-6 order-md-1 wow flipInX">
+        <div class="blog-post__image-wrap">
+          <img alt="post" class="blog-post__image" src="assets/img/blog/blog2.png"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-post__data">
+          <h3 class="blog-post__title wow rotateInUpLeft">
+            <a href="javascript:void(0);">SEO Quis Vestibulum</a></h3>
+          <div class="blog-post__info">
+            <p class="blog-post__date"><span
+                    class="fa fa-calendar"></span>14.072017</p>
+            <p class="blog-post__tag"><span
+                    class="fa fa-file"></span>Development</p>
+          </div>
+          <div class="item__text blog-post__desc">Dolore magna aliqua.
+                                                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                                  laboris nisi ut aliquip ex ea commodo consequat...
+          </div>
+        </div>
+      </div>
+    </div><!-- /.blog-post2-->
+    <div class="row blog-post">
+      <div class="col-md-6 wow flipInX">
+        <div class="blog-post__image-wrap">
+          <img alt="post" class="blog-post__image" src="assets/img/blog/blog3.png"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-post__data">
+          <h3 class="blog-post__title wow rotateInUpRight">
+            <a href="javascript:void(0);">SEO Quis Vestibulum</a>
+          </h3>
+          <div class="blog-post__info">
+            <p class="blog-post__date"><span
+                    class="fa fa-calendar"></span>14.072017</p>
+            <p class="blog-post__tag"><span
+                    class="fa fa-file"></span>Development</p>
+          </div>
+          <div class="item__text blog-post__desc">Dolore magna
+                                                  aliqua. Ut enim ad minim veniam, quis nostrud
+                                                  exercitation ullamco laboris nisi ut aliquip ex ea
+                                                  commodo consequat...
+          </div>
+        </div>
+      </div>
+    </div><!-- /.blog-post3-->
+    <div class="row">
+      <div class="col-md-12 text-center wow bounce">
+        <button
+                class="button button--color">more view
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end BLOG section======-->
+<!--======begin CONTACT section======-->
+<section class="contact" id="contact"
+         style="background-image : url(assets/img/background/footer.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="section__title contact__title wow rubberBand">Contact
+                                                                 Us</h2>
+        <p class="section__subtitle contact__subtitle wow zoomIn">Lorem
+                                                                  ipsum dolor sit amet, consectetur adipisicing elit,
+                                                                  sed do
+                                                                  eiusmod tempor incididunt ut labore et dolore magna
+                                                                  aliqua. Ut
+                                                                  enim ad minim veniam,</p>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-10 offset-md-1">
+        <div
+                class="row justify-content-sm-around justify-content-lg-between">
+          <div class="col-sm-6 col-lg-4 mb-lg-0 mb-5">
+            <div class="contact-item wow slideInLeft">
+              <div class="contact-item__icon"><span
+                      class="fa fa-map-marker"></span></div>
+              <p class="contact-item__address contact--text">Nobinagar
+                                                             savar, Dhaka Bangladesh</p>
+            </div>
+          </div><!-- /.contact-item-->
+          <div class="col-sm-6 col-lg-4 mb-lg-0 mb-5">
+            <div class="contact-item wow zoomIn">
+              <div class="contact-item__icon"><span
+                      class="fa fa-phone"></span></div>
+              <a class="contact-item__link contact--text" href="tel:+8801743331996">+8801743331996</a><a
+                    class="contact-item__link contact--text" href="tel:+8801928737807">+8801928737807</a>
+            </div>
+          </div><!-- /.contact-item-->
+          <div class="col-sm-6 col-lg-4 mb-lg-0 mb-5">
+            <div class="contact-item wow slideInRight">
+              <div class="contact-item__icon"><span
+                      class="fa fa-envelope-o"></span></div>
+              <a class="contact-item__link contact--text" href="mailto:quickmasud@gmail.com">quickmasud@gmail.com</a><a
+                    class="contact-item__link contact--text" href="mailto:quickmasud@yahoo.com">quickmasud@yahoo.com</a>
+            </div>
+          </div><!-- /.contact-item-->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <form action="/" class="form-contact" method="get">
+          <div class="row mb-4">
+            <div class="col-md-6 mb-4 mb-md-0 wow slideInLeft"><label
+                    for="name"></label><input id="name" maxlength="200"
+                                              name="name" placeholder="Your Name" type="text"></div>
+            <div class="col-md-6 wow slideInRight"><label
+                    for="mail"></label><input id="mail" maxlength="200"
+                                              name="mail" placeholder="Your Email" type="email">
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-12 wow slideInUp"><textarea id="message"
+                                                        maxlength="1000" name="message"
+                                                        placeholder="Write Message"></textarea></div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center text-md-right">
+              <button
+                      class="button button--contact">send
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end CONTACT section======-->
+<!--======begin FOOTER======-->
+<footer class="footer">
+  <p class="footer__copy">All rights Reserved &copy; 2032</p>
+</footer>
+<!--======end FOOTER======-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery.malihu.PageScroll2id.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        $("#preloader").fadeOut("slow");
+    });
+</script>
+</body>
+
+</html>
