@@ -99,3 +99,4 @@ $(function () {
         }, 900);
     });
 });
+new WOW().init();
