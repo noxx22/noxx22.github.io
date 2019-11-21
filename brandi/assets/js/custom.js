@@ -45,7 +45,7 @@ $(function () {
         // The tab groups identifier
         activate   : function activate(event) {
             // Callback function if tab is switched
-            var $tab  = $(this);
+            var $tab = $(this);
             var $info = $('#nested-tabInfo');
             var $name = $('span', $info);
             $name.text($tab.text());
@@ -147,8 +147,7 @@ $(function () {
 
     $('.nav__link').mPageScroll2id({
         highlightClass      : "nav__link--active",
-        forceSingleHighlight: true,
-        offset              : - '70'
+        forceSingleHighlight: true
     }); //======ANIMATE NUMBER===============================
 
     $('.facts-item__number').counterUp({
@@ -156,7 +155,7 @@ $(function () {
         time : 1500
     }); //======MENU TOGGLE BUTTON===========================
 
-    var nav  = $('.nav');
+    var nav = $('.nav');
     var menu = $('.menu-icon');
     menu.click(function () {
         menu.toggleClass('opened');
@@ -177,8 +176,8 @@ $(function () {
 }); //======GOOGLE MAP======
 
 function initialize() {
-    var myLatlng      = new google.maps.LatLng(53.3271878, - 3.096656, 20),
-        mapOptions    = {
+    var myLatlng   = new google.maps.LatLng(53.3271878, - 3.096656, 20),
+        mapOptions = {
             zoom     : 16,
             center   : new google.maps.LatLng(53.328032, - 3.094531, 16),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -305,7 +304,7 @@ function initialize() {
             content : contentString,
             maxWidth: 500
         });
-    var marker        = new google.maps.Marker({
+    var marker = new google.maps.Marker({
         position: myLatlng,
         map     : map,
         icon    : 'assets/img/marker/pin.png'
@@ -321,3 +320,4 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+wow = new WOW().init();

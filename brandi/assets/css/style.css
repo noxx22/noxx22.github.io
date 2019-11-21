@@ -584,6 +584,11 @@ ol {
     flex-basis: calc(270 * 100% / 1170);
 }
 
+.facts-item:hover span.animated {
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+}
+
 .facts__icon-clock,
 .facts__icon-friends,
 .facts__icon-rocket,
