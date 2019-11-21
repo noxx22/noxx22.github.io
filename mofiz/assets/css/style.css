@@ -2005,7 +2005,7 @@ body {
 .container {
     box-sizing: border-box;
     min-width: 320px;
-    max-width: 1140px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -2190,9 +2190,7 @@ ol {
 
     display: block;
 
-    padding-right: 10px;
     padding-right: 5px;
-    padding-left: 10px;
     padding-left: 5px;
 
     -webkit-transition: all .3s ease-in-out;
@@ -2278,8 +2276,8 @@ ol {
 /*======begin SERVICES section======*/
 
 .services {
-    padding-top: calc(114 * 100% / 1170);
-    padding-bottom: calc(117 * 100% / 1170);
+    padding-top: calc(114 * 100% / 1140);
+    padding-bottom: calc(117 * 100% / 1140);
 
     background-color: #f7f7f7;
 }
@@ -2298,7 +2296,7 @@ ol {
     display: flex;
 
     width: calc(555 * 100% / 1140);
-    margin-bottom: calc(77 * 100% / 1170);
+    margin-bottom: calc(77 * 100% / 1140);
 }
 
 .services__item:hover .services__icon {
@@ -2792,7 +2790,7 @@ ol {
 
 .form__mail,
 .form__phone {
-    flex-basis: calc(540 * 100% / 1110);
+    flex-basis: calc(540 * 100% / 1140);
 }
 
 .form__message {
@@ -3542,142 +3540,146 @@ ol {
 
 @media (min-width: 320px) {
     .hero {
-        padding-top: calc(24.70588vw - 9.05882px);
+        padding-top: calc(23.86364vw - 6.36364px);
     }
 
     .hero {
-        padding-bottom: calc(29.64706vw - 44.87059px);
+        padding-bottom: calc(28.63636vw - 41.63636px);
     }
 
     .about {
-        padding-top: calc(10.58824vw - 3.88235px);
+        padding-top: calc(10.22727vw - 2.72727px);
     }
 
     .about {
-        padding-bottom: calc(10.58824vw - 3.88235px);
+        padding-bottom: calc(10.22727vw - 2.72727px);
     }
 
     .form__name,
     .form__mail,
     .form__phone,
     .form__message {
-        border-radius: calc(4.11765vw - 5.17647px);
+        border-radius: calc(3.97727vw - 4.72727px);
     }
 
     .form__name,
     .form__mail,
     .form__phone,
     .form__message {
-        padding-left: calc(4.11765vw - 3.17647px);
+        padding-left: calc(3.97727vw - 2.72727px);
     }
 
     .form__name,
     .form__mail,
     .form__phone,
     .form__message {
-        padding-right: calc(1.76471vw + 4.35294px);
+        padding-right: calc(1.70455vw + 4.54545px);
     }
 
     .form__name,
     .form__mail,
     .form__phone,
     .form__message {
-        padding-top: calc(2.82353vw + .96471px);
+        padding-top: calc(2.72727vw + 1.27273px);
     }
 
     .form__name,
     .form__mail,
     .form__phone,
     .form__message {
-        padding-bottom: calc(2.11765vw + 3.22353px);
+        padding-bottom: calc(2.04545vw + 3.45455px);
     }
 
     .form__name,
     .form__mail,
     .form__phone,
     .form__message {
-        font-size: calc(.70588vw + 0.73382rem);
+        font-size: calc(.68182vw + 0.73864rem);
     }
 
     .form__name::-webkit-input-placeholder,
     .form__mail::-webkit-input-placeholder,
     .form__phone::-webkit-input-placeholder,
     .form__message::-webkit-input-placeholder {
-        font-size: calc(.70588vw + 0.73382rem);
+        font-size: calc(.68182vw + 0.73864rem);
     }
 
     .form__name::-moz-placeholder,
     .form__mail::-moz-placeholder,
     .form__phone::-moz-placeholder,
     .form__message::-moz-placeholder {
-        font-size: calc(.70588vw + 0.73382rem);
+        font-size: calc(.68182vw + 0.73864rem);
     }
 
     .form__name:-ms-input-placeholder,
     .form__mail:-ms-input-placeholder,
     .form__phone:-ms-input-placeholder,
     .form__message:-ms-input-placeholder {
-        font-size: calc(.70588vw + 0.73382rem);
+        font-size: calc(.68182vw + 0.73864rem);
     }
 
     .form__name::-ms-input-placeholder,
     .form__mail::-ms-input-placeholder,
     .form__phone::-ms-input-placeholder,
     .form__message::-ms-input-placeholder {
-        font-size: calc(.70588vw + 0.73382rem);
+        font-size: calc(.68182vw + 0.73864rem);
     }
 
     .form__name::placeholder,
     .form__mail::placeholder,
     .form__phone::placeholder,
     .form__message::placeholder {
-        font-size: calc(.70588vw + 0.73382rem);
+        font-size: calc(.68182vw + 0.73864rem);
     }
 
     .hero__button,
     .about__button,
     .work__button,
     .form__button {
-        font-size: calc(.70588vw + 0.60882rem);
+        font-size: calc(.68182vw + 0.61364rem);
     }
 
     .hero__button,
     .about__button,
     .work__button,
     .form__button {
-        padding-top: calc(1.64706vw - .27059px);
+        padding-top: calc(1.59091vw - .09091px);
     }
 
     .hero__button,
     .about__button,
     .work__button,
     .form__button {
-        padding-bottom: calc(1.41176vw - 1.51765px);
+        padding-bottom: calc(1.36364vw - 1.36364px);
     }
 
     .hero__button,
     .about__button,
     .work__button,
     .form__button {
-        padding-left: calc(3.41176vw + 4.08235px);
+        padding-left: calc(3.29545vw + 4.45455px);
     }
 
     .hero__button,
     .about__button,
     .work__button,
     .form__button {
-        padding-right: calc(3.41176vw + 4.08235px);
+        padding-right: calc(3.29545vw + 4.45455px);
     }
 
     .hero__button,
     .about__button,
     .work__button,
     .form__button {
-        border-radius: calc(3.17647vw + 23.83529px);
+        border-radius: calc(3.06818vw + 24.18182px);
+    }
+
+    .btn-top {
+        bottom: calc(40.625vw - 95px);
     }
 
     .hero__title {
-        margin-bottom: calc(1.17647vw + 31.23529px);
+        margin-bottom: calc(1.13636vw + 31.36364px);
     }
 
     .hero__title {
@@ -3699,13 +3701,7 @@ ol {
 
 @media (min-width: 480px) {
     .btn-top {
-        bottom: calc(6500vw - 31165px);
-    }
-}
-
-@media (min-width: 481px) {
-    .btn-top {
-        bottom: 100px;
+        bottom: calc(2.68817vw + 87.09677px);
     }
 }
 
@@ -3716,12 +3712,6 @@ ol {
 
     .header-nav__link {
         padding-right: calc(2.60417vw - 10px);
-    }
-}
-
-@media (min-width: 640px) {
-    .btn-top {
-        bottom: calc(4.71698vw + 69.81132px);
     }
 }
 
@@ -3737,15 +3727,15 @@ ol {
 
 @media (min-width: 852px) {
     .header-nav__item {
-        margin-right: calc(4.71698vw - 35.18868px);
+        margin-right: calc(4.31034vw - 31.72414px);
     }
 
     .btn-top {
-        bottom: calc(9.43396vw + 29.62264px);
+        bottom: calc(8.62069vw + 36.55172px);
     }
 
     .hero__title {
-        font-size: calc(5.97484vw - 0.5566rem);
+        font-size: calc(5.45977vw - 0.28233rem);
     }
 
     .section__title {
@@ -3761,7 +3751,7 @@ ol {
     }
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 1200px) {
     .header-nav__item {
         margin-right: 20px;
     }
