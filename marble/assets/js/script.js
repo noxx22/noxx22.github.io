@@ -16,7 +16,7 @@ $(function () {
         }, 900);
     }); //==========HAMBURGER==========
 
-    var nav  = $('.header__nav');
+    var nav = $('.header__nav');
     var menu = $('.menu-icon');
     menu.click(function () {
         menu.toggleClass('opened');

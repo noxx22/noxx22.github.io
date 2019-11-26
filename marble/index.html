@@ -8,11 +8,151 @@
   <link href="./assets/img/favicon.ico" rel="icon"
         type="image/vnd.microsoft.icon">
   <link href="assets/css/libs.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <!--include ../components/preloader-styles-->
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #212227;
+    }
+
+    #loader {
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: #212227;
+
+    }
+
+    .cssload-loader {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100px;
+      height: 100px;
+      margin-top: calc(25% + 50px);
+      -webkit-perspective: 780px;
+      perspective: 780px;
+    }
+
+    .cssload-inner {
+      position: absolute;
+
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+
+      border-radius: 50%;
+    }
+
+    .cssload-inner.cssload-one {
+      top: 0;
+      left: 0;
+
+      -webkit-animation: cssload-rotate-one 1.15s linear infinite;
+      animation: cssload-rotate-one 1.15s linear infinite;
+
+      border-bottom: 3px solid #5c5edc;
+    }
+
+    .cssload-inner.cssload-two {
+      top: 0;
+      right: 0;
+
+      -webkit-animation: cssload-rotate-two 1.15s linear infinite;
+      animation: cssload-rotate-two 1.15s linear infinite;
+
+      border-right: 3px solid rgba(76, 70, 101, .99);
+    }
+
+    .cssload-inner.cssload-three {
+      right: 0;
+      bottom: 0;
+
+      -webkit-animation: cssload-rotate-three 1.15s linear infinite;
+      animation: cssload-rotate-three 1.15s linear infinite;
+
+      border-top: 3px solid #e9908a;
+    }
+
+    @keyframes cssload-rotate-one {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @-webkit-keyframes cssload-rotate-one {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes cssload-rotate-two {
+      0% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @-webkit-keyframes cssload-rotate-two {
+      0% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes cssload-rotate-three {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+
+    @-webkit-keyframes cssload-rotate-three {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
-<!--include ../components/preloader-->
+<div id="loader">
+  <div class="cssload-loader">
+    <div class="cssload-inner cssload-one"></div>
+    <div class="cssload-inner cssload-two"></div>
+    <div class="cssload-inner cssload-three"></div>
+  </div>
+</div>
 <button class="btn-top"
         title="Go To Top"><span><svg class="arrow__img"><use xlink:href="./assets/img/symbol/sprite.svg#angle-up"></use></svg></span>
 </button>
@@ -50,7 +190,7 @@
 <!--======end HEADER======-->
 <!--======begin HERO section======-->
 <section class="hero"
-         style="background-image: url(assets/img/background/bg-hero.jpg);">
+         style="background-image: url('assets/img/background/bg-hero.jpg');">
   <div class="wrapper">
     <div class="hero__header-wrapper">
       <h1 class="hero__header">We are a digital & branding agency based in
@@ -109,27 +249,40 @@
     </h2>
     <div class="works__section">
       <!--#-->
-      <div class="works__item"><img alt="picture" class="works__picture" src="./assets/img/works/pic1.jpg">
+      <div class="works__item">
+        <div class="works__picture-wrapper">
+          <a href="javascript:void(0);" title="Click for more details"><img alt="picture" class="works__picture"
+                                                                            src="./assets/img/works/pic1.jpg"></a>
+        </div>
         <h3 class="item__header header--works">Nobis Business Card</h3>
         <p class="item__application">Business Card, Graphic</p>
-        <p class="item__desc item_desc--works">Sed posuere consectetur est
-                                               at lobortis. Porta sagittis lacus vel augue laoreet rutrum.</p>
+        <p class="item__desc item__desc--works">Sed posuere consectetur
+                                                est at lobortis. Porta sagittis lacus vel augue laoreet rutrum.
+        </p>
       </div>
       <!--#-->
-      <div class="works__item"><img alt="picture" class="works__picture" src="./assets/img/works/pic2.jpg">
+      <div class="works__item">
+        <div class="works__picture-wrapper">
+          <a href="javascript:void(0);" title="Click for more details"><img alt="picture" class="works__picture"
+                                                                            src="./assets/img/works/pic2.jpg"></a>
+        </div>
         <h3 class="item__header header--works">New Fun Project</h3>
         <p class="item__application">Web Design, Application</p>
-        <p class="item__desc item_desc--works">Nulla vitae elit libero, a
-                                               pharetra augue. Donec sed odio dui. Vestibulum id ligula porta
-                                               felis.</p>
+        <p class="item__desc item__desc--works">Nulla vitae elit libero, a
+                                                pharetra augue. Donec sed odio dui. Vestibulum id ligula porta
+                                                felis.</p>
       </div>
       <!--#-->
-      <div class="works__item"><img alt="picture" class="works__picture" src="./assets/img/works/pic3.jpg">
+      <div class="works__item">
+        <div class="works__picture-wrapper">
+          <a href="javascript:void(0);" title="Click for more details"><img alt="picture" class="works__picture"
+                                                                            src="./assets/img/works/pic3.jpg"></a>
+        </div>
         <h3 class="item__header header--works">Passionaries Branding Cover
         </h3>
         <p class="item__application">Branding, Graphic Design</p>
-        <p class="item__desc item_desc--works">Curabitur blandit tempus
-                                               porttitor. Donec id elit non mi porta gravida at eget metus.</p>
+        <p class="item__desc item__desc--works">Curabitur blandit tempus
+                                                porttitor. Donec id elit non mi porta gravida at eget metus.</p>
       </div>
     </div>
   </div>
@@ -157,33 +310,43 @@
                                                  commodo, tortor mauris condimentum utellus fermentum, porta sem
                                                  malesuada magna.</p>
         <div class="footer-adr">
-          <p class="item__desc footer-adr__desc"><span
+          <!---->
+          <div class="footer-adr__contact"><span
                   class="icon-touch"><i class="fa fa-map-marker"></i></span>
-            Moonshine Street No: 14/05 Light City, Jupiter</p>
+            <p class="item__desc footer-adr__desc"> Moonshine Street No:
+                                                    14/05 Light City, Jupiter</p>
+          </div>
           <!----><a class="item__desc footer-adr__link" href="tel:02475416587"><span
-                class="icon-touch fa fa-envelope"></span> 0247 541 65 87</a>
+                class="icon-touch fa fa-phone-square"></span> 0247 541 65 87</a>
           <!----><a class="item__desc footer-adr__link" href="mailto:support@longwave.com"><span
-                class="icon-touch fa fa-phone-square"></span> support@longwave.com</a>
+                class="icon-touch fa fa-envelope"></span> support@longwave.com</a>
         </div>
       </div>
       <!--======begin footer-item-twitter-->
       <div class="footer-item footer-twitter">
         <h2 class="section__header footer-item__header">twitter</h2>
-        <p class="item__desc footer-twitter__desc"><span
+        <div class="footer-twitter__post"><span
                 class="icon-tw fa fa-twitter"></span>
-          <a class="footer-twitter__link" href="javascript:void(0);">Aenean lacinia bibendum nulla sed leo posuere erat
-                                                                     a ante venenatis dapibus posuere velit aliquet.</a>
-        </p>
-        <p class="item__desc footer-twitter__desc"><span
+          <p class="item__desc footer-twitter__desc">
+            <a class="footer-twitter__link" href="javascript:void(0);">Aenean lacinia bibendum nulla sed leo posuere
+                                                                       erat a ante venenatis dapibus posuere velit
+                                                                       aliquet.</a>
+          </p>
+        </div>
+        <div class="footer-twitter__post"><span
                 class="icon-tw fa fa-twitter"></span>
-          <a class="footer-twitter__link" href="javascript:void(0);">Donec ullamcorper metus auctor fringilla. Nullam
-                                                                     quis risus eget.</a>
-        </p>
-        <p class="item__desc footer-twitter__desc"><span
+          <p class="item__desc footer-twitter__desc">
+            <a class="footer-twitter__link" href="javascript:void(0);">Donec ullamcorper metus auctor fringilla. Nullam
+                                                                       quis risus eget.</a>
+          </p>
+        </div>
+        <div class="footer-twitter__post"><span
                 class="icon-tw fa fa-twitter"></span>
-          <a class="footer-twitter__link" href="javascript:void(0);">Vestibulum id ligula porta euismod semper. Maecenas
-                                                                     faucibus mollis.</a>
-        </p>
+          <p class="item__desc footer-twitter__desc">
+            <a class="footer-twitter__link" href="javascript:void(0);">Vestibulum id ligula porta euismod semper.
+                                                                       Maecenas faucibus mollis.</a>
+          </p>
+        </div>
       </div>
       <!--======begin footer-item-posts====== -->
       <div class="footer-item footer-posts">
