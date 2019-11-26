@@ -553,4 +553,4 @@ function init() {
 
 }
 
-wow = new WOW().init();
+new WOW().init();

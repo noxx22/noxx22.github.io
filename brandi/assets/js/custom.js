@@ -176,7 +176,7 @@ $(function () {
 }); //======GOOGLE MAP======
 
 function initialize() {
-    var myLatlng   = new google.maps.LatLng(53.3271878, - 3.096656, 20),
+    var myLatlng = new google.maps.LatLng(53.3271878, - 3.096656, 20),
         mapOptions = {
             zoom     : 16,
             center   : new google.maps.LatLng(53.328032, - 3.094531, 16),
@@ -298,9 +298,9 @@ function initialize() {
                 } ]
             } ]
         };
-    var map           = new google.maps.Map(document.getElementById('map'), mapOptions),
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions),
         contentString = 'Some text here',
-        infowindow    = new google.maps.InfoWindow({
+        infowindow = new google.maps.InfoWindow({
             content : contentString,
             maxWidth: 500
         });
