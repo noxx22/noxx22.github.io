@@ -33,13 +33,13 @@
 
     /* plugin namespace, prefix, default selector(s) */
 
-    var pluginNS                                                                                             = "mPageScroll2id",
-        pluginPfx                                                                                            = "mPS2id",
-        defaultSelector                                                                                      = ".m_PageScroll2id,a[rel~='m_PageScroll2id'],.page-scroll-to-id,a[rel~='page-scroll-to-id'],._ps2id",
+    var pluginNS = "mPageScroll2id",
+        pluginPfx = "mPS2id",
+        defaultSelector = ".m_PageScroll2id,a[rel~='m_PageScroll2id'],.page-scroll-to-id,a[rel~='page-scroll-to-id'],._ps2id",
 
         /* default options */
 
-        defaults                                                                                             = {
+        defaults = {
             /* scroll animation speed in milliseconds: Integer */
             scrollSpeed           : 1000,
             /* auto-adjust animation speed (according to target element position and window scroll): Boolean */
@@ -94,8 +94,19 @@
 
         /* vars, constants */
 
-        selector, opt, _init, _trigger, _clicked, _target, _to, _axis, _offset, _dataOffset, _totalInstances = 0,
-        _liveTimer, _speed,
+        selector,
+        opt,
+        _init,
+        _trigger,
+        _clicked,
+        _target,
+        _to,
+        _axis,
+        _offset,
+        _dataOffset,
+        _totalInstances = 0,
+        _liveTimer,
+        _speed,
 
         /*
          ---------------
@@ -103,7 +114,7 @@
          ---------------
          */
 
-        methods                                                                                              = {
+        methods = {
 
             /* plugin initialization method */
 
@@ -154,8 +165,8 @@
                                 functions._removeClasses.call(null);
                                 return;
                             }
-                            var $this    = $(this),
-                                href     = $this.attr("href"),
+                            var $this = $(this),
+                                href = $this.attr("href"),
                                 hrefProp = $this.prop("href").baseVal || $this.prop("href");
                             if (opt.excludeSelectors && $this.is(opt.excludeSelectors)) { //excluded selectors
                                 return;
@@ -187,7 +198,7 @@
                         var targets = $("._" + pluginPfx + "-t");
                         targets.each(function (i) {
                             var t = $(this), id = t.attr("id"),
-                                h               = functions._findHighlight.call(null, id);
+                                h = functions._findHighlight.call(null, id);
                             functions._setClasses.call(null, false, t, h);
                             if (i == targets.length - 1) {
                                 functions._extendClasses.call(null);
@@ -225,11 +236,11 @@
                             offset : opt.offset,
                             clicked: false
                         },
-                        options  = $.extend(true, {}, defaults, options);
+                        options = $.extend(true, {}, defaults, options);
                     functions._reset.call(null);
-                    _axis   = options.layout;
+                    _axis = options.layout;
                     _offset = options.offset;
-                    id      = ( id.indexOf("#") !== - 1 ) ? id : "#" + id;
+                    id = ( id.indexOf("#") !== - 1 ) ? id : "#" + id;
                     if (functions._isValid.call(null, id) && functions._findTarget.call(null, id)) {
                         _trigger = "scrollTo";
                         _clicked = options.clicked;
@@ -257,13 +268,13 @@
          ---------------
          */
 
-        functions                                                                                            = {
+        functions = {
 
             /* checks if screen size ([x,y]) is below the value(s) set in disablePluginBelow option */
 
             _isDisabled: function () {
                 var e = window, a = "inner",
-                    val           = opt.disablePluginBelow instanceof Array ? [ opt.disablePluginBelow[ 0 ] || 0, opt.disablePluginBelow[ 1 ] || 0 ] : [ opt.disablePluginBelow || 0, 0 ];
+                    val = opt.disablePluginBelow instanceof Array ? [ opt.disablePluginBelow[ 0 ] || 0, opt.disablePluginBelow[ 1 ] || 0 ] : [ opt.disablePluginBelow || 0, 0 ];
                 if (! ( "innerWidth" in window )) {
                     a = "client";
                     e = document.documentElement || document.body;
@@ -278,8 +289,8 @@
                     return;
                 }
                 hrefProp = ( ! hrefProp ) ? href : hrefProp;
-                var str  = ( hrefProp.indexOf("#/") !== - 1 ) ? hrefProp.split("#/")[ 0 ] : hrefProp.split("#")[ 0 ],
-                    loc  = window.location.toString().split("#")[ 0 ];
+                var str = ( hrefProp.indexOf("#/") !== - 1 ) ? hrefProp.split("#/")[ 0 ] : hrefProp.split("#")[ 0 ],
+                    loc = window.location.toString().split("#")[ 0 ];
                 return href !== "#" && href.indexOf("#") !== - 1 && ( str === "" || decodeURIComponent(str) === decodeURIComponent(loc) );
             },
 
@@ -288,16 +299,16 @@
             _setup: function () {
                 var el = functions._highlightSelector(), i = 1, tp = 0;
                 return $(el).each(function () {
-                    var $this = $(this), href = $this.attr("href"),
+                    var $this = $(this),
+                        href = $this.attr("href"),
                         hrefProp = $this.prop("href").baseVal || $this.prop("href");
                     if (functions._isValid.call(null, href, hrefProp)) {
                         if (opt.excludeSelectors && $this.is(opt.excludeSelectors)) { //excluded selectors
                             return;
                         }
                         var id = ( href.indexOf("#/") !== - 1 ) ? href.split("#/")[ 1 ] : href.split("#")[ 1 ],
-                            t  = id.indexOf("%") !== - 1 ? $(document.getElementById(id)) : $("#" + id); //fix % in
-                                                                                                         // selector
-                                                                                                         // bug
+                            t = id.indexOf("%") !== - 1 ? $(document.getElementById(id)) : $("#" + id); //fix % in
+                                                                                                        // selector bug
                         if (t.length > 0) {
                             if (opt.highlightByNextTarget) {
                                 if (t !== tp) {
@@ -338,8 +349,8 @@
 
             _findTarget: function (str) {
                 var val = ( str.indexOf("#/") !== - 1 ) ? str.split("#/")[ 1 ] : str.split("#")[ 1 ],
-                    el  = val.indexOf("%") !== - 1 ? $(document.getElementById(val)) : $("#" + val); //fix % in
-                                                                                                     // selector bug
+                    el = val.indexOf("%") !== - 1 ? $(document.getElementById(val)) : $("#" + val); //fix % in selector
+                                                                                                    // bug
                 if (el.length < 1 || el.css("position") === "fixed") {
                     if (val === "top") {
                         el = $("body");
@@ -351,8 +362,8 @@
                 if (! _axis) {
                     _axis = opt.layout;
                 }
-                _offset  = functions._setOffset.call(null);
-                _to      = [ ( el.offset().top - _offset[ 0 ] ).toString(), ( el.offset().left - _offset[ 1 ] ).toString() ];
+                _offset = functions._setOffset.call(null);
+                _to = [ ( el.offset().top - _offset[ 0 ] ).toString(), ( el.offset().left - _offset[ 1 ] ).toString() ];
                 _to[ 0 ] = ( _to[ 0 ] < 0 ) ? 0 : _to[ 0 ];
                 _to[ 1 ] = ( _to[ 1 ] < 0 ) ? 0 : _to[ 1 ];
                 return _to;
@@ -415,7 +426,7 @@
                 var wLoc = window.location, loc = wLoc.toString().split("#")[ 0 ], locPath = wLoc.pathname;
                 if (loc.indexOf("'") !== - 1) loc = loc.replace("'", "\\'");
                 if (locPath.indexOf("'") !== - 1) locPath = locPath.replace("'", "\\'");
-                loc     = decodeURIComponent(loc);
+                loc = decodeURIComponent(loc);
                 locPath = decodeURIComponent(locPath);
                 return $("._" + pluginPfx + "-h[href='#" + id + "'],._" + pluginPfx + "-h[href='" + loc + "#" + id + "'],._" + pluginPfx + "-h[href='" + locPath + "#" + id + "'],._" + pluginPfx + "-h[href='#/" + id + "'],._" + pluginPfx + "-h[href='" + loc + "#/" + id + "'],._" + pluginPfx + "-h[href='" + locPath + "#/" + id + "']");
             },
@@ -443,8 +454,13 @@
             /* extends plugin classes */
 
             _extendClasses: function () {
-                var tc                                                                                 = opt.targetClass, hc                                                           = opt.highlightClass,
-                    $tc = $("." + tc), $hc = $("." + hc), ftc = tc + "-first", ltc = tc + "-last", fhc = hc + "-first",
+                var tc = opt.targetClass,
+                    hc = opt.highlightClass,
+                    $tc = $("." + tc),
+                    $hc = $("." + hc),
+                    ftc = tc + "-first",
+                    ltc = tc + "-last",
+                    fhc = hc + "-first",
                     lhc = hc + "-last";
                 $("._" + pluginPfx + "-t").removeClass(ftc + " " + ltc);
                 $("._" + pluginPfx + "-h").removeClass(fhc + " " + lhc);
@@ -477,26 +493,29 @@
             /* checks if target element is in viewport */
 
             _currentTarget: function (t) {
-                var o          = opt[ "target_" + t.data(pluginPfx).i ],
+                var o = opt[ "target_" + t.data(pluginPfx).i ],
                     dataTarget = t.data("ps2id-target"),
-                    rect       = dataTarget && $(dataTarget)[ 0 ] ? $(dataTarget)[ 0 ].getBoundingClientRect() : t[ 0 ].getBoundingClientRect();
+                    rect = dataTarget && $(dataTarget)[ 0 ] ? $(dataTarget)[ 0 ].getBoundingClientRect() : t[ 0 ].getBoundingClientRect();
                 if (typeof o !== "undefined") {
-                    var y                                          = t.offset().top, x = t.offset().left,
-                        from                                       = ( o.from ) ? o.from + y : y, to = ( o.to ) ? o.to + y : y,
+                    var y = t.offset().top, x = t.offset().left,
+                        from = ( o.from ) ? o.from + y : y, to = ( o.to ) ? o.to + y : y,
                         fromX = ( o.fromX ) ? o.fromX + x : x, toX = ( o.toX ) ? o.toX + x : x;
                     return (
                         rect.top >= to && rect.top <= from &&
                         rect.left >= toX && rect.left <= fromX
                     );
                 } else {
-                    var wh = $(window).height(), ww = $(window).width(),
-                        th                          = dataTarget ? $(dataTarget).height() : t.height(),
-                        tw                          = dataTarget ? $(dataTarget).width() : t.width(),
-                        base                        = 1 + ( th / wh ),
-                        top                         = base, bottom = ( th < wh ) ? base * ( wh / th ) : base,
-                        baseX                       = 1 + ( tw / ww ),
-                        left                        = baseX, right         = ( tw < ww ) ? baseX * ( ww / tw ) : baseX,
-                        val                         = [ rect.top <= wh / top, rect.bottom >= wh / bottom, rect.left <= ww / left, rect.right >= ww / right ];
+                    var wh = $(window).height(),
+                        ww = $(window).width(),
+                        th = dataTarget ? $(dataTarget).height() : t.height(),
+                        tw = dataTarget ? $(dataTarget).width() : t.width(),
+                        base = 1 + ( th / wh ),
+                        top = base,
+                        bottom = ( th < wh ) ? base * ( wh / th ) : base,
+                        baseX = 1 + ( tw / ww ),
+                        left = baseX,
+                        right = ( tw < ww ) ? baseX * ( ww / tw ) : baseX,
+                        val = [ rect.top <= wh / top, rect.bottom >= wh / bottom, rect.left <= ww / left, rect.right >= ww / right ];
                     if (opt.highlightByNextTarget) {
                         var tn = t.data(pluginPfx).tn;
                         if (tn) {
@@ -515,11 +534,11 @@
             /* scrolls the page */
 
             _scrollTo: function () {
-                _speed                             = functions._scrollSpeed.call(null);
-                _to                                = ( opt.pageEndSmoothScroll ) ? functions._pageEndSmoothScroll.call(null) : _to;
-                var _scrollable                    = $("html,body"),
-                    speed                          = ( opt.autoScrollSpeed ) ? functions._autoScrollSpeed.call(null) : _speed,
-                    easing                         = ( _scrollable.is(":animated") ) ? opt.scrollingEasing : opt.scrollEasing,
+                _speed = functions._scrollSpeed.call(null);
+                _to = ( opt.pageEndSmoothScroll ) ? functions._pageEndSmoothScroll.call(null) : _to;
+                var _scrollable = $("html,body"),
+                    speed = ( opt.autoScrollSpeed ) ? functions._autoScrollSpeed.call(null) : _speed,
+                    easing = ( _scrollable.is(":animated") ) ? opt.scrollingEasing : opt.scrollEasing,
                     _t = $(window).scrollTop(), _l = $(window).scrollLeft();
                 switch (_axis) {
                     case "horizontal":
@@ -549,10 +568,7 @@
                                     functions._callbacks.call(null, "onComplete");
                                 });
                             } else {
-                                _scrollable.stop().animate({
-                                    scrollTop: _to[ 0 ],
-                                    scrollLeft: _to[ 1 ]
-                                }, speed, easing).promise().then(function () {
+                                _scrollable.stop().animate({scrollTop: _to[ 0 ], scrollLeft: _to[ 1 ]}, speed, easing).promise().then(function () {
                                     functions._callbacks.call(null, "onComplete");
                                 });
                             }
@@ -572,7 +588,7 @@
 
             _pageEndSmoothScroll: function () {
                 var _dh = $(document).height(), _dw = $(document).width(),
-                    _wh                             = $(window).height(), _ww   = $(window).width();
+                    _wh = $(window).height(), _ww = $(window).width();
                 return [ ( ( _dh - _to[ 0 ] ) < _wh ) ? _dh - _wh : _to[ 0 ], ( ( _dw - _to[ 1 ] ) < _ww ) ? _dw - _ww : _to[ 1 ] ];
             },
 
@@ -601,8 +617,8 @@
 
             _autoScrollSpeed: function () {
                 var _t = $(window).scrollTop(), _l = $(window).scrollLeft(),
-                    _h                             = $(document).height(), _w = $(document).width(),
-                    val                            = [
+                    _h = $(document).height(), _w = $(document).width(),
+                    val = [
                         _speed + ( ( _speed * ( Math.floor(( Math.abs(_to[ 0 ] - _t) / _h ) * 100) ) ) / 100 ),
                         _speed + ( ( _speed * ( Math.floor(( Math.abs(_to[ 1 ] - _l) / _w ) * 100) ) ) / 100 )
                     ];
@@ -667,92 +683,92 @@
             /* extends jquery with custom easings (as jquery ui) */
 
             _easing: function () {
-                $.easing.easeInQuad       = $.easing.easeInQuad || function (x) {
+                $.easing.easeInQuad = $.easing.easeInQuad || function (x) {
                     return x * x;
                 };
-                $.easing.easeOutQuad      = $.easing.easeOutQuad || function (x) {
+                $.easing.easeOutQuad = $.easing.easeOutQuad || function (x) {
                     return 1 - ( 1 - x ) * ( 1 - x );
                 };
-                $.easing.easeInOutQuad    = $.easing.easeInOutQuad || function (x) {
+                $.easing.easeInOutQuad = $.easing.easeInOutQuad || function (x) {
                     return x < 0.5 ? 2 * x * x : 1 - Math.pow(- 2 * x + 2, 2) / 2;
                 };
-                $.easing.easeInCubic      = $.easing.easeInCubic || function (x) {
+                $.easing.easeInCubic = $.easing.easeInCubic || function (x) {
                     return x * x * x;
                 };
-                $.easing.easeOutCubic     = $.easing.easeOutCubic || function (x) {
+                $.easing.easeOutCubic = $.easing.easeOutCubic || function (x) {
                     return 1 - Math.pow(1 - x, 3);
                 };
-                $.easing.easeInOutCubic   = $.easing.easeInOutCubic || function (x) {
+                $.easing.easeInOutCubic = $.easing.easeInOutCubic || function (x) {
                     return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(- 2 * x + 2, 3) / 2;
                 };
-                $.easing.easeInQuart      = $.easing.easeInQuart || function (x) {
+                $.easing.easeInQuart = $.easing.easeInQuart || function (x) {
                     return x * x * x * x;
                 };
-                $.easing.easeOutQuart     = $.easing.easeOutQuart || function (x) {
+                $.easing.easeOutQuart = $.easing.easeOutQuart || function (x) {
                     return 1 - Math.pow(1 - x, 4);
                 };
-                $.easing.easeInOutQuart   = $.easing.easeInOutQuart || function (x) {
+                $.easing.easeInOutQuart = $.easing.easeInOutQuart || function (x) {
                     return x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(- 2 * x + 2, 4) / 2;
                 };
-                $.easing.easeInQuint      = $.easing.easeInQuint || function (x) {
+                $.easing.easeInQuint = $.easing.easeInQuint || function (x) {
                     return x * x * x * x * x;
                 };
-                $.easing.easeOutQuint     = $.easing.easeOutQuint || function (x) {
+                $.easing.easeOutQuint = $.easing.easeOutQuint || function (x) {
                     return 1 - Math.pow(1 - x, 5);
                 };
-                $.easing.easeInOutQuint   = $.easing.easeInOutQuint || function (x) {
+                $.easing.easeInOutQuint = $.easing.easeInOutQuint || function (x) {
                     return x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(- 2 * x + 2, 5) / 2;
                 };
-                $.easing.easeInExpo       = $.easing.easeInExpo || function (x) {
+                $.easing.easeInExpo = $.easing.easeInExpo || function (x) {
                     return x === 0 ? 0 : Math.pow(2, 10 * x - 10);
                 };
-                $.easing.easeOutExpo      = $.easing.easeOutExpo || function (x) {
+                $.easing.easeOutExpo = $.easing.easeOutExpo || function (x) {
                     return x === 1 ? 1 : 1 - Math.pow(2, - 10 * x);
                 };
-                $.easing.easeInOutExpo    = $.easing.easeInOutExpo || function (x) {
+                $.easing.easeInOutExpo = $.easing.easeInOutExpo || function (x) {
                     return x === 0 ? 0 : x === 1 ? 1 : x < 0.5 ? Math.pow(2, 20 * x - 10) / 2 : ( 2 - Math.pow(2, - 20 * x + 10) ) / 2;
                 };
-                $.easing.easeInSine       = $.easing.easeInSine || function (x) {
+                $.easing.easeInSine = $.easing.easeInSine || function (x) {
                     return 1 - Math.cos(x * Math.PI / 2);
                 };
-                $.easing.easeOutSine      = $.easing.easeOutSine || function (x) {
+                $.easing.easeOutSine = $.easing.easeOutSine || function (x) {
                     return Math.sin(x * Math.PI / 2);
                 };
-                $.easing.easeInOutSine    = $.easing.easeInOutSine || function (x) {
+                $.easing.easeInOutSine = $.easing.easeInOutSine || function (x) {
                     return - ( Math.cos(Math.PI * x) - 1 ) / 2;
                 };
-                $.easing.easeInCirc       = $.easing.easeInCirc || function (x) {
+                $.easing.easeInCirc = $.easing.easeInCirc || function (x) {
                     return 1 - Math.sqrt(1 - Math.pow(x, 2));
                 };
-                $.easing.easeOutCirc      = $.easing.easeOutCirc || function (x) {
+                $.easing.easeOutCirc = $.easing.easeOutCirc || function (x) {
                     return Math.sqrt(1 - Math.pow(x - 1, 2));
                 };
-                $.easing.easeInOutCirc    = $.easing.easeInOutCirc || function (x) {
+                $.easing.easeInOutCirc = $.easing.easeInOutCirc || function (x) {
                     return x < 0.5 ? ( 1 - Math.sqrt(1 - Math.pow(2 * x, 2)) ) / 2 : ( Math.sqrt(1 - Math.pow(- 2 * x + 2, 2)) + 1 ) / 2;
                 };
-                $.easing.easeInElastic    = $.easing.easeInElastic || function (x) {
+                $.easing.easeInElastic = $.easing.easeInElastic || function (x) {
                     return x === 0 ? 0 : x === 1 ? 1 : - Math.pow(2, 10 * x - 10) * Math.sin(( x * 10 - 10.75 ) * ( ( 2 * Math.PI ) / 3 ));
                 };
-                $.easing.easeOutElastic   = $.easing.easeOutElastic || function (x) {
+                $.easing.easeOutElastic = $.easing.easeOutElastic || function (x) {
                     return x === 0 ? 0 : x === 1 ? 1 : Math.pow(2, - 10 * x) * Math.sin(( x * 10 - 0.75 ) * ( ( 2 * Math.PI ) / 3 )) + 1;
                 };
                 $.easing.easeInOutElastic = $.easing.easeInOutElastic || function (x) {
                     return x === 0 ? 0 : x === 1 ? 1 : x < 0.5 ? - ( Math.pow(2, 20 * x - 10) * Math.sin(( 20 * x - 11.125 ) * ( ( 2 * Math.PI ) / 4.5 )) ) / 2 : Math.pow(2, - 20 * x + 10) * Math.sin(( 20 * x - 11.125 ) * ( ( 2 * Math.PI ) / 4.5 )) / 2 + 1;
                 };
-                $.easing.easeInBack       = $.easing.easeInBack || function (x) {
+                $.easing.easeInBack = $.easing.easeInBack || function (x) {
                     return ( 1.70158 + 1 ) * x * x * x - 1.70158 * x * x;
                 };
-                $.easing.easeOutBack      = $.easing.easeOutBack || function (x) {
+                $.easing.easeOutBack = $.easing.easeOutBack || function (x) {
                     return 1 + ( 1.70158 + 1 ) * Math.pow(x - 1, 3) + 1.70158 * Math.pow(x - 1, 2);
                 };
-                $.easing.easeInOutBack    = $.easing.easeInOutBack || function (x) {
+                $.easing.easeInOutBack = $.easing.easeInOutBack || function (x) {
                     return x < 0.5 ? ( Math.pow(2 * x, 2) * ( ( ( 1.70158 * 1.525 ) + 1 ) * 2 * x - ( 1.70158 * 1.525 ) ) ) / 2 : ( Math.pow(2 * x - 2, 2) * ( ( ( 1.70158 * 1.525 ) + 1 ) * ( x * 2 - 2 ) + ( 1.70158 * 1.525 ) ) + 2 ) / 2;
                 };
-                $.easing.easeInBounce     = $.easing.easeInBounce || function (x) {
+                $.easing.easeInBounce = $.easing.easeInBounce || function (x) {
                     return 1 - __bounceOut(1 - x);
                 };
-                $.easing.easeOutBounce    = $.easing.easeOutBounce || __bounceOut;
-                $.easing.easeInOutBounce  = $.easing.easeInOutBounce || function (x) {
+                $.easing.easeOutBounce = $.easing.easeOutBounce || __bounceOut;
+                $.easing.easeInOutBounce = $.easing.easeInOutBounce || function (x) {
                     return x < 0.5 ? ( 1 - __bounceOut(1 - 2 * x) ) / 2 : ( 1 + __bounceOut(2 * x - 1) ) / 2;
                 };
 
@@ -792,7 +808,7 @@
             $.error("Method " + method + " does not exist");
         }
     };
-    $[ pluginNS ]    = function (method) {
+    $[ pluginNS ] = function (method) {
         if (methods[ method ]) {
             return methods[ method ].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === "object" || ! method) {
