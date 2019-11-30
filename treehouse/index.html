@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Treehouse</title>
+  <link href="./assets/img/favicon.ico" rel="icon"
+        type="image/vnd.microsoft.icon">
+  <link href="assets/css/libs.min.css" rel="stylesheet">
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #212227;
+    }
+
+    #loader {
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 200;
+      background-color: #212227;
+
+    }
+
+    .cssload-loader {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100px;
+      height: 100px;
+      margin-top: calc(25% + 50px);
+      -webkit-perspective: 780px;
+      perspective: 780px;
+    }
+
+    .cssload-inner {
+      position: absolute;
+
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+
+      border-radius: 50%;
+    }
+
+    .cssload-inner.cssload-one {
+      top: 0;
+      left: 0;
+
+      -webkit-animation: cssload-rotate-one 1.15s linear infinite;
+      animation: cssload-rotate-one 1.15s linear infinite;
+
+      border-bottom: 3px solid #5c5edc;
+    }
+
+    .cssload-inner.cssload-two {
+      top: 0;
+      right: 0;
+
+      -webkit-animation: cssload-rotate-two 1.15s linear infinite;
+      animation: cssload-rotate-two 1.15s linear infinite;
+
+      border-right: 3px solid rgba(76, 70, 101, .99);
+    }
+
+    .cssload-inner.cssload-three {
+      right: 0;
+      bottom: 0;
+
+      -webkit-animation: cssload-rotate-three 1.15s linear infinite;
+      animation: cssload-rotate-three 1.15s linear infinite;
+
+      border-top: 3px solid #e9908a;
+    }
+
+    @keyframes cssload-rotate-one {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @-webkit-keyframes cssload-rotate-one {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes cssload-rotate-two {
+      0% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @-webkit-keyframes cssload-rotate-two {
+      0% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes cssload-rotate-three {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+
+    @-webkit-keyframes cssload-rotate-three {
+      0% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="loader">
+  <div class="cssload-loader">
+    <div class="cssload-inner cssload-one"></div>
+    <div class="cssload-inner cssload-two"></div>
+    <div class="cssload-inner cssload-three"></div>
+  </div>
+</div>
+<button class="btn-top"
+        title="Go To Top"><span><svg class="arrow__img"><use
+        xlink:href="assets/img/symbol/sprite.svg#angle-up"></use></svg></span></button>
+<!--======begin HEADER======-->
+<header class="header">
+  <div class="container">
+    <div class="header__content">
+      <a class="logo-holder" href="javascript:void(0);"><img alt="treehouse home" src="./assets/img/logo/logo.png"></a>
+      <div class="menu-icon menu-icon-3">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+      </div>
+      <nav class="nav">
+        <a class="nav__link nav__link--active" href="javascript:void(0);">home</a><a class="nav__link"
+                                                                                     href="javascript:void(0);">about</a><a
+              class="nav__link" href="javascript:void(0);">blog</a><a class="nav__link" href="javascript:void(0);">portfolio</a><a
+              class="nav__link" href="javascript:void(0);">contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--======end HEADER======-->
+<!--======begin HERO section======-->
+<div class="hero">
+  <div class="container">
+    <div class="hero__items">
+      <h1 class="heading-1">creative digital solutions</h1>
+      <p class="heading-subtitle subtitle-hero">Proin iaculis purus
+                                                consequat sem cure.</p>
+      <a class="button button-hero" href="javascript:void(0)">view portfolio</a>
+    </div>
+  </div>
+</div>
+<!--======end HERO section======-->
+<!--======begin SERVICES section======-->
+<section class="services">
+  <div class="container">
+    <h2 class="heading-2 heading-2-services wow bounce"
+        data-wow-offset="200">professional services</h2>
+    <p class="heading-subtitle subtitle-services wow zoomIn"
+       data-wow-offset="200">Proin iaculis purus consequat sem cure</p>
+    <div class="services__items">
+      <div class="services__item wow slideInLeft" data-wow-offset="200">
+        <div class="item__ico ico-heart services__ico"></div>
+        <h3 class="heading-3">beautiful designs</h3>
+        <p class="item__description">Proin iaculis purus consequat sem
+                                     cure digni ssim. Donec porttitora entum suscipit aenean rhoncus
+                                     posuere odio in tincidunt</p>
+      </div>
+      <div class="services__item wow zoomIn" data-wow-offset="200">
+        <div class="item__ico ico-mobile services__ico"></div>
+        <h3 class="heading-3">responsive web</h3>
+        <p class="item__description">Proin iaculis purus consequat sem
+                                     cure digni ssim. Donec porttitora entum suscipit aenean rhoncus
+                                     posuere odio in tincidunt</p>
+      </div>
+      <div class="services__item wow slideInRight" data-wow-offset="200">
+        <div class="item__ico ico-graph services__ico"></div>
+        <h3 class="heading-3">marketing tools</h3>
+        <p class="item__description">Proin iaculis purus consequat sem
+                                     cure digni ssim. Donec porttitora entum suscipit aenean rhoncus
+                                     posuere odio in tincidunt</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end SERVICES section======-->
+<!--======begin RELAX section======-->
+<section class="relax">
+  <div class="background-photo">
+    <div class="relax__content">
+      <h2 class="heading-2 heading-2-relax wow bounce"
+          data-wow-offset="200">Just relax<span
+              class="heading-amp">&nbsp;&</span><br>let us do the heavy lifting</h2>
+      <p class="heading-subtitle subtitle--relax wow slideInLeft"
+         data-wow-offset="200">Proin iaculis purus consequat sem cure
+                               digni ssim.
+                               Donec<br>porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+      <div class="relax__list">
+        <div class="relax__list-item wow slideInRight"
+             data-wow-offset="200">
+          <div class="ico-check"></div>
+          <span
+                  class="heading__subtitle item-desc-relax">Initial Setup &
+                    Customizations</span>
+        </div>
+        <div class="relax__list-item wow slideInLeft"
+             data-wow-offset="200">
+          <div class="ico-check"></div>
+          <span
+                  class="heading__subtitle item-desc-relax">Regular
+                    Updates</span>
+        </div>
+        <div class="relax__list-item wow slideInRight"
+             data-wow-offset="200">
+          <div class="ico-check"></div>
+          <span
+                  class="heading__subtitle item-desc-relax">Round The Clock
+                    Support</span>
+        </div>
+      </div>
+      <a class="button button-relax wow slideInUp" data-wow-offset="200" href="javascript:void(0)">learn more</a>
+    </div>
+  </div>
+</section>
+<!--======end RELAX section======-->
+<!--======begin PROJECT section======-->
+<section class="project">
+  <div class="container">
+    <h2 class="heading-2 heading-2-project wow bounce"
+        data-wow-offset="200">latest project</h2>
+    <p class="heading-subtitle subtitle-project wow zoomIn"
+       data-wow-offset="200">Proin iaculis purus consequat sem cure</p>
+  </div>
+  <div class="project__fluid-container">
+    <div class="container">
+      <div class="project__content">
+        <h3 class="heading-3 heading-3-project">developing a framework
+        </h3>
+        <p class="project-text project-heading-text">Proin iaculis purus
+                                                     consequat sem cure digni ssim donec porttitora tum suscipit
+                                                     aenean rhoncus posuere odio in tincidunt.</p>
+        <div class="project__items">
+          <div class="project__item wow slideInRight"
+               data-wow-offset="200"><span
+                  class="ico-project ico-basket"></span>
+            <div class="project__item-string">
+              <h4 class="project__item-header">E-Commerce Ready</h4>
+              <p class="project-text">Proin iaculis purus consequat sem
+                                      cure digni ssim.</p>
+            </div>
+          </div>
+          <div class="project__item wow slideInLeft"
+               data-wow-offset="200"><span
+                  class="ico-project ico-laptop"></span>
+            <div class="project__item-string">
+              <h4 class="project__item-header">Powerful SEO Features</h4>
+              <p class="project-text">Proin iaculis purus consequat sem
+                                      cure.</p>
+            </div>
+          </div>
+          <div class="project__item wow slideInRight"
+               data-wow-offset="200"><span
+                  class="ico-project ico-locked"></span>
+            <div class="project__item-string">
+              <h4 class="project__item-header">Secure Encryption</h4>
+              <p class="project-text">Proin iaculis purus consequat sem
+                                      cure digni ssim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="project__bottom-string">
+          <p class="project-text project-bottom-text">Proin iaculis purus
+                                                      consequat sem cure digni ssim donec porttitora entum suscipit
+                                                      aenean rhoncus posuere odio in.</p>
+          <a class="project__details wow jackInTheBox" data-wow-offset="200" href="javascript:void(0)">view details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end PROJECT section======-->
+<!--======begin CULTURE section======-->
+<section class="culture">
+  <div class="container">
+    <h2 class="heading-2 heading-2-culture wow bounce"
+        data-wow-offset="200">culture & values</h2>
+    <p class="heading-subtitle subtitle-culture wow zoomIn"
+       data-wow-offset="200">Proin iaculis purus consequat sem cure.</p>
+    <div class="culture__items">
+      <div class="culture__item wow slideInLeft" data-wow-offset="200">
+        <div class="ico-culture ico-music"></div>
+        <h3 class="heading-3">work-life balance</h3>
+        <p class="item__description">Proin iaculis purus consequat sem
+                                     cure digni ssim. Donec porttitora entum suscipit aenean rhoncus
+                                     posuere odio in tincidunt.</p>
+      </div>
+      <div class="culture__item wow zoomInUp" data-wow-offset="200">
+        <div class="ico-culture ico-level"></div>
+        <h3 class="heading-3">quality over quantity</h3>
+        <p class="item__description">Proin iaculis purus consequat sem
+                                     cure digni ssim. Donec porttitora entum suscipit aenean rhoncus
+                                     posuere odio in tincidunt.</p>
+      </div>
+      <div class="culture__item wow slideInRight" data-wow-offset="200">
+        <div class="ico-culture ico-star"></div>
+        <h3 class="heading-3">deliver exellence</h3>
+        <p class="item__description">Proin iaculis purus consequat sem
+                                     cure digni ssim. Donec porttitora entum suscipit aenean rhoncus
+                                     posuere odio in tincidunt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end CULTURE section======-->
+<!--======begin CLIENTS======-->
+<section class="clients">
+  <div class="container">
+    <div class="clients__content">
+      <h2 class="heading-2 heading-2-clients wow bounce"
+          data-wow-offset="200">our awesome clients</h2>
+      <p class="heading-subtitle subtitle-clients wow zoomIn"
+         data-wow-offset="200">Proin iaculis purus consequat sem cure.</p>
+      <div class="clients__comments">
+        <div class="clients__client-comment-1 wow zoomInLeft"
+             data-wow-offset="200"><img class="clients__picture" src="./assets/img/clients/client1.jpg">
+          <div class="client__text-1">
+            <p class="client__comment">“ Proin iaculis purus consequat sem
+                                       cure digni ssim &nbsp;&nbsp;donec porttitora entum suscipit
+                                       aenean rhoncus. ”</p>
+            <p class="client__comment-author">- Jamie Richardson, Founder
+                                              of Cocoa Media</p>
+          </div>
+        </div>
+        <div class="clients__client-comment-2 wow zoomInRight"
+             data-wow-offset="200">
+          <div class="client__text-2">
+            <p class="client__comment">“ Proin iaculis purus consequat sem
+                                       cure digni ssim &nbsp;&nbsp;donec porttitora entum suscipit
+                                       aenean rhoncus. ”</p>
+            <p class="client__comment-author">- Kim Thompson, Founder of
+                                              Rainel</p>
+          </div>
+          <img class="clients__picture" src="./assets/img/clients/client2.jpg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end CLIENTS======-->
+<!--======begin TALK section======-->
+<section class="talk">
+  <div class="container">
+    <div class="talk__content">
+      <h2 class="heading-2 heading-2-talk wow slideInUp"
+          data-wow-offset="200">ready to talk about your next project?</h2>
+      <a class="button-talk wow wobble" data-wow-offset="200" href="javascript:void(0)">contact us</a>
+    </div>
+  </div>
+</section>
+<!--======end TALK section======-->
+<!--======begin LOGOS section======-->
+<div class="logos">
+  <div class="container">
+    <div class="logo-carousel owl-carousel">
+      <div class="logos__item">
+        <img alt="picture" class="logos__pic" src="assets/img/logo/logo1.png"></div>
+      <div class="logos__item">
+        <img alt="picture" class="logos__pic" src="assets/img/logo/logo2.png"></div>
+      <div class="logos__item">
+        <img alt="picture" class="logos__pic" src="assets/img/logo/logo3.png"></div>
+      <div class="logos__item">
+        <img alt="picture" class="logos__pic" src="assets/img/logo/logo4.png"></div>
+      <div class="logos__item">
+        <img alt="picture" class="logos__pic" src="assets/img/logo/logo5.png"></div>
+      <div class="logos__item">
+        <img alt="picture" class="logos__pic" src="assets/img/logo/logo6.png"></div>
+    </div>
+  </div>
+</div>
+<!--======end LOGOS section======-->
+<!--======begin FOOTER======-->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__items">
+        <div class="footer__contacts footer__item">
+          <h3 class="heading-3 heading-footer">contact us</h3>
+          <div class="footer__text">
+            <div class="footer__text-outer">
+              <svg class="icon icon-location ">
+                <use xlink:href="assets/img/symbol/sprite.svg#location"></use>
+              </svg>
+              <div class="footer__text-string text-adr">
+                <p class="contacts">55 Main St. Toronto, ON
+                                    M1H 3A5</p>
+              </div>
+            </div>
+            <div class="footer__text-outer">
+              <svg class="icon icon-iphone ">
+                <use xlink:href="assets/img/symbol/sprite.svg#iphone"></use>
+              </svg>
+              <div class="footer__text-string">
+                <a class="footer__text-link" href="tel:4165555252">(416) 555-5252</a>
+              </div>
+            </div>
+            <div class="footer__text-outer">
+              <svg class="icon icon-email ">
+                <use xlink:href="assets/img/symbol/sprite.svg#email"></use>
+              </svg>
+              <div class="footer__text-string">
+                <a class="footer__text-link" href="mailto:hello@treehouse.com">hello@treehouse.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__posts footer__item">
+          <h3 class="heading-3 heading-footer">latest posts
+          </h3>
+          <div class="footer__text">
+            <div class="footer__text-outer post-string">
+              <svg class="icon icon-news ">
+                <use xlink:href="assets/img/symbol/sprite.svg#news"></use>
+              </svg>
+              <div class="footer__text-string">
+                <a class="footer__text-link" href="javascript:void(0)">Made With Love In Toronto</a>
+              </div>
+            </div>
+            <div class="footer__text-outer post-string">
+              <svg class="icon icon-photo ">
+                <use xlink:href="assets/img/symbol/sprite.svg#photo"></use>
+              </svg>
+              <div class="footer__text-string">
+                <a class="footer__text-link" href="javascript:void(0)">Startup News & Emerging Tech</a>
+              </div>
+            </div>
+            <div class="footer__text-outer post-string">
+              <svg class="icon icon-news ">
+                <use xlink:href="assets/img/symbol/sprite.svg#news"></use>
+              </svg>
+              <div class="footer__text-string">
+                <a class="footer__text-link" href="javascript:void(0)">Bitcoiin Will Soon Rule The World</a>
+              </div>
+            </div>
+            <div class="footer__text-outer post-string">
+              <svg class="icon icon-news ">
+                <use xlink:href="assets/img/symbol/sprite.svg#news"></use>
+              </svg>
+              <div class="footer__text-string">
+                <a class="footer__text-link" href="javascript:void(0)">Wearable Technology On The Rise</a>
+              </div>
+            </div>
+            <div class="footer__text-outer post-string">
+              <svg class="icon icon-media ">
+                <use xlink:href="assets/img/symbol/sprite.svg#media"></use>
+              </svg>
+              <div class="footer__text-string">
+                <a class="footer__text-link" href="javascript:void(0)">Learn Web Design In 30 Days</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__tweets footer__item">
+          <h3 class="heading-3 heading-footer">latest tweets
+          </h3>
+          <div class="footer__text">
+            <div class="footer__text-outer tweet-string">
+              <svg class="icon icon-twitter ">
+                <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+              </svg>
+              <div class="footer__tweet">
+                <a class="footer__text-link tweets" href="javascript:void(0)">Confucius: Life is really simple, but we
+                                                                              insist on making it complicated.</a><a
+                      class="footer__twitter-tag" href="javascript:void(0)">#famousquotes</a>
+                <p class="footer__twitter-data">8 mins ago</p>
+              </div>
+            </div>
+            <div class="footer__text-outer tweet-string">
+              <svg class="icon icon-twitter ">
+                <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+              </svg>
+              <div class="footer__tweet">
+                <a class="footer__text-link tweets" href="javascript:void(0)">Grab the Free Treehouse web template at
+                                                                              FreebiesXpress!</a><a
+                      class="footer__twitter-tag" href="javascript:void(0)">#freebies</a><a class="footer__twitter-tag"
+                                                                                            href="javascript:void(0)">#templates</a>
+                <p class="footer__twitter-data">2 days ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <p class="footer__copy">© Copyright 2014
+                              FreebiesXpress.com</p>
+      <div class="footer__social">
+        <a class="social__link social__link--tw" href="javascript:void(0)">
+          <svg class="icon icon-twitter ">
+            <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+          </svg>
+        </a><a class="social__link social__link--fb" href="javascript:void(0)">
+        <svg class="icon icon-facebook ">
+          <use xlink:href="assets/img/symbol/sprite.svg#facebook"></use>
+        </svg>
+      </a><a class="social__link social__link--pin" href="javascript:void(0)">
+        <svg class="icon icon-pinterest ">
+          <use xlink:href="assets/img/symbol/sprite.svg#pinterest"></use>
+        </svg>
+      </a><a class="social__link social__link--gp" href="javascript:void(0)">
+        <svg class="icon icon-google-plus ">
+          <use xlink:href="assets/img/symbol/sprite.svg#google-plus"></use>
+        </svg>
+      </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--======end FOOTER======-->
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/libs.min.js"></script>
+<script src="./assets/js/custom.js"></script>
+<script>
+    $(function () {
+        jQuery(document).ready(function () {
+            $('#loader').delay(1000).fadeOut('slow');
+        });
+    })
+</script>
+</body>
+
+</html>
