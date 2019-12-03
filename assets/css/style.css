@@ -4,6 +4,30 @@
 
 /*===============CSS=====================================*/
 
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+
+    src: url('../fonts/MontserratBold/MontserratBold.woff2') format('woff2'), url('../fonts/MontserratBold/MontserratBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+
+    src: url('../fonts/MontserratRegular/MontserratRegular.woff2') format('woff2'), url('../fonts/MontserratRegular/MontserratRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+
+    src: url('../fonts/MontserratSemiBoldRegular/MontserratSemiBoldRegular.woff2') format('woff2'), url('../fonts/MontserratSemiBoldRegular/MontserratSemiBoldRegular.woff') format('woff');
+}
+
 /*======ADJUSTMENT======*/
 
 html {
@@ -11,7 +35,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     line-height: 1.2;
 
@@ -68,6 +92,9 @@ ol {
 /*======END ADJUSTMENT======*/
 
 .top-wrapper {
+    display: -webkit-box;
+    display: flex;
+
     width: 100%;
     height: 100vh;
 
@@ -78,14 +105,16 @@ ol {
     background-size: cover;
 
     background-blend-mode: overlay;
-}
-
-.top-items {
-    padding-top: 20%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
 }
 
 .top-title {
-    font-size: 3.75rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
     line-height: 1.2;
 
     margin-bottom: 40px;
@@ -94,8 +123,9 @@ ol {
 }
 
 .top-text {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 400;
 
     margin-bottom: 30px;
 
@@ -103,10 +133,236 @@ ol {
 }
 
 .top-info {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 600;
 
     color: #fff;
 }
 
+/*======begin PORTFOLIO section======*/
+
+.portfolio {
+    padding-top: 80px;
+    padding-bottom: 55px;
+
+    background-color: #fff;
+}
+
+.section__header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    margin-bottom: 60px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio__items {
+    display: -webkit-box;
+    display: flex;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+
+    width: 30.70175439%;
+    height: 475px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    border: 1px solid #c0c0c0;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, .5);
+}
+
+.portfolio-item__wrapper {
+    margin-bottom: 15px;
+}
+
+.portfolio-item__wrapper img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.portfolio-item__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio-item__description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+.portfolio-item__button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background-color: deepskyblue;
+}
+
+.portfolio-item__button:hover {
+    color: deepskyblue;
+    border-color: deepskyblue;
+    background-color: #fff;
+}
+
+/*======end PORTFOLIO section======*/
+
+/*======begin FOOTER======*/
+
+.footer {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: #000;
+}
+
+.footer__copy {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    color: #fff;
+}
+
+.footer__copy span {
+    font-weight: 400;
+
+    margin-right: 20px;
+}
+
+.footer__copy .icon {
+    display: inline-block;
+
+    margin-right: 5px;
+    margin-left: 5px;
+
+    fill: red;
+}
+
+.footer__copy .icon-heart {
+    width: 16px;
+    height: 16px;
+
+    vertical-align: middle;
+}
+
+/*======end FOOTER======*/
+
 /*======begin MEDIA QUERIES======*/
+
+@media (min-width: 320px) {
+    .top-title {
+        font-size: calc(2.97619048vw + 1.90476rem);
+    }
+
+    .top-text {
+        font-size: calc(1.48809524vw + 1.57738rem);
+    }
+
+    .top-info {
+        font-size: calc(1.48809524vw + 1.57738rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .top-title {
+        font-size: 3.75rem;
+    }
+
+    .top-text {
+        font-size: 2.5rem;
+    }
+
+    .top-info {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 852px) {
+    .portfolio-item {
+        width: 46.94835681%;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio {
+        padding-top: 50px;
+    }
+
+    .section__header {
+        margin-bottom: 40px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 400px;
+        height: initial;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .portfolio-item__title {
+        margin-bottom: 15px;
+    }
+
+    .portfolio-item__description {
+        margin-bottom: 20px;
+    }
+}
