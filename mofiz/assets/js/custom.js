@@ -15,32 +15,32 @@ $(function () {
       dotsContainer   : '.team-carousel-pager',
       dotClass        : 'team-dot',
       responsive      : {
-          0  : {
-              items: 1,
-        margin     : 10,
-              dots : true
+          0   : {
+              items : 1,
+              margin: 10,
+              dots  : true
       },
-          361: {
-              items: 1,
-        margin     : 10,
-              dots : true
+          361 : {
+              items : 1,
+              margin: 10,
+              dots  : true
       },
-          576: {
-              items: 2,
-        margin     : 15,
-              dots : true
+          576 : {
+              items : 2,
+              margin: 15,
+              dots  : true
       },
-          853: {
+          853 : {
               items: 3,
               dots : true,
               loop : true,
         margin: 15
       },
-      1200   : {
-          items: 4,
-          dots : true,
-          loop : true,
-        margin : 15
+          1200: {
+              items : 4,
+              dots  : true,
+              loop  : true,
+              margin: 15
       }
     }
   });
@@ -57,22 +57,22 @@ $(function () {
       dotsContainer   : '.blog-pager',
       dotClass        : 'blog-dot',
       responsive      : {
-          0  : {
-              items: 1,
-        margin     : 30,
-              dots : true
+          0   : {
+              items : 1,
+              margin: 30,
+              dots  : true
       },
-          361: {
-              items: 1,
-        margin     : 10,
-              dots : true
+          361 : {
+              items : 1,
+              margin: 10,
+              dots  : true
       },
-          576: {
-              items: 2,
-        margin     : 10,
-              dots : true
+          576 : {
+              items : 2,
+              margin: 10,
+              dots  : true
       },
-          853: {
+          853 : {
               items : 3,
               dots  : true,
               loop  : true,
@@ -80,11 +80,11 @@ $(function () {
               center: false,
         autoplay: true
       },
-      1100   : {
-          items : 3,
-          dots  : false,
-          loop  : true,
-          margin: 30,
+          1100: {
+              items : 3,
+              dots  : false,
+              loop  : true,
+              margin: 30,
         autoplay: true
       }
     }
@@ -104,57 +104,57 @@ $(function () {
         margin: 30
       },
       480: {
-          items: 3,
-        margin : 30
+          items : 3,
+          margin: 30
       },
       576: {
-          items: 4,
-        margin : 30
+          items : 4,
+          margin: 30
       },
       768: {
-          items: 4,
-        margin : 30
+          items : 4,
+          margin: 30
       },
       853: {
-          items: 5,
-        margin : 30
+          items : 5,
+          margin: 30
       },
       992: {
-          items: 6,
-        margin : 30
+          items : 6,
+          margin: 30
       }
     }
   }); //======BX-SLIDER======================================
 
   $('.testi-slider').bxSlider({
-      mode       : 'fade',
+      mode        : 'fade',
     // тип перехода между слайдами может быть 'horizontal', 'vertical', 'fade'
-      captions   : false,
+      captions    : false,
     // отображение title
-      easing     : 'easeInOutQuad',
+      easing      : 'easeInOutQuad',
     // анимация слайда
-      controls   : false,
+      controls    : false,
     // отображение стрелки - вперед, назад
-      startSlide : 0,
+      startSlide  : 0,
     // Показ начнется с заданного слайда
-    infiniteLoop : true,
+      infiniteLoop: true,
     // показывать первый слайд за последним
-      autoHover  : true,
+      autoHover   : true,
     // пауза при наведении на слайд
-      pager      : true,
+      pager       : true,
     // показ номера страницы
-      pagerCustom: '.testi-pager',
-      auto       : true,
+      pagerCustom : '.testi-pager',
+      auto        : true,
     // сделать автоматический переход
-    autoControls : false,
+      autoControls: false,
     // показывает кнопку плей и стоп
-      video      : true,
+      video       : true,
     // включить видео
-      pause      : 4000,
+      pause       : 4000,
     // время между сменой слайдов в м-сек
-      speed      : 500,
+      speed       : 500,
     // длительность перехода слайда в м-сек
-      useCSS     : false // CSS переходы
+      useCSS      : false // CSS переходы
 
   }); //======SCROLL TO TOP==================================
 
