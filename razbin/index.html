@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Razbin Home</title>
+  <link href="assets/img/favicon.png" rel="icon"
+        type="image/vnd.microsoft.icon">
+  <link href="assets/css/libs.min.css" rel="stylesheet">
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: #111;
+    }
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+<button class="btn-top"
+        title="Go To Top"><span><svg class="arrow__img"><use
+        xlink:href="assets/img/symbol/sprite.svg#angle-up"></use></svg></span></button>
+<!--======begin HOME-WRAPPER======-->
+<div class="home-wrapper">
+  <!--======begin HEADER======-->
+  <header class="header" id="home">
+    <!--======begin NAVBAR-HOME======-->
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__items">
+          <div class="nav__logo-wrapper">
+            <img alt="logo" class="nav__logo" src="assets/img/logo/logo.png"></div>
+          <!--#-->
+          <div class="menu-icon menu-icon-3">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+          </div>
+          <!--#-->
+          <ul class="nav__list">
+            <!--#-->
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="#home">home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About Us</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#service">Services</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#price">pricing</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#portfolio">Portfolio</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#team">Team</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#blog">Blog</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--======end NAVBAR-HOME======-->
+  </header>
+  <!--======end HEADER======-->
+  <!--======begin HOME-BANNER======-->
+  <section class="home-banner">
+    <ul class="home-banner__slider">
+      <li>
+        <div class="home-banner__item"
+             style="background: url('assets/img/background/corporate1.jpg') rgba(0, 0, 0, 0.7)">
+          <div class="container">
+            <div class="home-banner__text">
+              <h1 class="home-banner__title">Our core Vision & Strategy
+              </h1>
+              <div class="home-banner__text-wrapper">
+                <p class="home-banner__subtitle">Lorem ipsum dolor sit
+                                                 amet, consectetur adipiscielit. Sed egestas sapien sit
+                                                 amet ipsum commodo ultricies. Proin in magna a ipsum
+                                                 viverra scel erisque eu nec turp, Nunc vestibulum frin
+                                                 gilla accumsan</p>
+              </div>
+              <button class="home-banner__button">get in
+                                                  touch
+              </button>
+            </div>
+          </div>
+        </div><!-- /.home-banner__item-->
+      </li>
+      <li>
+        <div class="home-banner__item"
+             style="background: url('assets/img/background/corporate2.jpg') rgba(0, 0, 0, 0.7)">
+          <div class="container">
+            <div class="home-banner__text">
+              <h1 class="home-banner__title">Our main Vision & Strategy
+              </h1>
+              <div class="home-banner__text-wrapper">
+                <p class="home-banner__subtitle">Lorem ipsum dolor sit
+                                                 amet, consectetur adipiscielit. Sed egestas sapien sit
+                                                 amet ipsum commodo ultricies. Proin in magna a ipsum
+                                                 viverra scel erisque eu nec turp, Nunc vestibulum frin
+                                                 gilla accumsan</p>
+              </div>
+              <button class="home-banner__button">get in
+                                                  touch
+              </button>
+            </div>
+          </div>
+        </div><!-- /.home-banner__item-->
+      </li>
+      <li>
+        <div class="home-banner__item"
+             style="background: url('assets/img/background/corporate3.jpg') rgba(0, 0, 0, 0.7)">
+          <div class="container">
+            <div class="home-banner__text">
+              <h1 class="home-banner__title">Our best Vision & Strategy
+              </h1>
+              <div class="home-banner__text-wrapper">
+                <p class="home-banner__subtitle">Lorem ipsum dolor sit
+                                                 amet, consectetur adipiscielit. Sed egestas sapien sit
+                                                 amet ipsum commodo ultricies. Proin in magna a ipsum
+                                                 viverra scel erisque eu nec turp, Nunc vestibulum frin
+                                                 gilla accumsan</p>
+              </div>
+              <button class="home-banner__button">get in
+                                                  touch
+              </button>
+            </div>
+          </div>
+        </div><!-- /.home-banner__item-->
+      </li>
+    </ul>
+  </section>
+  <!--======end HOME-BANNER======-->
+</div>
+<!--======end HOME-WRAPPER======-->
+<!--======begin WELCOME section======-->
+<section class="welcome">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">Welcome
+                                                                  to our Company</h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <div class="welcome__items">
+      <div class="welcome-item wow slideInLeft" data-wow-offset="200">
+        <div class="welcome-item__icon">
+          <svg class="icon icon-pen ">
+            <use xlink:href="assets/img/symbol/sprite.svg#pen"></use>
+          </svg>
+        </div>
+        <h3 class="welcome-item__title">clean design</h3>
+        <p class="item-text">Lorem ipsum dolor sit amet, consectetuer
+                             adipiscing elit. Aenean commodo ligula eget massa Cum sociis
+                             natoque</p>
+      </div>
+      <div class="welcome-item wow slideInUp" data-wow-offset="200">
+        <div class="welcome-item__icon">
+          <svg class="icon icon-screen ">
+            <use xlink:href="assets/img/symbol/sprite.svg#screen"></use>
+          </svg>
+        </div>
+        <h3 class="welcome-item__title">easy customization</h3>
+        <p class="item-text">Lorem ipsum dolor sit amet, consectetuer
+                             adipiscing elit. Aenean commodo ligula eget massa Cum sociis
+                             natoque</p>
+      </div>
+      <div class="welcome-item wow slideInRight" data-wow-offset="200">
+        <div class="welcome-item__icon">
+          <svg class="icon icon-tap ">
+            <use xlink:href="assets/img/symbol/sprite.svg#tap"></use>
+          </svg>
+        </div>
+        <h3 class="welcome-item__title">seo optimized</h3>
+        <p class="item-text">Lorem ipsum dolor sit amet, consectetuer
+                             adipiscing elit. Aenean commodo ligula eget massa Cum sociis
+                             natoque</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end WELCOME section======-->
+<!--======begin ABOUT section======-->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-header about-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">Some
+                                                                  Words About Us</h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <div class="about-content">
+      <div class="about__image-wrapper wow zoomInLeft"
+           data-wow-offset="200"><img alt="man" src="assets/img/about/man.jpg">
+        <div class="about__image-label"><span>about us</span></div>
+      </div>
+      <div class="about__description wow slideInRight"
+           data-wow-offset="200">
+        <p class="item-text about-text">To achieve this, it would be
+                                        necessary to have uniform grammar, pronunciation and more common
+                                        words. If several languages coalesce, the grammar of the
+                                        resulting language is more simple and regular than that of the
+                                        individual languages. The new common language will be more
+                                        simple and regular than the existing European anguages. t will
+                                        be as simple as Occidental; in fact, it will be
+                                        Occidental.European anguages are members of the same family.
+                                        Their separate existence is a myth. Forcience, music, sport,
+                                        etc, Europe uses the same vocabulary. The languages only differ
+                                        in their grammar, their pronunciation and their most.</p>
+        <p class="item-text about-text">sit amet adipiscing sem neque sed
+                                        ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+                                        id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec
+                                        vitae sapien ut libero venenatis faucibus.</p>
+        <a class="about__button" href="javascript:void(0);">Our projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end ABOUT section======-->
+<!--======begin SERVICES section======-->
+<section class="services" id="service">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">our
+                                                                  awesome Services </h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <div class="services-content">
+      <div class="services-item wow services-item--even zoomInLeft"
+           data-wow-offset="200">
+        <div class="services-item__icon">
+          <svg class="icon icon-diamond ">
+            <use xlink:href="assets/img/symbol/sprite.svg#diamond"></use>
+          </svg>
+        </div>
+        <div class="services-item__data">
+          <h4 class="services-item__title">Brand Stategy</h4>
+          <p class="item-text services-text">One morning, when Gregor
+                                             Samsa woke from troubled dreams, he found himself transformed
+                                             in his bed ihorrible</p>
+        </div>
+      </div>
+      <div class="services-item wow services-item--odd zoomInRight"
+           data-wow-offset="200">
+        <div class="services-item__icon">
+          <svg class="icon icon-film-strip ">
+            <use xlink:href="assets/img/symbol/sprite.svg#film-strip"></use>
+          </svg>
+        </div>
+        <div class="services-item__data">
+          <h4 class="services-item__title">Digital Media</h4>
+          <p class="item-text services-text">One morning, when Gregor
+                                             Samsa woke from troubled dreams, he found himself transformed
+                                             in his bed ihorrible</p>
+        </div>
+      </div>
+      <div class="services-item wow services-item--even zoomInLeft"
+           data-wow-offset="200">
+        <div class="services-item__icon">
+          <svg class="icon icon-ufo ">
+            <use xlink:href="assets/img/symbol/sprite.svg#ufo"></use>
+          </svg>
+        </div>
+        <div class="services-item__data">
+          <h4 class="services-item__title">Corporate Identity</h4>
+          <p class="item-text services-text">One morning, when Gregor
+                                             Samsa woke from troubled dreams, he found himself transformed
+                                             in his bed ihorrible</p>
+        </div>
+      </div>
+      <div class="services-item wow services-item--odd zoomInRight"
+           data-wow-offset="200">
+        <div class="services-item__icon">
+          <svg class="icon icon-taurus ">
+            <use xlink:href="assets/img/symbol/sprite.svg#taurus"></use>
+          </svg>
+        </div>
+        <div class="services-item__data">
+          <h4 class="services-item__title">Marketing Stategy</h4>
+          <p class="item-text services-text">One morning, when Gregor
+                                             Samsa woke from troubled dreams, he found himself transformed
+                                             in his bed ihorrible</p>
+        </div>
+      </div>
+      <div class="services-item wow services-item--even zoomInLeft"
+           data-wow-offset="200">
+        <div class="services-item__icon">
+          <svg class="icon icon-victory ">
+            <use xlink:href="assets/img/symbol/sprite.svg#victory"></use>
+          </svg>
+        </div>
+        <div class="services-item__data">
+          <h4 class="services-item__title">Motion Picture</h4>
+          <p class="item-text services-text">One morning, when Gregor
+                                             Samsa woke from troubled dreams, he found himself transformed
+                                             in his bed ihorrible</p>
+        </div>
+      </div>
+      <div class="services-item wow services-item--odd zoomInRight"
+           data-wow-offset="200">
+        <div class="services-item__icon">
+          <svg class="icon icon-happiness ">
+            <use xlink:href="assets/img/symbol/sprite.svg#happiness"></use>
+          </svg>
+        </div>
+        <div class="services-item__data">
+          <h4 class="services-item__title">Photography</h4>
+          <p class="item-text services-text">One morning, when Gregor
+                                             Samsa woke from troubled dreams, he found himself transformed
+                                             in his bed ihorrible</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end SERVICES section======-->
+<!--======begin HIRE section======-->
+<section class="hire">
+  <div class="container">
+    <div class="hire__content">
+      <div class="hire__header">
+        <h2 class="hire__title wow zoomInUp" data-wow-offset="200">Sed ut
+                                                                   perspiciatis unde omnis iste natus</h2>
+        <div class="hire__text-wrapper">
+          <p class="hire__subtitle wow zoomInDown" data-wow-offset="200">
+            Waved about helplessly as he looked. "What's happened to me?"
+            he thought. It wasn His room a proper human room although</p>
+        </div>
+      </div>
+      <a class="hire__button wow wobble" data-wow-offset="200" href="javascript:void(0);">hire us</a>
+    </div>
+  </div>
+</section>
+<!--======end HIRE section======-->
+<!--======begin BLOCK section======-->
+<section class="promo">
+  <div class="container">
+    <div class="promo__content">
+      <div class="skills">
+        <div class="section__title section__title--right wow bounce"
+             data-wow-offset="200">Our Powerful Skills
+        </div>
+        <div class="section__icon section__icon--left wow zoomInUp"
+             data-wow-offset="200"></div>
+        <div class="promo__subtitle-right wow slideInLeft"
+             data-wow-offset="200">The European languages are members of the
+                                   same family. Their separate For science, music, sport, etc,
+                                   Europe uses the same vocabulary
+        </div>
+        <div class="skills-items">
+          <div class="skills-item wow slideInLeft" data-wow-offset="200">
+            <div class="skills-item__title">web design</div>
+            <div class="skills-item__chart-outer">
+              <div class="skill-item__chart" data-chart="70%"
+                   style="width:70%"></div>
+            </div>
+          </div><!-- /.skills-item-->
+          <div class="skills-item wow slideInLeft" data-wow-offset="200">
+            <div class="skills-item__title">web development</div>
+            <div class="skills-item__chart-outer">
+              <div class="skill-item__chart" data-chart="80%"
+                   style="width:80%"></div>
+            </div>
+          </div><!-- /.skills-item-->
+          <div class="skills-item wow slideInLeft" data-wow-offset="200">
+            <div class="skills-item__title">web design</div>
+            <div class="skills-item__chart-outer">
+              <div class="skill-item__chart" data-chart="87%"
+                   style="width:87%"></div>
+            </div>
+          </div><!-- /.skills-item-->
+          <div class="skills-item wow slideInLeft" data-wow-offset="200">
+            <div class="skills-item__title">marketing strategy</div>
+            <div class="skills-item__chart-outer">
+              <div class="skill-item__chart" data-chart="65%"
+                   style="width:65%"></div>
+            </div>
+          </div><!-- /.skills-item-->
+          <div class="skills-item wow slideInLeft" data-wow-offset="200">
+            <div class="skills-item__title">web design</div>
+            <div class="skills-item__chart-outer">
+              <div class="skill-item__chart" data-chart="90%"
+                   style="width:90%"></div>
+            </div>
+          </div><!-- /.skills-item-->
+        </div>
+      </div>
+      <div class="start">
+        <div class="section__title section__title--left wow slideInRight"
+             data-wow-offset="200">Start Build Your Business
+        </div>
+        <div class="section__icon section__icon--right wow zoomInDown"
+             data-wow-offset="200"></div>
+        <div class="promo__subtitle-left wow slideInRight"
+             data-wow-offset="200">The European languages are members of the
+                                   same family. Their separate For science, music, sport, etc,
+                                   Europe uses the same vocabulary
+        </div>
+        <div class="start-acc">
+          <div class="start-acc__item wow slideInRight"
+               data-wow-offset="200">
+            <div class="start-acc__item-inner">
+              <div class="start-acc__item-icon">
+                <svg class="icon icon-hourglass-start ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#hourglass-start"></use>
+                </svg>
+              </div>
+              <div class="start-acc__item-text">
+                <h5 class="start-acc__title">Powerful & Creative Design
+                                             Layouts</h5>
+              </div>
+            </div>
+            <p class="start-acc__desc">Pellentesque facilisis. Nulla
+                                       imperdiet sit amet magna. Vestibulum dapibus mauris nec
+                                       malesuada fames ac turpis velit, rhoncus eu, luctus et
+                                       interdum adipiscing wisi. Oestibulum laoreet enim. commodo
+                                       volutpat.</p>
+          </div><!-- /.start-acc__item-->
+          <div class="start-acc__item wow slideInRight"
+               data-wow-offset="200">
+            <div class="start-acc__item-inner">
+              <div class="start-acc__item-icon">
+                <svg class="icon icon-box ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#box"></use>
+                </svg>
+              </div>
+              <div class="start-acc__item-text">
+                <h5 class="start-acc__title">Stunning Portfolio and Blog
+                                             Layout Styles</h5>
+              </div>
+            </div>
+            <p class="start-acc__desc">Pellentesque facilisis. Nulla
+                                       imperdiet sit amet magna. Vestibulum dapibus mauris nec
+                                       malesuada fames ac turpis velit, rhoncus eu, luctus et
+                                       interdum adipiscing wisi. Oestibulum laoreet enim. commodo
+                                       volutpat.</p>
+          </div><!-- /.start-acc__item-->
+          <div class="start-acc__item wow slideInRight"
+               data-wow-offset="200">
+            <div class="start-acc__item-inner">
+              <div class="start-acc__item-icon">
+                <svg class="icon icon-laptop ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#laptop"></use>
+                </svg>
+              </div>
+              <div class="start-acc__item-text">
+                <h5 class="start-acc__title">Looks Awesome in All Mobile
+                                             Devices</h5>
+              </div>
+            </div>
+            <p class="start-acc__desc">Pellentesque facilisis. Nulla
+                                       imperdiet sit amet magna. Vestibulum dapibus mauris nec
+                                       malesuada fames ac turpis velit, rhoncus eu, luctus et
+                                       interdum adipiscing wisi. Oestibulum laoreet enim. commodo
+                                       volutpat.</p>
+          </div><!-- /.start-acc__item-->
+          <div class="start-acc__item wow slideInRight"
+               data-wow-offset="200">
+            <div class="start-acc__item-inner">
+              <div class="start-acc__item-icon">
+                <svg class="icon icon-stack-overflow ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#stack-overflow"></use>
+                </svg>
+              </div>
+              <div class="start-acc__item-text">
+                <h5 class="start-acc__title">Parallax & Video Slider
+                                             Backgrounds</h5>
+              </div>
+            </div>
+            <p class="start-acc__desc">Pellentesque facilisis. Nulla
+                                       imperdiet sit amet magna. Vestibulum dapibus mauris nec
+                                       malesuada fames ac turpis velit, rhoncus eu, luctus et
+                                       interdum adipiscing wisi. Oestibulum laoreet enim. commodo
+                                       volutpat.</p>
+          </div><!-- /.start-acc__item-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end BLOCK section======-->
+<!--======begin PRICE section======-->
+<section class="price" id="price">
+  <div class="container">
+    <div class="section-header price-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">Pricing
+                                                                  &amp; Planing</h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <div class="price-content">
+      <!--#-->
+      <div class="price-item wow zoomInDown" data-wow-offset="200">
+        <div class="price-item__header">
+          <h4 class="price-item__title">personal</h4>
+        </div>
+        <div class="price-item__data">
+          <div class="price-item__info"><span
+                  class="price-item__currency">$</span> <span
+                  class="price-item__cash">0</span> <span
+                  class="price-item__period">/mo</span></div>
+          <p class="price-item__text">No License</p>
+          <p class="price-item__text">3 GB Storage</p>
+          <p class="price-item__text">Unlimited Users</p>
+          <p class="price-item__text">15 GB Bandwith</p>
+          <p class="price-item__text">Editable Html File</p>
+          <p class="price-item__text">One click install</p>
+          <a class="price-item__button" href="javascript:void(0);">buy now</a>
+        </div>
+      </div><!-- /.price-item-->
+      <div class="price-item wow zoomInDown" data-wow-offset="200">
+        <div class="price-item__header-hot">
+          <h4 class="price-item__title">hot</h4>
+        </div>
+        <div class="price-item__data price-item__data--hot">
+          <div class="price-item__info"><span
+                  class="price-item__currency">$</span> <span
+                  class="price-item__cash">82</span> <span
+                  class="price-item__period">/mo</span></div>
+          <p class="price-item__text">Unlimited License</p>
+          <p class="price-item__text">Unlimited Storage</p>
+          <p class="price-item__text">Unlimited Users</p>
+          <p class="price-item__text">Unlimited Bandwith</p>
+          <p class="price-item__text">Editable Html File</p>
+          <p class="price-item__text">One click install</p>
+          <p class="price-item__text">Support 24/7</p>
+          <a class="price-item__button" href="javascript:void(0);">buy now</a>
+        </div>
+      </div><!-- /.price-item-->
+      <div class="price-item wow zoomInDown" data-wow-offset="200">
+        <div class="price-item__header">
+          <h4 class="price-item__title">standard</h4>
+        </div>
+        <div class="price-item__data">
+          <div class="price-item__info"><span
+                  class="price-item__currency">$</span> <span
+                  class="price-item__cash">45</span> <span
+                  class="price-item__period">/mo</span></div>
+          <p class="price-item__text">No License</p>
+          <p class="price-item__text">3 GB Storage</p>
+          <p class="price-item__text">Unlimited Users</p>
+          <p class="price-item__text">15 GB Bandwith</p>
+          <p class="price-item__text">Editable Html File</p>
+          <p class="price-item__text">One click install</p>
+          <a class="price-item__button" href="javascript:void(0);">buy now</a>
+        </div>
+      </div><!-- /.price-item-->
+      <div class="price-item wow zoomInDown" data-wow-offset="200">
+        <div class="price-item__header">
+          <h4 class="price-item__title">diamond</h4>
+        </div>
+        <div class="price-item__data">
+          <div class="price-item__info"><span
+                  class="price-item__currency">$</span> <span
+                  class="price-item__cash">35</span> <span
+                  class="price-item__period">/mo</span></div>
+          <p class="price-item__text">No License</p>
+          <p class="price-item__text">3 GB Storage</p>
+          <p class="price-item__text">Unlimited Users</p>
+          <p class="price-item__text">15 GB Bandwith</p>
+          <p class="price-item__text">Editable Html File</p>
+          <p class="price-item__text">One click install</p>
+          <a class="price-item__button" href="javascript:void(0);">buy now</a>
+        </div>
+      </div><!-- /.price-item-->
+    </div>
+  </div>
+</section>
+<!--======end PRICE section======-->
+<!--======begin FACTS section======-->
+<section class="facts">
+  <div class="container">
+    <div class="facts__content">
+      <div class="facts-item">
+        <div class="facts-item__inner">
+          <div class="facts-item__icon">
+            <svg class="icon icon-user ">
+              <use xlink:href="assets/img/symbol/sprite.svg#user"></use>
+            </svg>
+          </div>
+          <p class="facts-item__counter">123</p>
+          <h4 class="facts-item__title">Happy Clients</h4>
+        </div>
+      </div>
+      <div class="facts-item">
+        <div class="facts-item__inner">
+          <div class="facts-item__icon">
+            <svg class="icon icon-laptop ">
+              <use xlink:href="assets/img/symbol/sprite.svg#laptop"></use>
+            </svg>
+          </div>
+          <p class="facts-item__counter">235</p>
+          <h4 class="facts-item__title">websites complete</h4>
+        </div>
+      </div>
+      <div class="facts-item">
+        <div class="facts-item__inner">
+          <div class="facts-item__icon">
+            <svg class="icon icon-coffee ">
+              <use xlink:href="assets/img/symbol/sprite.svg#coffee"></use>
+            </svg>
+          </div>
+          <p class="facts-item__counter">36011</p>
+          <h4 class="facts-item__title">cups of coffee</h4>
+        </div>
+      </div>
+      <div class="facts-item">
+        <div class="facts-item__inner">
+          <div class="facts-item__icon">
+            <svg class="icon icon-comments ">
+              <use xlink:href="assets/img/symbol/sprite.svg#comments"></use>
+            </svg>
+          </div>
+          <p class="facts-item__data">24/7</p>
+          <h4 class="facts-item__title">friendly support</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end FACTS section======-->
+<!--======begin PROJECTS section======-->
+<section class="projects" id="portfolio">
+  <div class="container">
+    <div class="section-header projects-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">our
+                                                                  recent projects</h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+  </div>
+  <div class="project-tabs">
+    <div class="container">
+      <div class="projects-nav__wrapper">
+        <ul class="projects__nav">
+          <li class="projects__nav-item">
+            <a class="projects__nav-link" href="#projects-all">all</a>
+          </li>
+          <li class="projects__nav-item">
+            <a class="projects__nav-link" href="#projects-design">Web Design</a>
+          </li>
+          <li class="projects__nav-item">
+            <a class="projects__nav-link" href="#projects-branding">branding</a>
+          </li>
+          <li class="projects__nav-item">
+            <a class="projects__nav-link" href="#projects-photo">Photography</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="projects-content">
+      <div class="projects-content__item" id="projects-all">
+        <div class="projects-item__first">
+          <a data-fancybox="gallery1" href="assets/img/projects/project1.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project1.jpg"></a>
+        </div>
+        <div class="projects-item">
+          <a data-fancybox="gallery1" href="assets/img/projects/project2.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project2.jpg"></a>
+        </div>
+        <div class="projects-item">
+          <a data-fancybox="gallery1" href="assets/img/projects/project3.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project3.jpg"></a>
+        </div>
+        <div class="projects-item">
+          <a data-fancybox="gallery1" href="assets/img/projects/project4.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project4.jpg"></a>
+        </div>
+        <div class="projects-item">
+          <a data-fancybox="gallery1" href="assets/img/projects/project5.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project5.jpg"></a>
+        </div>
+      </div>
+      <div class="projects-content__item" id="projects-design">
+        <div class="projects-item">
+          <a data-fancybox="gallery2" href="assets/img/projects/project2.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project2.jpg"></a>
+        </div>
+        <div class="projects-item">
+          <a data-fancybox="gallery2" href="assets/img/projects/project3.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project3.jpg"></a>
+        </div>
+      </div>
+      <div class="projects-content__item" id="projects-branding">
+        <div class="projects-item">
+          <a data-fancybox="gallery3" href="assets/img/projects/project4.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project4.jpg"></a>
+        </div>
+        <div class="projects-item">
+          <a data-fancybox="gallery3" href="assets/img/projects/project5.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project5.jpg"></a>
+        </div>
+      </div>
+      <div class="projects-content__item" id="projects-photo">
+        <div class="projects-item">
+          <a data-fancybox="gallery4" href="assets/img/projects/project5.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project5.jpg"></a>
+        </div>
+        <div class="projects-item">
+          <a data-fancybox="gallery4" href="assets/img/projects/project3.jpg"><img alt="project"
+                                                                                   class="projects-item__image"
+                                                                                   src="assets/img/projects/project3.jpg"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end PROJECTS section======-->
+<!--======begin TEAM section======-->
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">awesome
+                                                                  team</h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <div class="team-carousel owl-carousel wow zoomInDown"
+         data-wow-offset="200">
+      <div class="team-item"><img alt="team member" class="team-item__image" src="assets/img/team/team1.jpg"/>
+        <div class="team-item__wrapper">
+          <div class="team-item__text">
+            <p class="team-item__name">james doe</p>
+            <p class="team-item__job">designer</p>
+          </div>
+          <ul class="team-social">
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-facebook-f ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-twitter ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-google-plus-g ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-behance ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-dribbble ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#dribbble"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-item"><img alt="team member" class="team-item__image" src="assets/img/team/team2.jpg"/>
+        <div class="team-item__wrapper">
+          <div class="team-item__text">
+            <p class="team-item__name">james doe</p>
+            <p class="team-item__job">designer</p>
+          </div>
+          <ul class="team-social">
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-facebook-f ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-twitter ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-google-plus-g ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-behance ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-dribbble ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#dribbble"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-item"><img alt="team member" class="team-item__image" src="assets/img/team/team3.jpg"/>
+        <div class="team-item__wrapper">
+          <div class="team-item__text">
+            <p class="team-item__name">james doe</p>
+            <p class="team-item__job">designer</p>
+          </div>
+          <ul class="team-social">
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-facebook-f ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-twitter ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-google-plus-g ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-behance ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-dribbble ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#dribbble"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-item"><img alt="team member" class="team-item__image" src="assets/img/team/team4.jpg"/>
+        <div class="team-item__wrapper">
+          <div class="team-item__text">
+            <p class="team-item__name">james doe</p>
+            <p class="team-item__job">designer</p>
+          </div>
+          <ul class="team-social">
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-facebook-f ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-twitter ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-google-plus-g ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-behance ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-dribbble ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#dribbble"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-item"><img alt="team member" class="team-item__image" src="assets/img/team/team5.jpg"/>
+        <div class="team-item__wrapper">
+          <div class="team-item__text">
+            <p class="team-item__name">james doe</p>
+            <p class="team-item__job">designer</p>
+          </div>
+          <ul class="team-social">
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-facebook-f ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-twitter ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-google-plus-g ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-behance ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-dribbble ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#dribbble"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-item"><img alt="team member" class="team-item__image" src="assets/img/team/team6.jpg"/>
+        <div class="team-item__wrapper">
+          <div class="team-item__text">
+            <p class="team-item__name">james doe</p>
+            <p class="team-item__job">designer</p>
+          </div>
+          <ul class="team-social">
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-facebook-f ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-twitter ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-google-plus-g ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-behance ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-social__item">
+              <a class="team-social__link" href="javascript:void(0);">
+                <svg class="icon icon-dribbble ">
+                  <use xlink:href="assets/img/symbol/sprite.svg#dribbble"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="team-carousel-pager"></div>
+  </div>
+</section>
+<!--======end TEAM section======-->
+<!--======begin BLOG section======-->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">latest
+                                                                  blog</h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <div class="blog-review">
+      <div class="blog-item">
+        <div class="blog-item__image-wrapper"
+             style="background-image: url('assets/img/blog/blog1.jpg');">
+          <a href="javascript:void(0);"></a></div>
+        <div class="blog-item__text-wrapper">
+          <p class="blog-item__data"><span>January 12, 2017</span> ||
+            <span>0 comments</span></p>
+          <h4 class="blog-item__title">
+            <a href="javascript:void(0);">When she reached the first hills of Mountains she had a last</a>
+          </h4>
+          <p class="blog-item__desription">A wonderful serenity has taken
+                                           possession of my entire soul, like these sweet mornings of
+                                           spring which I enjoy with my whole heart</p>
+          <a class="blog-item__link" href="javascript:void(0);">read more</a>
+        </div>
+      </div><!-- /.blog-item-->
+      <div class="blog-item">
+        <div class="blog-item__image-wrapper"
+             style="background-image: url('assets/img/blog/blog2.jpg');">
+          <a href="javascript:void(0);"></a></div>
+        <div class="blog-item__text-wrapper">
+          <p class="blog-item__data"><span>January 12, 2017</span> ||
+            <span>0 comments</span></p>
+          <h4 class="blog-item__title">
+            <a href="javascript:void(0);">When she reached the second hills of Mountains she had a last</a>
+          </h4>
+          <p class="blog-item__desription">A wonderful serenity has taken
+                                           possession of my entire soul, like these sweet mornings of
+                                           spring which I enjoy with my whole heart</p>
+          <a class="blog-item__link" href="javascript:void(0);">read more</a>
+        </div>
+      </div><!-- /.blog-item-->
+      <div class="blog-item">
+        <div class="blog-item__image-wrapper"
+             style="background-image: url('assets/img/blog/blog3.jpg');">
+          <a href="javascript:void(0);"></a></div>
+        <div class="blog-item__text-wrapper">
+          <p class="blog-item__data"><span>January 12, 2017</span> ||
+            <span>0 comments</span></p>
+          <h4 class="blog-item__title">
+            <a href="javascript:void(0);">When she reached the third hills of Mountains she had a last</a>
+          </h4>
+          <p class="blog-item__desription">A wonderful serenity has taken
+                                           possession of my entire soul, like these sweet mornings of
+                                           spring which I enjoy with my whole heart</p>
+          <a class="blog-item__link" href="javascript:void(0);">read more</a>
+        </div>
+      </div><!-- /.blog-item-->
+    </div>
+  </div>
+</section>
+<!--======end BLOG section======-->
+<!--======begin TESTIMONIALS section======-->
+<section class="what">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section__title wow bounce" data-wow-offset="200">what
+                                                                  clients say</h2>
+      <div class="section__icon wow zoomInDown" data-wow-offset="200">
+      </div>
+      <p class="section__subtitle wow slideInLeft" data-wow-offset="200">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <ul class="what-slider">
+      <li class="what-item"><img alt="man" class="what-item__image" src="assets/img/what/testimonial1.jpg">
+        <div class="what-item__text-wrapper">
+          <p class="what-item__text">Sed ut perspiciatis unde omnis iste
+                                     natus error sit voluptatem accusantium doloremque laudantium,
+                                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                     et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                                     enim luptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                     sed quia consequuntur</p>
+          <p class="what-item__name">Jon Doe</p>
+          <p class="what-item__job">ceo, ratet systems</p>
+        </div>
+      </li><!-- /.what-item-->
+      <li class="what-item"><img alt="man" class="what-item__image" src="assets/img/what/testimonial2.jpg">
+        <div class="what-item__text-wrapper">
+          <p class="what-item__text">Sed ut perspiciatis unde omnis iste
+                                     natus error sit voluptatem accusantium doloremque laudantium,
+                                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                     et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                                     enim luptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                     sed quia consequuntur</p>
+          <p class="what-item__name">Tony Doe</p>
+          <p class="what-item__job">ceo, ratet systems</p>
+        </div>
+      </li><!-- /.what-item-->
+      <li class="what-item"><img alt="man" class="what-item__image" src="assets/img/what/testimonial3.jpg">
+        <div class="what-item__text-wrapper">
+          <p class="what-item__text">Sed ut perspiciatis unde omnis iste
+                                     natus error sit voluptatem accusantium doloremque laudantium,
+                                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                     et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                                     enim luptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                     sed quia consequuntur</p>
+          <p class="what-item__name">Mike Doe</p>
+          <p class="what-item__job">ceo, ratet systems</p>
+        </div>
+      </li><!-- /.what-item-->
+    </ul>
+    <div class="what-slider-pager">
+      <!--#--><a data-slide-index="0"></a>
+      <!--#--><a data-slide-index="1"></a>
+      <!--#--><a data-slide-index="2"></a>
+      <!--#-->
+    </div>
+  </div>
+</section>
+<!--======end TESTIMONIALS section======-->
+<!--======begin CLIENTS section======-->
+<section class="clients">
+  <div class="clients-carousel owl-carousel">
+    <div class="clients__item">
+      <img alt="client" class="clients__image" src="assets/img/clients/client1.jpg"></div>
+    <div class="clients__item">
+      <img alt="client" class="clients__image" src="assets/img/clients/client2.jpg"></div>
+    <div class="clients__item">
+      <img alt="client" class="clients__image" src="assets/img/clients/client3.jpg"></div>
+    <div class="clients__item">
+      <img alt="client" class="clients__image" src="assets/img/clients/client4.jpg"></div>
+    <div class="clients__item">
+      <img alt="client" class="clients__image" src="assets/img/clients/client5.jpg"></div>
+    <div class="clients__item">
+      <img alt="client" class="clients__image" src="assets/img/clients/client6.jpg"></div>
+  </div>
+</section>
+<!--======end CLIENTS section======-->
+<!--======begin CONTACTS section======-->
+<section class="contacts" id="contacts">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section__title section__title--lite wow bounce"
+          data-wow-offset="200">get in touch</h2>
+      <div class="section__icon section__icon--lite wow zoomInDown"
+           data-wow-offset="200"></div>
+      <p class="section__subtitle section__subtitle--lite wow slideInLeft"
+         data-wow-offset="200">Lorem ipsum dolor sit amet, consectetuer
+                               adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                               Cum sociis natoque penatibus et magnis dis parturient montes,
+                               nascetur ridiculus mus.</p>
+    </div>
+    <div class="contacts-content">
+      <div class="contacts-data">
+        <div class="contacts-item wow slideInLeft" data-wow-offset="200">
+          <div class="contacts-item__icon">
+            <svg class="icon icon-paper-plane ">
+              <use xlink:href="assets/img/symbol/sprite.svg#paper-plane"></use>
+            </svg>
+          </div>
+          <div class="contacts-item__info">
+            <h4 class="contacts-item__title">Our Office</h4>
+            <p class="contacts-item__text">795 Folsom Ave, Suite 600</p>
+            <p class="contacts-item__text">San Francisco, CA 94107</p>
+          </div>
+        </div>
+        <div class="contacts-item wow slideInLeft" data-wow-offset="200">
+          <div class="contacts-item__icon">
+            <svg class="icon icon-phone ">
+              <use xlink:href="assets/img/symbol/sprite.svg#phone"></use>
+            </svg>
+          </div>
+          <div class="contacts-item__info">
+            <h4 class="contacts-item__title">Phone</h4>
+            <a class="contacts-item__link" href="tel:918547632521">(91) 8547 632521</a><a class="contacts-item__link"
+                                                                                          href="tel:911147521433">(91)
+                                                                                                                  11
+                                                                                                                  4752
+                                                                                                                  1433</a>
+          </div>
+        </div>
+        <div class="contacts-item wow slideInLeft" data-wow-offset="200">
+          <div class="contacts-item__icon">
+            <svg class="icon icon-envelope ">
+              <use xlink:href="assets/img/symbol/sprite.svg#envelope"></use>
+            </svg>
+          </div>
+          <div class="contacts-item__info">
+            <h4 class="contacts-item__title">Email</h4>
+            <a class="contacts-item__link" href="mailto:info@example.com">info@example.com</a><a
+                  class="contacts-item__link" href="mailto:mail@example.com">mail@example.com</a>
+          </div>
+        </div>
+      </div>
+      <form action="/" class="contacts-form" method="get">
+        <div class="contacts-form__inner">
+          <!--#--><label for="first"></label><input
+                class="contacts-form__input contacts-form__first wow zoomInDown"
+                data-wow-offset="200" id="first" maxlength="200" name="first"
+                placeholder="First Name" required="required"
+                type="text">
+          <!--#--><label for="last"></label><input
+                class="contacts-form__input contacts-form__last wow zoomInDown"
+                data-wow-offset="200" id="last" maxlength="200" name="last"
+                placeholder="Last Name" required="required" type="text">
+          <!--#--><label for="email"></label><input
+                class="contacts-form__input contacts-form__email wow zoomInDown"
+                data-wow-offset="200" id="email" maxlength="200" name="email"
+                placeholder="Last E-mail" required="required"
+                type="email">
+          <!--#--><label for="subject"></label><input
+                class="contacts-form__input contacts-form__subject wow zoomInDown"
+                data-wow-offset="200" id="subject" maxlength="200" name="subject"
+                placeholder="Subject" required="required" type="text">
+          <!--#--><label for="message"></label><textarea
+                class="contacts-form__input contacts-form__message wow zoomInDown"
+                data-wow-offset="200" id="message" maxlength="1500"
+                name="message" placeholder="Message"
+                required="required"></textarea></div>
+        <input
+                class="contacts-form__button wow jackInTheBox" data-wow-offset="200"
+                id="submit" name="submit" type="submit" value="send">
+      </form>
+    </div>
+  </div>
+</section>
+<!--======end CONTACTS section======-->
+<!--======begin FOOTER======-->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+      <a href="index.html#home"><img alt="logo" class="footer__logo" src="assets/img/logo/logo.png"></a>
+      <p class="footer__copy">&copy; Copyright 2027 Made with
+        <span><svg class="icon icon-heart "><use xlink:href="assets/img/symbol/sprite.svg#heart"></use></svg></span>
+                              by Designer.&nbsp;
+      </p>
+      <p class="footer__rights">All Rights Reserved.</p>
+      <div class="footer-social">
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-facebook-f ">
+              <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-twitter ">
+              <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-google-plus-g ">
+              <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-linkedin-in ">
+              <use xlink:href="assets/img/symbol/sprite.svg#linkedin-in"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-instagram ">
+              <use xlink:href="assets/img/symbol/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-behance ">
+              <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--======end FOOTER======-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/libs.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        $("#preloader").fadeOut("slow");
+    });
+</script>
+</body>
+
+</html>
