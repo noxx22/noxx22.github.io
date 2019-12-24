@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Razbin Blog Post</title>
+  <link href="assets/img/favicon.png" rel="icon"
+        type="image/vnd.microsoft.icon">
+  <link href="assets/css/libs.min.css" rel="stylesheet">
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: #111;
+    }
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+<button class="btn-top"
+        title="Go To Top"><span><svg class="arrow__img"><use
+        xlink:href="assets/img/symbol/sprite.svg#angle-up"></use></svg></span></button>
+<!--======begin HEADER-BLOG======-->
+<header class="header-blog" id="home">
+  <!--======begin NAVBAR-BLOG======-->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__items">
+        <div class="nav__logo-wrapper">
+          <a href="index.html#home"><img alt="logo" class="nav__logo" src="assets/img/logo/logo.png"></a>
+        </div>
+        <!--#-->
+        <div class="menu-icon menu-icon-3">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </div>
+        <!--#-->
+        <ul class="nav__list">
+          <!--#-->
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#home">home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#about">About Us</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#service">Services</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#price">pricing</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#portfolio">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#team">Team</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#blog">Blog</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#contacts">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--======end NAVBAR-BLOG======-->
+</header>
+<!--======end HEADER-BLOG======-->
+<!--======begin BANNER-BLOG SECTION======-->
+<section class="banner-blog"
+         style="background: url('assets/img/background/blog-bg.jpg') rgba(0, 0, 0, 0.7)">
+  <div class="container">
+    <h1 class="banner-blog__title">our latest blog</h1>
+  </div>
+</section>
+<!--======end BANNER-BLOG SECTION======-->
+<!--======begin MAIN-SINGLE section======-->
+<section class="main">
+  <div class="container">
+    <div class="main-content">
+      <!--======begin SINGLE-POST section======-->
+      <section class="single-post">
+        <div class="post-items">
+          <div class="post-item">
+            <div class="post-item__image-wrapper wow flipInX"
+                 data-wow-offset="200">
+              <img alt="post image" class="post-item__image" src="assets/img/blogpage/blogpage2.jpg"></div>
+            <div class="post-item__data wow jackInTheBox"
+                 data-wow-offset="200">
+              <div class="post-item__string">
+                <span><svg class="icon icon-user "><use
+                        xlink:href="assets/img/symbol/sprite.svg#user"></use></svg></span>
+                <a class="post-item__text" href="javascript:void(0);">Admin</a>
+              </div>
+              <div class="post-item__string">
+                <span><svg class="icon icon-clock-nine "><use
+                        xlink:href="assets/img/symbol/sprite.svg#clock-nine"></use></svg></span>
+                <span class="post-item__text">September 3, 2017</span>
+              </div>
+              <div class="post-item__string">
+                <span><svg class="icon icon-comment "><use
+                        xlink:href="assets/img/symbol/sprite.svg#comment"></use></svg></span>
+                <span class="post-item__text">4 Comments</span></div>
+            </div>
+            <h3 class="post-item__title wow slideInLeft"
+                data-wow-offset="200">Lorem ipsum dolor sit amet,
+                                      consectetur adipisicing elitsed do eiusmod tempor
+                                      incididunt ut labore et dolore</h3>
+            <p class="post-item__description wow zoomInUp"
+               data-wow-offset="200">But I must explain to you how all
+                                     this mistaken idea of denouncing pleasure and praising
+                                     pain was born and I will give you a complete account of
+                                     the system, and expound the actual teachings of the great
+                                     explorer of the truth, the master-builder of human
+                                     happiness. No one rejects, dislikes, or avoids pleasure
+                                     itself, because it is pleasure, but because those who do
+                                     not know how to pursue pleasure rationally encounter
+                                     consequences that are extremely painful. Nor again is
+                                     there anyone who loves or pursues or desires to obtain
+                                     pain of itself, because it is pain, but because
+                                     occasionally circumstances occur in which toil and pain
+                                     can procure him some great pleasure. To take a trivial
+                                     example, which of us ever undertakes laborious physical
+                                     exercise, except to obtain some advantage from it? But who
+                                     has any right to find fault with a man who chooses to
+                                     enjoy a pleasure that has no annoying consequences, or one
+                                     who avoids a pain that produces no resultant pleasure? On
+                                     the other hand, we denounce with righteous indignation and
+                                     dislike men who are so beguiled and demoralized by the
+                                     charms of pleasure of the moment, so blinded by desire,
+                                     that they cannot foresee</p>
+            <p class="post-item__description wow zoomInUp"
+               data-wow-offset="200">But I must explain to you how all
+                                     this mistaken idea of denouncing pleasure and praising
+                                     pain was born and I will give you a complete account of
+                                     the system, and expound the actual teachings of the great
+                                     explorer of the truth, the master-builder of human
+                                     happiness. No one rejects, dislikes, or avoids pleasure
+                                     itself, because it is pleasure, but because those who do
+                                     not know how to pursue pleasure rationally encounter
+                                     consequences that are extremely painful. Nor again is
+                                     there anyone who loves or pursues or desires to obtain
+                                     pain of itself, because it is pain, but because
+                                     occasionally circumstances occur in which toil and pain
+                                     can procure him some great pleasure. To take a trivial
+                                     example, which of us ever undertakes laborious physical
+                                     exercise, except to obtain some advantage from it? But who
+                                     has any right to find fault with a man who chooses to
+                                     enjoy a pleasure that has no annoying consequences, or one
+                                     who avoids a pain that produces no resultant pleasure? On
+                                     the other hand, we denounce with righteous indignation and
+                                     dislike men who are so beguiled and demoralized by the
+                                     charms of pleasure of the moment, so blinded by desire,
+                                     that they cannot foresee</p>
+            <p class="post-item__description wow zoomInUp"
+               data-wow-offset="200">But I must explain to you how all
+                                     this mistaken idea of denouncing pleasure and praising
+                                     pain was born and I will give you a complete account of
+                                     the system, and expound the actual teachings of the great
+                                     explorer of the truth, the master-builder of human
+                                     happiness. No one rejects, dislikes, or avoids pleasure
+                                     itself, because it is pleasure, but because those who do
+                                     not know how to pursue pleasure rationally encounterfi
+                                     that they cannot foresee</p>
+          </div>
+        </div>
+        <h3 class="single-form-title wow slideInRight"
+            data-wow-offset="200">Write your comment Here</h3>
+        <form action="/" class="single-form" method="get">
+          <div class="single-form__inner"><label class="wow slideInLeft"
+                                                 data-wow-offset="200" for="username"><input
+                  class="single-form__input" id="username" maxlength="300"
+                  name="username" placeholder="Your Name"
+                  type="text"></label><label
+                  class="wow slideInRight" data-wow-offset="200"
+                  for="usermail"><input class="single-form__input"
+                                        id="usermail" maxlength="300" name="usermail"
+                                        placeholder="Your Email" type="email"></label></div>
+          <textarea class="single-form__text wow zoomInUp" data-wow-offset="200"
+                    id="usertext" maxlength="1000"
+                    name="usertext"
+                    placeholder="Your Comment Here"></textarea><input
+                class="single-form__send wow jackInTheBox" data-wow-offset="200"
+                id="submit" name="submit" type="submit"
+                value="Post Comment">
+        </form>
+      </section>
+      <!--======end SINGLE-POST section======-->
+      <!--======begin SIDEBAR======-->
+      <aside class="sidebar">
+        <div class="widget-search wow wobble" data-wow-offset="200">
+          <form action="/" class="search-form" method="get"><label
+                  for="search"></label>
+            <!--#--><input class="search-form__input" id="search"
+                           maxlength="300" name="search" placeholder="Search"
+                           title="Site Search" type="search">
+            <!--#-->
+            <button
+                    class="search-form__button"><span><svg class="icon icon-search-form "><use
+                    xlink:href="assets/img/symbol/sprite.svg#search-form"></use></svg></span></button>
+          </form>
+        </div>
+        <div class="widget-categories wow zoomInLeft"
+             data-wow-offset="200">
+          <h3 class="widget-title">categories</h3>
+          <div class="section__icon widget-icon"></div>
+          <ul class="widget-categories__list">
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Web Design</a><span>(03)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Web Development</a><span>(02)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Graphic Design</a><span>(03)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Logo Design</a><span>(01)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">UI &amp; UX</a><span>(04)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Wordpress</a><span>(12)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Html Templates</a><span>(04)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Freebie</a><span>(02)</span>
+            </li>
+            <li class="widget-categories__item">
+              <a href="javascript:void(0);">Joomla</a><span>(04)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="widget-posts wow zoomInRight" data-wow-offset="200">
+          <h3 class="widget-title">recent posts</h3>
+          <div class="section__icon widget-icon"></div>
+          <ul class="widget-posts__list">
+            <li class="widget-posts__item">
+              <a href="javascript:void(0);">Create a Minimal Website</a>
+            </li>
+            <li class="widget-posts__item">
+              <a href="javascript:void(0);">Minimal Design Concept</a>
+            </li>
+            <li class="widget-posts__item">
+              <a href="javascript:void(0);">Quo epicuri vituperata ad</a>
+            </li>
+            <li class="widget-posts__item">
+              <a href="javascript:void(0);">Most of its text is made up from</a>
+            </li>
+          </ul>
+        </div>
+        <div class="widget-archive wow zoomInLeft" data-wow-offset="200">
+          <h3 class="widget-title">archives</h3>
+          <div class="section__icon widget-icon"></div>
+          <ul class="widget-archive__list">
+            <li class="widget-archive__item">
+              <a href="javascript:void(0);">February 2027</a></li>
+            <li class="widget-archive__item">
+              <a href="javascript:void(0);">January 2027</a></li>
+            <li class="widget-archive__item">
+              <a href="javascript:void(0);">December 2026</a></li>
+          </ul>
+        </div>
+        <div class="widget-tags wow zoomInRight" data-wow-offset="200">
+          <h3 class="widget-title">tags</h3>
+          <div class="section__icon widget-icon"></div>
+          <ul class="widget-tags__list">
+            <li class="widget-tags__item">
+              <a href="javascript:void(0);">joomla</a></li>
+            <li class="widget-tags__item">
+              <a href="javascript:void(0);">corporate</a></li>
+            <li class="widget-tags__item">
+              <a href="javascript:void(0);">web</a></li>
+            <li class="widget-tags__item">
+              <a href="javascript:void(0);">wordpress</a></li>
+            <li class="widget-tags__item">
+              <a href="javascript:void(0);">onepage</a></li>
+            <li class="widget-tags__item">
+              <a href="javascript:void(0);">business</a></li>
+          </ul>
+        </div>
+      </aside>
+      <!--======end SIDEBAR======-->
+    </div>
+  </div>
+</section>
+<!--======end MAIN-SINGLE section======-->
+<!--======begin FOOTER======-->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+      <a href="index.html#home"><img alt="logo" class="footer__logo" src="assets/img/logo/logo.png"></a>
+      <p class="footer__copy">&copy; Copyright 2027 Made with
+        <span><svg class="icon icon-heart "><use xlink:href="assets/img/symbol/sprite.svg#heart"></use></svg></span>
+                              by Designer.&nbsp;
+      </p>
+      <p class="footer__rights">All Rights Reserved.</p>
+      <div class="footer-social">
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-facebook-f ">
+              <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-twitter ">
+              <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-google-plus-g ">
+              <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-linkedin-in ">
+              <use xlink:href="assets/img/symbol/sprite.svg#linkedin-in"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-instagram ">
+              <use xlink:href="assets/img/symbol/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-social__item">
+          <a href="javascript:void(0);">
+            <svg class="icon icon-behance ">
+              <use xlink:href="assets/img/symbol/sprite.svg#behance"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--======end FOOTER======-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/libs.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        $("#preloader").fadeOut("slow");
+    });
+</script>
+</body>
+
+</html>
