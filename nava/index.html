@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Nava Home</title>
+  <link href="assets/img/favicon.png" rel="icon"
+        type="image/vnd.microsoft.icon">
+  <link href="assets/css/libs.min.css" rel="stylesheet">
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: #111;
+    }
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+<!--======begin HEADER======-->
+<header class="header" id="home">
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img alt="nava logo" height="33px" src="assets/img/logo/logo.png" width="166px"></div>
+      <ul class="navbar-nav">
+        <li class="nav-item current">
+          <a class="nav-link nav-link--active" href="#home">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#destination">top destinations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#boats">add your boat</a></li>
+      </ul>
+      <button class="navbar-auth">sign up</button>
+      <div class="menu-icon menu-icon-3">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--======end HEADER======-->
+<!--======begin HERO section======-->
+<section class="hero"
+         style="background-image: url('assets/img/background/hero-bg.jpg')">
+  <div class="container">
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <h1 class="hero__title">reserve a boat now!</h1>
+        <p class="hero__subtitle">and set your sails into paradise!</p>
+        <form action="/" class="hero-form" method="get"><input
+                class="hero-form__input" id="boat" maxlength="200" name="boat"
+                placeholder="What is your DESTINATION, SAILOR?"
+                type="search">
+          <button
+                  class="hero-form__button"><span><svg class="icon icon-sailboat "><use
+                  xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span>
+            find a boat
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end HERO section======-->
+<!--======begin FACTS section======-->
+<section class="facts">
+  <div class="container">
+    <div class="facts-items">
+      <div class="facts-item">
+        <h3 class="facts-item__title">2,300</h3>
+        <p class="facts-item__subtitle">Destinations</p>
+      </div>
+      <!--#-->
+      <div class="facts-item">
+        <h3 class="facts-item__title">1,000</h3>
+        <p class="facts-item__subtitle">Cities</p>
+      </div>
+      <!--#-->
+      <div class="facts-item">
+        <h3 class="facts-item__title">35,000</h3>
+        <p class="facts-item__subtitle">Boats</p>
+      </div>
+      <!--#-->
+      <div class="facts-item">
+        <h3 class="facts-item__title">50,000</h3>
+        <p class="facts-item__subtitle">Sailors</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end FACTS section======-->
+<!--======begin EXPLORE section======-->
+<section class="explore" id="destination">
+  <div class="container">
+    <h2 class="section-title wow swing" data-wow-offset="200">explore our
+                                                              top destinations</h2>
+    <p class="section-subtitle wow zoomInDown" data-wow-offset="200">Lorem
+                                                                     ipsum dolor sit amet, consectetur adipisicing elit,
+                                                                     sed do eiusmod
+                                                                     tempor incididunt ut labore et</p>
+    <div class="explore-items">
+      <div class="explore-item wow flipInX" data-wow-offset="200"><img class="explore-item__image"
+                                                                       src="assets/img/destination/dest1.jpg"/>
+        <div class="explore-item__text">
+          <div class="explore-item__quantity">
+            <span><svg class="icon icon-sailboat "><use xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span><span
+                  class="explore-item__number">730</span></div>
+          <div class="explore-item__destination">
+            <h3 class="explore-item__title">Figuera da Foz</h3>
+            <p class="explore-item__country">Portugal</p>
+          </div>
+        </div>
+      </div>
+      <div class="explore-item wow flipInX" data-wow-offset="200"><img class="explore-item__image"
+                                                                       src="assets/img/destination/dest2.jpg"/>
+        <div class="explore-item__text">
+          <div class="explore-item__quantity">
+            <span><svg class="icon icon-sailboat "><use xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span><span
+                  class="explore-item__number">621</span></div>
+          <div class="explore-item__destination">
+            <h3 class="explore-item__title">Ibiza</h3>
+            <p class="explore-item__country">Spain</p>
+          </div>
+        </div>
+      </div>
+      <div class="explore-item wow flipInX" data-wow-offset="200"><img class="explore-item__image"
+                                                                       src="assets/img/destination/dest3.jpg"/>
+        <div class="explore-item__text">
+          <div class="explore-item__quantity">
+            <span><svg class="icon icon-sailboat "><use xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span><span
+                  class="explore-item__number">543</span></div>
+          <div class="explore-item__destination">
+            <h3 class="explore-item__title">Palma de Mallorca</h3>
+            <p class="explore-item__country">Spain</p>
+          </div>
+        </div>
+      </div>
+      <div class="explore-item wow flipInX" data-wow-offset="200"><img class="explore-item__image"
+                                                                       src="assets/img/destination/dest4.jpg"/>
+        <div class="explore-item__text">
+          <div class="explore-item__quantity">
+            <span><svg class="icon icon-sailboat "><use xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span><span
+                  class="explore-item__number">495</span></div>
+          <div class="explore-item__destination">
+            <h3 class="explore-item__title">Portofino</h3>
+            <p class="explore-item__country">Italy</p>
+          </div>
+        </div>
+      </div>
+      <div class="explore-item wow flipInX" data-wow-offset="200"><img class="explore-item__image"
+                                                                       src="assets/img/destination/dest5.jpg"/>
+        <div class="explore-item__text">
+          <div class="explore-item__quantity">
+            <span><svg class="icon icon-sailboat "><use xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span><span
+                  class="explore-item__number">402</span></div>
+          <div class="explore-item__destination">
+            <h3 class="explore-item__title">Port Hercules</h3>
+            <p class="explore-item__country">Monaco</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="explore-button wow rollIn" data-wow-offset="200" href="javascript:void(0);">explore more destinations</a>
+  </div>
+</section>
+<!--======end EXPLORE section======-->
+<!--======begin CTA section======-->
+<section class="cta"
+         style="background-image: url('assets/img/background/cta-bg.jpg')">
+  <div class="container">
+    <h2 class="cta__title wow slideInLeft" data-wow-offset="200">have your
+                                                                 own boat?</h2>
+    <h3 class="cta__subtitle wow slideInRight" data-wow-offset="200">
+      navigare necesse est, vivere non est necesse</h3>
+    <a class="cta__button wow rollIn" data-wow-offset="200" href="javascript:void(0);">Make money with your boat</a>
+  </div>
+</section>
+<!--======end CTA section======-->
+<!--======begin BOATS section=======-->
+<section class="boats" id="boats">
+  <div class="container">
+    <h2 class="section-title wow wobble" data-wow-offset="200">featured
+                                                               boats</h2>
+    <p class="section-subtitle wow zoomInDown" data-wow-offset="200">Lorem
+                                                                     ipsum dolor sit amet, consectetur adipisicing elit,
+                                                                     sed do eiusmod
+    </p>
+    <div class="boats-items">
+      <div class="boats-item wow flipInX" data-wow-offset="200"><img alt="image" class="boats-item__image"
+                                                                     src="assets/img/boat/boat1.jpg"/>
+        <div class="boats-item__text">
+          <div class="boats-item__price">&euro; 580 / day</div>
+          <div class="boats-item__data">
+            <p class="boats-item__boat">Delphia 47</p>
+            <div class="boats-item__info">
+              <div class="boats-item__string">
+                <span><svg class="icon icon-map-marker-alt "><use
+                        xlink:href="assets/img/symbol/sprite.svg#map-marker-alt"></use></svg></span><span
+                      class="boats-item__desc">Gdansk, Poland</span></div>
+              <div class="boats-item__string">
+                <span><svg class="icon icon-user-friends "><use
+                        xlink:href="assets/img/symbol/sprite.svg#user-friends"></use></svg></span><span
+                      class="boats-item__desc">8 Berths</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="boats-item wow flipInX" data-wow-offset="200"><img alt="image" class="boats-item__image"
+                                                                     src="assets/img/boat/boat2.jpg"/>
+        <div class="boats-item__text">
+          <div class="boats-item__price">&euro; 950 / day</div>
+          <div class="boats-item__data">
+            <p class="boats-item__boat">Sense 55</p>
+            <div class="boats-item__info">
+              <div class="boats-item__string">
+                <span><svg class="icon icon-map-marker-alt "><use
+                        xlink:href="assets/img/symbol/sprite.svg#map-marker-alt"></use></svg></span><span
+                      class="boats-item__desc">Portofino, Italy</span></div>
+              <div class="boats-item__string">
+                <span><svg class="icon icon-user-friends "><use
+                        xlink:href="assets/img/symbol/sprite.svg#user-friends"></use></svg></span><span
+                      class="boats-item__desc">12 Berths</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="boats-item wow flipInX" data-wow-offset="200"><img alt="image" class="boats-item__image"
+                                                                     src="assets/img/boat/boat3.jpg"/>
+        <div class="boats-item__text">
+          <div class="boats-item__price">&euro; 820 / day</div>
+          <div class="boats-item__data">
+            <p class="boats-item__boat">Cruiser 51</p>
+            <div class="boats-item__info">
+              <div class="boats-item__string">
+                <span><svg class="icon icon-map-marker-alt "><use
+                        xlink:href="assets/img/symbol/sprite.svg#map-marker-alt"></use></svg></span><span
+                      class="boats-item__desc">Palma de Mallorca, Spain</span>
+              </div>
+              <div class="boats-item__string">
+                <span><svg class="icon icon-user-friends "><use
+                        xlink:href="assets/img/symbol/sprite.svg#user-friends"></use></svg></span><span
+                      class="boats-item__desc">10 Berths</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="boats-item wow flipInX" data-wow-offset="200"><img alt="image" class="boats-item__image"
+                                                                     src="assets/img/boat/boat4.jpg"/>
+        <div class="boats-item__text">
+          <div class="boats-item__price">&euro; 400 / day</div>
+          <div class="boats-item__data">
+            <p class="boats-item__boat">Cruiser 41S</p>
+            <div class="boats-item__info">
+              <div class="boats-item__string">
+                <span><svg class="icon icon-map-marker-alt "><use
+                        xlink:href="assets/img/symbol/sprite.svg#map-marker-alt"></use></svg></span><span
+                      class="boats-item__desc">Lisbon, Portugal</span></div>
+              <div class="boats-item__string">
+                <span><svg class="icon icon-user-friends "><use
+                        xlink:href="assets/img/symbol/sprite.svg#user-friends"></use></svg></span><span
+                      class="boats-item__desc">8 Berths</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="boats-button wow rollIn" data-wow-offset="200" href="javascript:void(0);">load more boats</a>
+  </div>
+</section>
+<!--======end BOATS section=======-->
+<!--======begin FOOTER======-->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-widgets">
+      <div class="footer-widget-top">
+        <h3 class="footer-widget__title">top locations</h3>
+        <ul class="footer-widget__list">
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Lorem ipsum dolor </a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Sit amet consectetur </a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Adipisicing elit</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Eiusmod tempor</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Incididunt ut labore</a>
+          </li>
+        </ul>
+      </div>
+      <!--#-->
+      <div class="footer-widget-boats">
+        <h3 class="footer-widget__title">featured boats</h3>
+        <ul class="footer-widget__list">
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Lorem ipsum dolor</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Sit amet consectetur</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Adipisicing elit</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Eiusmod tempor</a>
+          </li>
+        </ul>
+      </div>
+      <!--#-->
+      <div class="footer-widget-subscribe">
+        <h3 class="footer-widget__title">subscribe to our newsletters</h3>
+        <form action="/" class="footer-form" method="get"><input
+                class="footer-form__input" id="mail" maxlength="150" name="mail"
+                placeholder="Your email address" type="emai">
+          <button
+                  class="footer-form__button">subscribe
+          </button>
+        </form>
+        <ul class="footer-social">
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="javascript:void(0);">
+              <svg class="icon icon-facebook-f ">
+                <use xlink:href="assets/img/symbol/sprite.svg#facebook-f"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="javascript:void(0);">
+              <svg class="icon icon-twitter ">
+                <use xlink:href="assets/img/symbol/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="javascript:void(0);">
+              <svg class="icon icon-google-plus-g ">
+                <use xlink:href="assets/img/symbol/sprite.svg#google-plus-g"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-widget-contacts">
+        <h3 class="footer-widget__title">contact us</h3>
+        <ul class="footer-widget__list">
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Lorem ipsum dolor</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Sit amet consectetur</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Adipisicing elit</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Eiusmod tempor</a>
+          </li>
+          <li class="footer-widget__item">
+            <a class="footer-widget__link" href="javascript:void(0);">Incididunt ut labore </a>
+          </li>
+        </ul>
+      </div>
+      <!--#-->
+    </div>
+  </div>
+</footer>
+<!--======end FOOTER======-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/libs.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        $("#preloader").fadeOut("slow");
+    });
+</script>
+</body>
+
+</html>
