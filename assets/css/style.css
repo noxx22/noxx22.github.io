@@ -218,25 +218,14 @@ ol {
     flex-direction: column;
 
     width: 50%;
-    padding-right: 20px;
-    padding-bottom: 25px;
-    padding-left: 20px;
+    padding: 20px 20px 15px;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
 }
 
-.item--odd .portfolio-item__title {
-    text-align: right;
-}
-
-.item--odd .portfolio-item__description {
-    text-align: right;
-}
-
 .portfolio-item__title {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .portfolio-item__title:hover a {
@@ -246,7 +235,7 @@ ol {
 
 .portfolio-item__title a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
 
@@ -262,13 +251,76 @@ ol {
 
 .portfolio-item__description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.4;
+
+    margin-bottom: 15px;
 
     text-align: left;
 
     color: #363636;
+}
+
+.portfolio-item__tech {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    color: dimgray;
+}
+
+.portfolio-item__tech span {
+    font-weight: 400;
+
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+}
+
+.portfolio-item__inner {
+    display: inline-block;
+
+    margin-top: auto;
+    padding-left: 20px;
+
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background-color: #03beff;
+
+    align-self: center;
+}
+
+.portfolio-item__inner span {
+    padding-top: 7px;
+
+    vertical-align: middle;
+}
+
+.portfolio-item__inner span .icon-binoculars {
+    width: 20px;
+    height: 18px;
+
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    fill: #fff;
+}
+
+.portfolio-item__inner:hover {
+    border-color: #03beff;
+    background-color: #fff;
+}
+
+.portfolio-item__inner:hover span .icon {
+    fill: #03beff;
+}
+
+.portfolio-item__inner:hover .portfolio-item__button {
+    color: #03beff;
 }
 
 .portfolio-item__button {
@@ -279,26 +331,15 @@ ol {
 
     display: inline-block;
 
-    margin-top: auto;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 10px;
 
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    vertical-align: middle;
     text-decoration: none;
     text-transform: uppercase;
 
     color: #fff;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    background-color: #03beff;
-
-    align-self: center;
-}
-
-.portfolio-item__button:hover {
-    color: #03beff;
-    border-color: #03beff;
-    background-color: #fff;
 }
 
 /*======end PORTFOLIO section======*/
@@ -425,10 +466,6 @@ ol {
     .portfolio {
         padding-bottom: 70px;
     }
-
-    .portfolio-item__title {
-        margin-top: calc(26.78571429vw - 185.71428571px);
-    }
 }
 
 @media (min-width: 992px) {
@@ -443,13 +480,9 @@ ol {
     .top-info {
         font-size: 2.5rem;
     }
-
-    .portfolio-item__title {
-        margin-top: 80px;
-    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 852px) {
     .portfolio-item {
         display: block;
     }
@@ -464,17 +497,16 @@ ol {
         width: 100%;
     }
 
-    .item--odd .portfolio-item__title,
-    .item--odd .portfolio-item__description {
-        text-align: left;
-    }
-
     .portfolio-item__title {
         margin-top: 30px;
     }
 
     .portfolio-item__description {
         margin-bottom: 25px;
+    }
+
+    .portfolio-item__tech {
+        margin-bottom: 20px;
     }
 }
 
