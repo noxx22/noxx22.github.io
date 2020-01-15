@@ -16,8 +16,8 @@
         class="btn-arrow"><svg class="icon icon-angle-up "><use
         xlink:href="assets/img/symbol/sprite.svg#angle-up"></use></svg></span></button>
 <!--#-->
-<div class="top-wrapper"
-     style="background: url('assets/img/background/top-bg.jpg') rgba(5, 4, 38, 0.6);">
+<div class="top-wrapper" id="home"
+     style="background-image: url('assets/img/background/top-bg.jpg');">
   <div class="container">
     <div class="top-items">
       <h1 class="top-title">Site is under construction</h1>
@@ -26,8 +26,33 @@
     </div>
   </div>
 </div>
+<!--======begin HEADER======-->
+<header class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="header__icon">
+        <div class="menu-icon menu-icon-3">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </div>
+      </div>
+      <ul class="header-nav">
+        <li class="header-nav__item">
+          <a class="header-nav__link header-nav__link--active" href="#home">home</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="index.html#portfolio">portfolio</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="about.html">about</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!--======end HEADER======-->
 <!--======begin PORTFOLIO section======-->
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
   <div class="container">
     <div class="portfolio__content">
       <h2 class="section__header">portfolio</h2>
@@ -269,6 +294,7 @@
 </footer>
 <!--======end FOOTER======-->
 <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/libs.min.js"></script>
 <script src="assets/js/custom.js"></script>
 </body>
 
