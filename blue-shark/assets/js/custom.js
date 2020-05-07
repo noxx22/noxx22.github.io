@@ -1,9 +1,11 @@
 "use strict";
 
 $(document).ready(function () {
+    /*======SKILL CHARTS ANIMATION======*/
     $("#skills-circle1").circliful({
         animation            : 1,
         animationStep        : 5,
+        animateInView        : true,
         foregroundBorderWidth: 15,
         backgroundBorderWidth: 15,
         backgroundColor      : '#ececec',
@@ -15,6 +17,7 @@ $(document).ready(function () {
     $("#skills-circle2").circliful({
         animation            : 1,
         animationStep        : 5,
+        animateInView        : true,
         foregroundBorderWidth: 15,
         backgroundBorderWidth: 15,
         backgroundColor      : '#ececec',
@@ -26,6 +29,7 @@ $(document).ready(function () {
     $("#skills-circle3").circliful({
         animation            : 1,
         animationStep        : 5,
+        animateInView        : true,
         foregroundBorderWidth: 15,
         backgroundBorderWidth: 15,
         backgroundColor      : '#ececec',
@@ -37,6 +41,7 @@ $(document).ready(function () {
     $("#skills-circle4").circliful({
         animation            : 1,
         animationStep        : 5,
+        animateInView        : true,
         foregroundBorderWidth: 15,
         backgroundBorderWidth: 15,
         backgroundColor      : '#ececec',
@@ -45,9 +50,19 @@ $(document).ready(function () {
         percentageTextSize   : 32,
         textAdditionalCss    : 'font-weight: light'
     });
-    $('.nav-link').mPageScroll2id({
+    /*======SMOOTH SCROLL======*/
+
+    $(".nav-link, a[href^='#']").mPageScroll2id({
         highlightClass      : "active",
         forceSingleHighlight: false
+    });
+    var $btnTop = $('.btn-top');
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() >= 100) {
+            $btnTop.fadeIn();
+        } else {
+            $btnTop.fadeOut();
+        }
     });
 });
 new WOW().init();
