@@ -7,105 +7,21 @@
   <title>Web Development Project</title>
   <link href="assets/img/favicon.png" rel="icon"
         type="image/vnd.microsoft.icon">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/libs.min.css" rel="stylesheet">
   <link href="assets/css/style.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #111;
-    }
-
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1000;
-      background-color: #111;
-    }
-
-    #loader {
-      display: block;
-      position: relative;
-      left: 50%;
-      top: 50%;
-      width: 150px;
-      height: 150px;
-      margin: -75px 0 0 -75px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #9370DB;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-    }
-
-    #loader:before {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #BA55D3;
-      -webkit-animation: spin 3s linear infinite;
-      animation: spin 3s linear infinite;
-    }
-
-    #loader:after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #FF00FF;
-      -webkit-animation: spin 1.5s linear infinite;
-      animation: spin 1.5s linear infinite;
-    }
-
-    @-webkit-keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-  </style>
 </head>
 <body>
-<button class="btn-top"><span class="fa fa-angle-up"></span></button>
 <div id="preloader">
   <div id="loader"></div>
 </div>
+<div class="btn-top">
+  <a href="#home"><span class="fa fa-angle-up"></span></a></div>
 <!--======begin HEADER======-->
-<header class="header">
+<header class="header" id="home">
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#"><img alt="logo" class="logo" src="assets/img/logo/logo.png"></a>
+    <nav class="navbar navbar-expand-lg navbar-light"><span
+            class="navbar-brand"><img alt="logo" class="logo" src="assets/img/logo/logo.png"></span>
       <button
               aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"
               class="navbar-toggler" data-target="#navbarContent"
@@ -113,8 +29,8 @@
               class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
@@ -133,7 +49,7 @@
 <!--======end HEADER======-->
 <!--======begin HERO section======-->
 <section class="hero text-center"
-         style="background-image: url('assets/img/background/header.png')">
+         style="background-image: url('assets/img/background/hero-bg.jpg')">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -148,6 +64,8 @@
         </button>
       </div>
     </div>
+    <div class="btn-scroll">
+      <a href="#about"><span class="fa fa-angle-down"></span></a></div>
   </div>
 </section>
 <!--======end HERO section======-->
@@ -156,34 +74,34 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h2 class="section__title about__title wow rubberBand">About Us
-        </h2>
-        <p class="section__subtitle about__subtitle wow zoomIn">Lorem
-                                                                ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                                do
-                                                                eiusmod tempor incididunt ut labore et dolore magna
-                                                                aliqua. Ut
-                                                                enim ad minim veniam,</p>
+        <h2 class="section__title about__title wow rubberBand"
+            data-wow-offset="300">About Us</h2>
+        <p class="section__subtitle about__subtitle wow zoomIn"
+           data-wow-offset="300">Lorem ipsum dolor sit amet, consectetur
+                                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                 dolore magna aliqua. Ut enim ad minim veniam,</p>
       </div>
     </div>
     <div class="row">
       <!--#1-->
-      <div class="col-md-4 about__item wow slideInLeft"><span
+      <div class="col-md-4 about__item wow slideInLeft"
+           data-wow-offset="300"><span
               class="about__icon icon-internet"></span>
         <h3 class="item__title">Awesome Icons</h3>
         <p class="item__text">Lorem ipsum dolor sit amet, consectetur
                               adipisicing elit, sed do eiusmod tempor</p>
       </div>
       <!--#2-->
-      <div class="col-md-4 about__item wow zoomInDown"><span
+      <div class="col-md-4 about__item wow zoomInDown"
+           data-wow-offset="300"><span
               class="about__icon icon-transfer"></span>
         <h3 class="item__title">One Page</h3>
         <p class="item__text">Lorem ipsum dolor sit amet, consectetur
                               adipisicing elit, sed do eiusmod tempor</p>
       </div>
       <!--#3-->
-      <div class="col-md-4 about__item wow slideInRight"><span
-              class="about__icon icon-head"></span>
+      <div class="col-md-4 about__item wow slideInRight"
+           data-wow-offset="300"><span class="about__icon icon-head"></span>
         <h3 class="item__title">Fully Responsive</h3>
         <p class="item__text">Lorem ipsum dolor sit amet, consectetur
                               adipisicing elit, sed do eiusmod tempor</p>
@@ -198,18 +116,17 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <h2 class="section__title services__title wow rubberBand"
-            data-wow-delay="1s">Our Services</h2>
-        <p class="section__subtitle services__subtitle wow zoomIn">Lorem
-                                                                   ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                   sed do
-                                                                   eiusmod tempor incididunt ut labore et dolore magna
-                                                                   aliqua. Ut
-                                                                   enim ad minim veniam,</p>
+            data-wow-offset="300">Our Services</h2>
+        <p class="section__subtitle services__subtitle wow zoomIn"
+           data-wow-offset="300">Lorem ipsum dolor sit amet, consectetur
+                                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                 dolore magna aliqua. Ut enim ad minim veniam,</p>
       </div>
     </div>
     <div class="row">
       <!--#1-->
-      <div class="col-lg-4 col-md-6 wow slideInLeft">
+      <div class="col-lg-4 col-md-6 services__outer wow slideInLeft"
+           data-wow-offset="300">
         <div class="services__item"><span
                 class="services__icon icon-smartphone"></span>
           <h3 class="item__title">Research</h3>
@@ -222,7 +139,8 @@
         </div>
       </div>
       <!--#2-->
-      <div class="col-lg-4 col-md-6 wow slideInUp">
+      <div class="col-lg-4 col-md-6 services__outer wow slideInUp"
+           data-wow-offset="300">
         <div class="services__item"><span
                 class="services__icon icon-smartphone"></span>
           <h3 class="item__title">Portfolio</h3>
@@ -235,7 +153,8 @@
         </div>
       </div>
       <!--#3-->
-      <div class="col-lg-4 col-md-6 wow slideInRight">
+      <div class="col-lg-4 col-md-6 services__outer wow slideInRight"
+           data-wow-offset="300">
         <div class="services__item"><span
                 class="services__icon icon-smartphone"></span>
           <h3 class="item__title">Support</h3>
@@ -248,7 +167,8 @@
         </div>
       </div>
       <!--#4-->
-      <div class="col-lg-4 col-md-6 wow slideInLeft">
+      <div class="col-lg-4 col-md-6 services__outer wow slideInLeft"
+           data-wow-offset="300">
         <div class="services__item"><span
                 class="services__icon icon-smartphone"></span>
           <h3 class="item__title">Documentation</h3>
@@ -261,7 +181,8 @@
         </div>
       </div>
       <!--#5-->
-      <div class="col-lg-4 col-md-6 wow slideInUp">
+      <div class="col-lg-4 col-md-6 services__outer wow slideInUp"
+           data-wow-offset="300">
         <div class="services__item"><span
                 class="services__icon icon-smartphone"></span>
           <h3 class="item__title">Development</h3>
@@ -274,7 +195,8 @@
         </div>
       </div>
       <!--#6-->
-      <div class="col-lg-4 col-md-6 wow slideInRight">
+      <div class="col-lg-4 col-md-6 services__outer wow slideInRight"
+           data-wow-offset="300">
         <div class="services__item"><span
                 class="services__icon icon-smartphone"></span>
           <h3 class="item__title">Design</h3>
@@ -296,18 +218,17 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <h2 class="section__title works__title wow rubberBand"
-            data-wow-delay="1s">Latest Works</h2>
-        <p class="section__subtitle works__subtitle wow zoomIn">Lorem
-                                                                ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                                do
-                                                                eiusmod tempor incididunt ut labore et dolore magna
-                                                                aliqua. Ut
-                                                                enim ad minim veniam,</p>
+            data-wow-offset="300">Latest Works</h2>
+        <p class="section__subtitle works__subtitle wow zoomIn"
+           data-wow-offset="300">Lorem ipsum dolor sit amet, consectetur
+                                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                 dolore magna aliqua. Ut enim ad minim veniam,</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
-        <ul class="tabs_menu">
+      <div class="col-12 tabs-menu-outer wow bounceInDown"
+           data-wow-offset="300">
+        <ul class="tabs-menu">
           <li class="active">all</li>
           <li>web design</li>
           <li>ui/ux design</li>
@@ -316,11 +237,12 @@
       </div><!-- /.tabs_menu-->
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 tabs-outer">
         <div class="tabs">
           <div class="info active">
             <div class="row">
-              <div class="col-md-4 col-sm-6 wow slideInLeft">
+              <div class="col-md-4 col-sm-6 wow slideInLeft"
+                   data-wow-offset="300">
                 <div class="works__item"><img alt="image" src="assets/img/work/work1.jpg">
                   <div class="works__info">
                     <p class="works__desc">Hand Watch<br><span>ui/ux
@@ -328,7 +250,8 @@
                   </div>
                 </div><!-- /.works__item-->
               </div>
-              <div class="col-md-4 col-sm-6 wow zoomInLeft">
+              <div class="col-md-4 col-sm-6 wow zoomInLeft"
+                   data-wow-offset="300">
                 <div class="works__item"><img alt="image" src="assets/img/work/work2.jpg">
                   <div class="works__info">
                     <p class="works__desc">Hand Watch<br><span>ui/ux
@@ -336,7 +259,8 @@
                   </div>
                 </div><!-- /.works__item-->
               </div>
-              <div class="col-md-4 col-sm-6 wow slideInRight">
+              <div class="col-md-4 col-sm-6 wow slideInRight"
+                   data-wow-offset="300">
                 <div class="works__item"><img alt="image" src="assets/img/work/work3.jpg">
                   <div class="works__info">
                     <p class="works__desc">Hand Watch<br><span>ui/ux
@@ -344,7 +268,8 @@
                   </div>
                 </div><!-- /.works__item-->
               </div>
-              <div class="col-md-4 col-sm-6 wow slideInLeft">
+              <div class="col-md-4 col-sm-6 wow slideInLeft"
+                   data-wow-offset="300">
                 <div class="works__item"><img alt="image" src="assets/img/work/work4.jpg">
                   <div class="works__info">
                     <p class="works__desc">Hand Watch<br><span>ui/ux
@@ -352,7 +277,8 @@
                   </div>
                 </div><!-- /.works__item-->
               </div>
-              <div class="col-md-4 col-sm-6 wow zoomInRight">
+              <div class="col-md-4 col-sm-6 wow zoomInRight"
+                   data-wow-offset="300">
                 <div class="works__item"><img alt="image" src="assets/img/work/work5.jpg">
                   <div class="works__info">
                     <p class="works__desc">Hand Watch<br><span>ui/ux
@@ -360,7 +286,8 @@
                   </div>
                 </div><!-- /.works__item-->
               </div>
-              <div class="col-md-4 col-sm-6 wow slideInRight">
+              <div class="col-md-4 col-sm-6 wow slideInRight"
+                   data-wow-offset="300">
                 <div class="works__item"><img alt="image" src="assets/img/work/work6.jpg">
                   <div class="works__info">
                     <p class="works__desc">Hand Watch<br><span>ui/ux
@@ -431,6 +358,7 @@
             </div>
           </div><!-- /.info-->
         </div>
+        <!--/.tabs-->
       </div>
     </div>
     <div class="row">
@@ -448,18 +376,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h2 class="section__title plan__title wow rubberBand">Pricing Plan
-        </h2>
-        <p class="section__subtitle plan__subtitle wow zoomIn">Lorem ipsum
-                                                               dolor sit amet, consectetur adipisicing elit, sed do
-                                                               eiusmod
-                                                               tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                               enim ad
-                                                               minim veniam,</p>
+        <h2 class="section__title plan__title wow rubberBand"
+            data-wow-offset="300">Pricing Plan</h2>
+        <p class="section__subtitle plan__subtitle wow zoomIn"
+           data-wow-offset="300">Lorem ipsum dolor sit amet, consectetur
+                                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                 dolore magna aliqua. Ut enim ad minim veniam,</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-sm-6 wow rollIn">
+      <div class="col-lg-4 col-sm-6 plan-item__wrapper wow rollIn"
+           data-wow-offset="300">
         <div class="plan-item">
           <div class="plan-item__top">
             <h3 class="plan-item__title">Free Trial</h3>
@@ -475,7 +402,8 @@
           <button class="button button--plan">Order Now</button>
         </div><!-- /.plan-item-->
       </div>
-      <div class="col-lg-4 col-sm-6 wow zoomIn">
+      <div class="col-lg-4 col-sm-6 plan-item__wrapper wow zoomIn"
+           data-wow-offset="300">
         <div class="plan-item">
           <div class="plan-item__top">
             <h3 class="plan-item__title">Basic</h3>
@@ -491,7 +419,8 @@
           <button class="button button--plan">Order Now</button>
         </div><!-- /.plan-item-->
       </div>
-      <div class="col-lg-4 col-sm-6 wow slideInRight">
+      <div class="col-lg-4 col-sm-6 plan-item__wrapper wow slideInRight"
+           data-wow-offset="300">
         <div class="plan-item">
           <div class="plan-item__top">
             <h3 class="plan-item__title">Ultimate</h3>
@@ -516,22 +445,20 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h2 class="section__title team__title wow rubberBand">Meet Our
-                                                              Team</h2>
-        <p class="section__subtitle team__subtitle wow zoomIn">Lorem ipsum
-                                                               dolor sit amet, consectetur adipisicing elit, sed do
-                                                               eiusmod
-                                                               tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                               enim ad
-                                                               minim veniam,</p>
+        <h2 class="section__title team__title wow rubberBand"
+            data-wow-offset="300">Meet Our Team</h2>
+        <p class="section__subtitle team__subtitle wow zoomIn"
+           data-wow-offset="300">Lorem ipsum dolor sit amet, consectetur
+                                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                 dolore magna aliqua. Ut enim ad minim veniam,</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 wow bounce">
+      <div class="col-12 wow slideInRight" data-wow-offset="300">
         <div class="team-carousel owl-carousel">
           <div class="item team-item">
             <div class="team-item__image-wrap">
-              <img alt="team" class="team-item__image" src="assets/img/team/team1.png"></div>
+              <img alt="team" class="team-item__image" src="assets/img/team/team1.jpg"></div>
             <div class="team-item__name">John Doe</div>
             <div class="team-item__job">General Manager</div>
             <div class="team-item__social">
@@ -543,7 +470,7 @@
           </div><!-- /.team-item-->
           <div class="item team-item">
             <div class="team-item__image-wrap">
-              <img alt="team" class="team-item__image" src="assets/img/team/team1.png"></div>
+              <img alt="team" class="team-item__image" src="assets/img/team/team1.jpg"></div>
             <div class="team-item__name">John Doe</div>
             <div class="team-item__job">General Manager</div>
             <div class="team-item__social">
@@ -555,7 +482,7 @@
           </div><!-- /.team-item-->
           <div class="item team-item">
             <div class="team-item__image-wrap">
-              <img alt="team" class="team-item__image" src="assets/img/team/team2.png"></div>
+              <img alt="team" class="team-item__image" src="assets/img/team/team2.jpg"></div>
             <div class="team-item__name">Alexa Biru</div>
             <div class="team-item__job">Office Director</div>
             <div class="team-item__social">
@@ -567,7 +494,7 @@
           </div><!-- /.team-item-->
           <div class="item team-item">
             <div class="team-item__image-wrap">
-              <img alt="team" class="team-item__image" src="assets/img/team/team1.png"></div>
+              <img alt="team" class="team-item__image" src="assets/img/team/team1.jpg"></div>
             <div class="team-item__name">Ronobir sing</div>
             <div class="team-item__job">admin</div>
             <div class="team-item__social">
@@ -579,7 +506,7 @@
           </div><!-- /.team-item-->
           <div class="item team-item">
             <div class="team-item__image-wrap">
-              <img alt="team" class="team-item__image" src="assets/img/team/team3.png"></div>
+              <img alt="team" class="team-item__image" src="assets/img/team/team3.jpg"></div>
             <div class="team-item__name">Ronobir sing</div>
             <div class="team-item__job">admin</div>
             <div class="team-item__social">
@@ -601,23 +528,24 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h2 class="section__title blog__title wow rubberBand">Blog</h2>
-        <p class="section__subtitle blog__subtitle wow zoomIn">Lorem ipsum
-                                                               dolor sit amet, consectetur adipisicing elit, sed do
-                                                               eiusmod
-                                                               tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                               enim ad
-                                                               minim veniam,</p>
+        <h2 class="section__title blog__title wow rubberBand"
+            data-wow-offset="300">Blog</h2>
+        <p class="section__subtitle blog__subtitle wow zoomIn"
+           data-wow-offset="300">Lorem ipsum dolor sit amet, consectetur
+                                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                 dolore magna aliqua. Ut enim ad minim veniam,</p>
       </div>
     </div>
     <div class="row blog-post mb-5 mb-md-0">
-      <div class="col-md-6 wow flipInX">
-        <div class="blog-post__image-wrap">
-          <img alt="post" class="blog-post__image" src="assets/img/blog/blog1.png"></div>
+      <div class="col-md-6">
+        <div class="blog-post__image-wrap wow flipInX"
+             data-wow-offset="300">
+          <img alt="post" class="blog-post__image" src="assets/img/blog/blog1.jpg"></div>
       </div>
       <div class="col-md-6">
         <div class="blog-post__data">
-          <h3 class="blog-post__title wow rotateInUpRight">
+          <h3 class="blog-post__title wow rotateInUpRight"
+              data-wow-offset="300">
             <a href="javascript:void(0);">SEO Quis Vestibulum</a></h3>
           <div class="blog-post__info">
             <p class="blog-post__date"><span
@@ -625,21 +553,23 @@
             <p class="blog-post__tag"><span
                     class="fa fa-file"></span>Development</p>
           </div>
-          <div class="item__text blog-post__desc">Dolore magna aliqua.
-                                                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          <div class="item__text blog-post__desc">Dolore magna aliqua. Ut
+                                                  enim ad minim veniam, quis nostrud exercitation ullamco
                                                   laboris nisi ut aliquip ex ea commodo consequat...
           </div>
         </div>
       </div>
     </div><!-- /.blog-post1-->
     <div class="row blog-post mb-5 mb-md-0">
-      <div class="col-md-6 order-md-1 wow flipInX">
-        <div class="blog-post__image-wrap">
-          <img alt="post" class="blog-post__image" src="assets/img/blog/blog2.png"></div>
+      <div class="col-md-6 order-md-1">
+        <div class="blog-post__image-wrap wow flipInX"
+             data-wow-offset="300">
+          <img alt="post" class="blog-post__image" src="assets/img/blog/blog2.jpg"></div>
       </div>
       <div class="col-md-6">
         <div class="blog-post__data">
-          <h3 class="blog-post__title wow rotateInUpLeft">
+          <h3 class="blog-post__title wow rotateInUpLeft"
+              data-wow-offset="300">
             <a href="javascript:void(0);">SEO Quis Vestibulum</a></h3>
           <div class="blog-post__info">
             <p class="blog-post__date"><span
@@ -647,42 +577,40 @@
             <p class="blog-post__tag"><span
                     class="fa fa-file"></span>Development</p>
           </div>
-          <div class="item__text blog-post__desc">Dolore magna aliqua.
-                                                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          <div class="item__text blog-post__desc">Dolore magna aliqua. Ut
+                                                  enim ad minim veniam, quis nostrud exercitation ullamco
                                                   laboris nisi ut aliquip ex ea commodo consequat...
           </div>
         </div>
       </div>
     </div><!-- /.blog-post2-->
     <div class="row blog-post">
-      <div class="col-md-6 wow flipInX">
-        <div class="blog-post__image-wrap">
-          <img alt="post" class="blog-post__image" src="assets/img/blog/blog3.png"></div>
+      <div class="col-md-6">
+        <div class="blog-post__image-wrap wow flipInX"
+             data-wow-offset="300">
+          <img alt="post" class="blog-post__image" src="assets/img/blog/blog3.jpg"></div>
       </div>
       <div class="col-md-6">
         <div class="blog-post__data">
-          <h3 class="blog-post__title wow rotateInUpRight">
-            <a href="javascript:void(0);">SEO Quis Vestibulum</a>
-          </h3>
+          <h3 class="blog-post__title wow rotateInUpRight"
+              data-wow-offset="300">
+            <a href="javascript:void(0);">SEO Quis Vestibulum</a></h3>
           <div class="blog-post__info">
             <p class="blog-post__date"><span
                     class="fa fa-calendar"></span>14.072017</p>
             <p class="blog-post__tag"><span
                     class="fa fa-file"></span>Development</p>
           </div>
-          <div class="item__text blog-post__desc">Dolore magna
-                                                  aliqua. Ut enim ad minim veniam, quis nostrud
-                                                  exercitation ullamco laboris nisi ut aliquip ex ea
-                                                  commodo consequat...
+          <div class="item__text blog-post__desc">Dolore magna aliqua. Ut
+                                                  enim ad minim veniam, quis nostrud exercitation ullamco
+                                                  laboris nisi ut aliquip ex ea commodo consequat...
           </div>
         </div>
       </div>
     </div><!-- /.blog-post3-->
     <div class="row">
-      <div class="col-md-12 text-center wow bounce">
-        <button
-                class="button button--color">more view
-        </button>
+      <div class="col-md-12 text-center wow bounce" data-wow-offset="300">
+        <button class="button button--color">more view</button>
       </div>
     </div>
   </div>
@@ -690,12 +618,12 @@
 <!--======end BLOG section======-->
 <!--======begin CONTACT section======-->
 <section class="contact" id="contact"
-         style="background-image : url('assets/img/background/footer.png')">
+         style="background-image : url('assets/img/background/contact-bg.jpg')">
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h2 class="section__title contact__title wow rubberBand">Contact
-                                                                 Us</h2>
+        <h2 class="section__title contact__title wow rubberBand"
+            data-wow-offset="200">Contact Us</h2>
         <p class="section__subtitle contact__subtitle wow zoomIn">Lorem
                                                                   ipsum dolor sit amet, consectetur adipisicing elit,
                                                                   sed do
@@ -709,7 +637,8 @@
         <div
                 class="row justify-content-sm-around justify-content-lg-between">
           <div class="col-sm-6 col-lg-4 mb-lg-0 mb-5">
-            <div class="contact-item wow slideInLeft">
+            <div class="contact-item wow slideInLeft"
+                 data-wow-offset="200">
               <div class="contact-item__icon"><span
                       class="fa fa-map-marker"></span></div>
               <p class="contact-item__address contact--text">Nobinagar
@@ -717,7 +646,7 @@
             </div>
           </div><!-- /.contact-item-->
           <div class="col-sm-6 col-lg-4 mb-lg-0 mb-5">
-            <div class="contact-item wow zoomIn">
+            <div class="contact-item wow zoomIn" data-wow-offset="200">
               <div class="contact-item__icon"><span
                       class="fa fa-phone"></span></div>
               <a class="contact-item__link contact--text" href="tel:+8801743331996">+8801743331996</a><a
@@ -725,7 +654,8 @@
             </div>
           </div><!-- /.contact-item-->
           <div class="col-sm-6 col-lg-4 mb-lg-0 mb-5">
-            <div class="contact-item wow slideInRight">
+            <div class="contact-item wow slideInRight"
+                 data-wow-offset="200">
               <div class="contact-item__icon"><span
                       class="fa fa-envelope-o"></span></div>
               <a class="contact-item__link contact--text" href="mailto:quickmasud@gmail.com">quickmasud@gmail.com</a><a
@@ -739,21 +669,24 @@
       <div class="col-md-10 offset-md-1">
         <form action="/" class="form-contact" method="get">
           <div class="row mb-4">
-            <div class="col-md-6 mb-4 mb-md-0 wow slideInLeft"><label
-                    for="name"></label><input id="name" maxlength="200"
-                                              name="name" placeholder="Your Name" type="text"></div>
-            <div class="col-md-6 wow slideInRight"><label
-                    for="mail"></label><input id="mail" maxlength="200"
-                                              name="mail" placeholder="Your Email" type="email">
-            </div>
+            <div class="col-md-6 mb-4 mb-md-0 wow slideInLeft"
+                 data-wow-offset="200"><label for="name"></label><input
+                    id="name" maxlength="200" name="name" placeholder="Your Name"
+                    required="required" type="text"></div>
+            <div class="col-md-6 wow slideInRight" data-wow-offset="200">
+              <label for="mail"></label><input id="mail" maxlength="200"
+                                               name="mail" placeholder="Your Email" required="required"
+                                               type="email"></div>
           </div>
           <div class="row mb-4">
-            <div class="col-12 wow slideInUp"><textarea id="message"
-                                                        maxlength="1000" name="message"
-                                                        placeholder="Write Message"></textarea></div>
+            <div class="col-12 wow slideInUp" data-wow-offset="200">
+                  <textarea id="message" maxlength="1000" name="message"
+                            placeholder="Write Message"
+                            required="required"></textarea></div>
           </div>
           <div class="row">
-            <div class="col-12 text-center text-md-right">
+            <div class="col-12 text-center text-md-right wow wobble"
+                 data-wow-offset="200">
               <button
                       class="button button--contact">send
               </button>
@@ -776,15 +709,6 @@
 <script src="assets/js/jquery.malihu.PageScroll2id.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/script.js"></script>
-<script>
-    jQuery(document).ready(function () {
-        $("#preloader").fadeOut("slow");
-        $('body').css(
-            {
-                'background-color': '#ffffff'
-            });
-    });
-</script>
 </body>
 
 </html>
