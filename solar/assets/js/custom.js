@@ -100,7 +100,7 @@ $(function () {
         infinite      : true,
         asNavFor      : '.reviews-carousel',
         centerMode    : true,
-        centerPadding : 100,
+        centerPadding : '0px',
         focusOnSelect : true,
         slidesToShow  : 5,
         slidesToScroll: 1,

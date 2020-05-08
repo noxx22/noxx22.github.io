@@ -820,21 +820,30 @@ img {
     width: 100%;
 }
 
+.header .navbar-nav {
+    display: inline-block;
+
+    padding: 15px;
+
+    background-color: rgba(0, 0, 0, .4);
+}
+
 #navbar-top .navbar-collapse .navbar-nav .nav-item .nav-link {
     font-family: 'Roboto', sans-serif;
     font-size: 0.875rem;
 
     transition: all .3s ease-in-out;
+    text-align: center;
 
     color: #fff;
 }
 
 #navbar-top .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
-    color: red;
+    color: #07b569;
 }
 
 #navbar-top .navbar-collapse .navbar-nav .nav-item a.mPS2id-highlight-last {
-    color: red;
+    color: #07b569;
 }
 
 .header #navbar-top .navbar-brand {
@@ -842,6 +851,10 @@ img {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
+}
+
+.navbar-toggler {
+    margin-left: auto;
 }
 
 /*======end HEADER======*/
@@ -883,7 +896,7 @@ img {
 /*======begin ABOUT section======*/
 
 .about {
-    padding-top: 118px;
+    padding-top: 60px;
     padding-bottom: 60px;
 
     background-color: #fff;
@@ -911,7 +924,7 @@ img {
 
 .services {
     padding-top: 60px;
-    padding-bottom: 115px;
+    padding-bottom: 60px;
 
     background-color: #fff;
 }
@@ -948,7 +961,7 @@ img {
 /*======begin Our Projects section======*/
 
 .projects {
-    padding-bottom: 123px;
+    padding-bottom: 60px;
 
     background-color: #fff;
 }
@@ -959,8 +972,8 @@ img {
 
 .reviews {
     width: 100%;
-    padding-top: 83px;
-    padding-bottom: 95px;
+    padding-top: 40px;
+    padding-bottom: 45px;
 
     background: linear-gradient(to right, #005083, #22b977);
 }
@@ -974,21 +987,27 @@ img {
 }
 
 .review-nav {
-    max-width: 340px;
-    margin-left: 27px;
+    max-width: 290px;
 }
 
 .review-nav__inner img {
-    width: 45px;
-    height: 45px;
+    width: 58px;
+    height: 58px;
 
     transition: all .3s ease-in-out;
 
+    border: 12px solid transparent;
     border-radius: 50%;
 }
 
 .slick-current .review-nav__inner img {
-    border: 3px solid #07b569;
+    width: 57px;
+    height: 57px;
+
+    transition: all .3s ease-in-out;
+
+    border: 1px solid transparent;
+    border-radius: 50%;
 }
 
 /*======end REVIEWS section======*/
@@ -997,8 +1016,8 @@ img {
 
 .contacts {
     width: 100%;
-    padding-top: 114px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     background-color: #fff;
 }
@@ -1035,6 +1054,14 @@ img {
     background-size: cover;
 }
 
+.text-widget:nth-child(1) {
+    margin-bottom: 25px;
+}
+
+.text-widget:nth-child(2) {
+    margin-bottom: 25px;
+}
+
 /*======end FOOTER======*/
 
 /*======begin BUTTONS======*/
@@ -1044,7 +1071,7 @@ img {
     font-size: 1rem;
     line-height: 1.2;
 
-    margin-left: 60px;
+    margin-left: auto;
     padding: 14px 30px;
 
     transition: all .3s ease-in-out;
@@ -1060,7 +1087,7 @@ img {
     background-color: #046b3e;
 }
 
-.btn-about {
+.about-info .btn-about {
     margin-left: 0;
 }
 
@@ -1196,6 +1223,8 @@ img {
 
     z-index: 10;
 
+    display: none;
+
     text-align: center;
 
     color: #fff;
@@ -1229,7 +1258,7 @@ img {
     font-size: 2.25rem;
     line-height: 1.2;
 
-    margin-bottom: 65px;
+    margin-bottom: 40px;
 
     text-align: center;
     letter-spacing: 0.1125rem;
@@ -1270,7 +1299,7 @@ img {
     font-weight: 400;
     line-height: 1.667;
 
-    margin-bottom: 35px;
+    margin-bottom: 0;
 
     color: #000;
 }
@@ -1342,7 +1371,7 @@ img {
     font-size: 0.875rem;
     line-height: 2.143;
 
-    margin-bottom: 20px;
+    margin-bottom: 0;
 
     color: rgba(0, 0, 0, .7);
 }
@@ -1372,7 +1401,7 @@ img {
 .text-widget a:hover {
     text-decoration: none;
 
-    color: red;
+    color: #07b569;
 }
 
 .footer-copy {
@@ -1411,7 +1440,61 @@ img {
     }
 }
 
+@media (min-width: 420px) {
+    .review-nav {
+        max-width: 340px;
+    }
+
+    .review-nav__inner img {
+        width: 70px;
+        height: 70px;
+
+        border: 12px solid transparent;
+    }
+
+    .slick-current .review-nav__inner img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .btn-header {
+        margin-left: 60px;
+    }
+
+    .slide-title {
+        display: block;
+    }
+}
+
+@media (min-width: 576px) {
+    .reviews {
+        padding-top: 83px;
+        padding-bottom: 95px;
+    }
+
+    .text-widget:nth-child(2) {
+        margin-bottom: initial;
+    }
+}
+
 @media (min-width: 768px) {
+    .about {
+        padding-top: 118px;
+    }
+
+    .services {
+        padding-bottom: 115px;
+    }
+
+    .projects {
+        padding-bottom: 123px;
+    }
+
+    .contacts {
+        padding-top: 114px;
+        padding-bottom: 120px;
+    }
+
     .footer {
         padding-top: 126px;
     }
@@ -1420,90 +1503,45 @@ img {
         padding-bottom: 116px;
     }
 
-    .slide-title {
-        font-size: 3.375rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .widget-title {
-        margin-bottom: 37px;
-    }
-}
-
-@media (max-width: 992px) {
-    .navbar-toggler {
-        margin-left: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .about {
-        padding-top: 60px;
-    }
-
-    .services {
-        padding-bottom: 60px;
-    }
-
-    .projects {
-        padding-bottom: 60px;
-    }
-
-    .contacts {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
     .text-widget:nth-child(1) {
-        margin-bottom: 25px;
+        margin-bottom: initial;
     }
 
     .btn-form {
         margin-top: 40px !important;
     }
 
+    .slide-title {
+        font-size: 3.375rem;
+    }
+
     .contacts-title {
-        margin-bottom: 40px;
+        margin-bottom: 65px;
     }
 
     .contacts-adr__title {
-        margin-bottom: 0;
+        margin-bottom: 35px;
     }
 
     .contacts-adr__data {
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 576px) {
-    .reviews {
-        padding-top: 40px;
-        padding-bottom: 45px;
+@media (min-width: 992px) {
+    .header .navbar-nav {
+        display: flex;
+
+        padding: 0;
+
+        background-color: transparent;
     }
 
-    .text-widget:nth-child(2) {
-        margin-bottom: 25px;
-    }
-}
-
-@media (max-width: 420px) {
-    .slide-single {
-        height: 50vh;
+    .navbar-toggler {
+        margin-left: initial;
     }
 
-    .btn-header {
-        margin-left: auto;
-    }
-
-    .slide-title {
-        display: none;
-    }
-}
-
-@media (max-width: 400px) {
-    .review-nav {
-        max-width: 290px;
-        margin-left: 13px;
+    .widget-title {
+        margin-bottom: 37px;
     }
 }
