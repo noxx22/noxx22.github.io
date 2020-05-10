@@ -1091,10 +1091,10 @@ img {
     margin-left: 0;
 }
 
-.btn-form {
-    display: block !important;
+.contacts .btn-form {
+    display: block;
 
-    margin-top: 60px !important;
+    margin-top: 40px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1507,8 +1507,8 @@ img {
         margin-bottom: initial;
     }
 
-    .btn-form {
-        margin-top: 40px !important;
+    .contacts .btn-form {
+        margin-top: 60px;
     }
 
     .slide-title {
