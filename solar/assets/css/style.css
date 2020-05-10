@@ -1099,6 +1099,13 @@ img {
     margin-left: auto;
 }
 
+.modal .btn-form {
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .btn-top {
     position: fixed;
     right: 20px;
@@ -1142,10 +1149,7 @@ img {
     line-height: 1.2;
 
     width: 100%;
-    padding-top: 15px;
-    padding-right: 24px;
-    padding-bottom: 13px;
-    padding-left: 24px;
+    padding: 15px 24px 13px;
 
     color: rgba(29, 29, 29, .85);
     border: 1px solid #e5e5e5;
