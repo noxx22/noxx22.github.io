@@ -9,92 +9,6 @@
         type="image/vnd.microsoft.icon">
   <link href="assets/css/libs.min.css" rel="stylesheet">
   <link href="assets/css/style.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #111;
-    }
-
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1000;
-      background-color: #111;
-    }
-
-    #loader {
-      display: block;
-      position: relative;
-      left: 50%;
-      top: 50%;
-      width: 150px;
-      height: 150px;
-      margin: -75px 0 0 -75px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #9370DB;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-    }
-
-    #loader:before {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #BA55D3;
-      -webkit-animation: spin 3s linear infinite;
-      animation: spin 3s linear infinite;
-    }
-
-    #loader:after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #FF00FF;
-      -webkit-animation: spin 1.5s linear infinite;
-      animation: spin 1.5s linear infinite;
-    }
-
-    @-webkit-keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-  </style>
 </head>
 <body>
 <div id="preloader">
@@ -108,8 +22,7 @@
         <img alt="nava logo" height="33px" src="assets/img/logo/logo.png" width="166px"></div>
       <ul class="navbar-nav">
         <li class="nav-item current">
-          <a class="nav-link nav-link--active" href="#home">home</a>
-        </li>
+          <a class="nav-link nav-link--active" href="#home">home</a></li>
         <li class="nav-item">
           <a class="nav-link" href="#destination">top destinations</a>
         </li>
@@ -134,16 +47,21 @@
       <div class="hero-content">
         <h1 class="hero__title">reserve a boat now!</h1>
         <p class="hero__subtitle">and set your sails into paradise!</p>
-        <form action="/" class="hero-form" method="get"><input
-                class="hero-form__input" id="boat" maxlength="200" name="boat"
-                placeholder="What is your DESTINATION, SAILOR?"
-                type="search">
-          <button
-                  class="hero-form__button"><span><svg class="icon icon-sailboat "><use
-                  xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span>
-            find a boat
-          </button>
-        </form>
+        <div class="hero-form__wrapper">
+          <form action="/" class="hero-form" method="get">
+            <div class="hero-form__group"><input class="hero-form__input"
+                                                 id="boat" maxlength="200" name="boat"
+                                                 placeholder="What is your DESTINATION, SAILOR?"
+                                                 required="required"
+                                                 type="search">
+              <button
+                      class="hero-form__button"><span><svg class="icon icon-sailboat "><use
+                      xlink:href="assets/img/symbol/sprite.svg#sailboat"></use></svg></span>
+                find a boat
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -363,10 +281,10 @@
         <h3 class="footer-widget__title">top locations</h3>
         <ul class="footer-widget__list">
           <li class="footer-widget__item">
-            <a class="footer-widget__link" href="javascript:void(0);">Lorem ipsum dolor </a>
+            <a class="footer-widget__link" href="javascript:void(0);">Lorem ipsum dolor</a>
           </li>
           <li class="footer-widget__item">
-            <a class="footer-widget__link" href="javascript:void(0);">Sit amet consectetur </a>
+            <a class="footer-widget__link" href="javascript:void(0);">Sit amet consectetur</a>
           </li>
           <li class="footer-widget__item">
             <a class="footer-widget__link" href="javascript:void(0);">Adipisicing elit</a>
@@ -400,12 +318,15 @@
       <!--#-->
       <div class="footer-widget-subscribe">
         <h3 class="footer-widget__title">subscribe to our newsletters</h3>
-        <form action="/" class="footer-form" method="get"><input
-                class="footer-form__input" id="mail" maxlength="150" name="mail"
-                placeholder="Your email address" type="emai">
-          <button
-                  class="footer-form__button">subscribe
-          </button>
+        <form action="/" class="footer-form" method="get">
+          <div class="footer-form__inner"><input
+                  class="footer-form__input" id="mail" maxlength="150" name="mail"
+                  placeholder="Your email address" required="required"
+                  type="emai">
+            <button
+                    class="footer-form__button">subscribe
+            </button>
+          </div>
         </form>
         <ul class="footer-social">
           <li class="footer-social__item">
@@ -447,7 +368,7 @@
             <a class="footer-widget__link" href="javascript:void(0);">Eiusmod tempor</a>
           </li>
           <li class="footer-widget__item">
-            <a class="footer-widget__link" href="javascript:void(0);">Incididunt ut labore </a>
+            <a class="footer-widget__link" href="javascript:void(0);">Incididunt ut labore</a>
           </li>
         </ul>
       </div>
