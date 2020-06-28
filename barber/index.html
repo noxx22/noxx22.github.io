@@ -4,380 +4,1043 @@
   <meta charset="utf-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-  <title>Portfolio</title>
+  <title>Barber</title>
   <link href="assets/img/favicon.png" rel="icon"
         type="image/vnd.microsoft.icon">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/libs.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.min.css" rel="stylesheet">
 </head>
 <body>
-<!--#-->
-<button class="btn-top" title="Go To Top"><span
-        class="btn-arrow"><svg class="icon icon-angle-up "><use
-        xlink:href="assets/img/symbol/sprite.svg#angle-up"></use></svg></span></button>
-<!--#-->
-<div class="top-wrapper" id="home"
-     style="background-image: url('assets/img/background/top-bg.jpg');">
-  <div class="container">
-    <div class="top-items">
-      <h1 class="top-title">Hey, I'm Alex.</h1>
-      <p class="top-text">Freelance web developer from Tver, Russia. I
-                          create custom websites to help businesses do better online.</p>
-      <p class="top-info">site is under construction<br>Coming soon!</p>
-    </div>
-  </div>
+<div id="preloader">
+  <div id="loader"></div>
 </div>
-<!--======begin HEADER======-->
-<header class="header">
+<div class="btn btn-top"><a href="#home"><i class="icon-angle-up"></i></a>
+</div>
+<!--======begin HEADER-CONTACT======-->
+<header class="header-contact" id="home">
   <div class="container">
-    <div class="navbar">
-      <div class="header__icon">
-        <div class="menu-icon menu-icon-3">
-          <div class="bar bar-1"></div>
-          <div class="bar bar-2"></div>
-          <div class="bar bar-3"></div>
+    <div class="header-contact__content">
+      <div class="header-contact__logo">
+        <img alt="logo" src="assets/img/logo.png"></div>
+      <div class="header-contact__phone">
+        <div class="header-contact__links">
+          <a class="header-contact__link" href="tel:1800000000000">1-800-00-000-0000</a><a class="header-contact__link"
+                                                                                           href="tel:1800000000000">1-800-00-000-0000</a>
         </div>
       </div>
-      <ul class="header-nav">
-        <li class="header-nav__item">
-          <a class="header-nav__link header-nav__link--active" href="#home">home</a>
-        </li>
-        <li class="header-nav__item">
-          <a class="header-nav__link" href="#portfolio">portfolio</a></li>
-        <li class="header-nav__item">
-          <a class="header-nav__link" href="about.html">about</a></li>
-      </ul>
+      <div class="header-contact__adr">
+        <div class="header-contact__info">
+          <p class="header-contact__text">11301 West Olympic Boulevard</p>
+          <p class="header-contact__text">New Yourk, USA</p>
+        </div>
+      </div>
+      <div class="header-contact__open">
+        <div class="header-contact__work">
+          <p class="header-contact__text">Mon - Fri</p>
+          <p class="header-contact__text">9.00 - 18.00</p>
+        </div>
+      </div>
+      <div class="header-contact__search">
+        <button class="btn"
+                data-target="#siteSearch" data-toggle="modal"
+                type="button"><i class="icon-search"></i></button>
+      </div>
+        </div>
+      </div>
+</header>
+<!--======end HEADER-CONTACT======-->
+<!--======begin HEADER-NAV======-->
+<div class="header-nav">
+  <div class="container">
+    <nav class="navbar navbar-expand-xl navbar-dark">
+      <button
+              aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler" data-target="#navbarTop"
+              data-toggle="collapse" type="button"><span
+              class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse justify-content-end"
+           id="navbarTop">
+        <ul class="navbar-nav mr-0">
+          <li class="nav-item active">
+            <a class="nav-link nav-link--active" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">services</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#appointment">appointment</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#barbers">barbers</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">testimonials</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">portfolio</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#prices">prices</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<!--======end HEADER-NAV======-->
+<!--======begin HERO section======-->
+<section class="hero">
+  <div class="carousel slide carousel-fade" data-ride="carousel"
+       id="carouselHero">
+    <div class="carousel-inner">
+      <!--item-1-->
+      <div class="carousel-item active"
+           style="background-image: url('assets/img/hero/hero-slide-1.jpg');">
+        <div class="carousel-item__inner">
+          <div class="wrapper">
+            <div class="carousel-item__content">
+              <h1 class="carousel-item__title">welcome
+                <br>to the<br><span>barbershop</span></h1>
+              <a class="btn btn-hero" href="#appointment">Make An Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.item-1-->
+      <!--item-2-->
+      <div class="carousel-item"
+           style="background-image: url('assets/img/hero/hero-slide-2.jpg');">
+        <div class="carousel-item__inner">
+          <div class="wrapper">
+            <div class="carousel-item__content">
+              <h1 class="carousel-item__title">welcome
+                <br>to the<br><span>barbershop</span></h1>
+              <a class="btn btn-hero" href="#appointment">Make An Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.item-2-->
+      <!--item-3-->
+      <div class="carousel-item"
+           style="background-image: url('assets/img/hero/hero-slide-3.jpg');">
+        <div class="carousel-item__inner">
+          <div class="wrapper">
+            <div class="carousel-item__content">
+              <h1 class="carousel-item__title">welcome
+                <br>to the<br><span>barbershop</span></h1>
+              <a class="btn btn-hero" href="#appointment">Make An Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.item-3-->
+      <!--item-4-->
+      <div class="carousel-item"
+           style="background-image: url('assets/img/hero/hero-slide-4.jpg');">
+        <div class="carousel-item__inner">
+          <div class="wrapper">
+            <div class="carousel-item__content">
+              <h1 class="carousel-item__title">welcome
+                <br>to the<br><span>barbershop</span></h1>
+              <a class="btn btn-hero" href="#appointment">Make An Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.item-4--><a class="carousel-control-prev d-none d-md-flex" data-slide="prev" href="#carouselHero"
+                      role="button"><span class="icon-angle-left"></span><span class="sr-only">Previous</span></a><a
+          class="carousel-control-next d-none d-md-flex" data-slide="next" href="#carouselHero" role="button"><span
+          class="icon-angle-right"></span><span class="sr-only">Next</span></a>
+  </div>
+</section>
+<!--======end HERO section======-->
+<!--======begin ABOUT section======-->
+<section class="about" id="about">
+  <div class="container">
+    <div class="row about-header wow animate__zoomInDown"
+         data-wow-offset="300">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="section-title title-dark">about us</h2>
+        <div class="divider">
+          <div class="divider-icon-wrapper"><span
+                  class="icon-moustache"></span></div>
+        </div>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem accusantium doloremque laudantium,
+                                    totam rem aperiam</p>
+      </div>
+    </div>
+    <div class="row">
+      <!--item-1-->
+      <div
+              class="col-sm-6 col-lg-4 mb-5 mb-lg-0 wow animate__fadeInTopLeft"
+              data-wow-offset="300">
+        <div class="card about-card h-100">
+          <div class="about-card__inner">
+            <div class="about-card__icon animate__animated"><span
+                    class="icon-shave"></span></div>
+          </div>
+          <div class="card-body about-card__body">
+            <h5 class="card-title about-card__title">New York’s №1
+                                                     Barbershop</h5>
+            <p class="card-text about-card__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium doloremque
+                                                  laudantium.</p>
+          </div>
+        </div>
+      </div>
+      <!--/.item-1-->
+      <!--item-2-->
+      <div class="col-sm-6 col-lg-4 mb-5 mb-lg-0 wow animate__backInUp"
+           data-wow-offset="300">
+        <div class="card about-card h-100">
+          <div class="about-card__inner">
+            <div class="about-card__icon animate__animated"><span
+                    class="icon-scissors"></span></div>
+          </div>
+          <div class="card-body about-card__body">
+            <h5 class="card-title about-card__title">Professionals Barbers
+            </h5>
+            <p class="card-text about-card__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium doloremque
+                                                  laudantium.</p>
+          </div>
+        </div>
+      </div>
+      <!--/.item-2-->
+      <!--item-3-->
+      <div
+              class="col-sm-6 col-lg-4 offset-sm-3 offset-lg-0 wow animate__fadeInTopRight"
+              data-wow-offset="300">
+        <div class="card about-card h-100">
+          <div class="about-card__inner">
+            <div class="about-card__icon animate__animated"><span
+                    class="icon-scissors3"></span></div>
+          </div>
+          <div class="card-body about-card__body">
+            <h5 class="card-title about-card__title">Branded Products</h5>
+            <p class="card-text about-card__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium doloremque
+                                                  laudantium.</p>
+          </div>
+        </div>
+      </div>
+      <!--/.item-3-->
     </div>
   </div>
-</header>
-<!--======end HEADER======-->
-<!--======begin PORTFOLIO section======-->
-<section class="portfolio" id="portfolio">
+</section>
+<!--======end ABOUT section======-->
+<!--======begin FACTS section======-->
+<section class="facts"
+         style="background-image: url('assets/img/background/facts-bg.jpg');">
   <div class="container">
-    <div class="portfolio__content">
-      <h2 class="section__header">portfolio</h2>
-      <div class="portfolio__items">
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="awax" src="assets/img/portfolio/awax.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/awax/" target="_blank">awax</a>
-            </h3>
-            <p class="portfolio-item__description">Awax is a multipurpose
-                                                   responsive landing page template with pop-ups.</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, gulp, scss, pug, javascript,
-                    jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/awax/" target="_blank">live preview</a>
-            </div>
+    <div class="row">
+      <!--item-1-->
+      <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <p class="facts__number">2500</p>
+        <p class="facts__item">happy clients</p>
+      </div>
+      <!--/.item-1-->
+      <!--item-2-->
+      <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <p class="facts__number">300</p>
+        <p class="facts__item">coffee cups</p>
+      </div>
+      <!--/.item-2-->
+      <!--item-3-->
+      <div class="col-sm-6 col-lg-3 mb-5 mb-sm-0">
+        <p class="facts__number">120</p>
+        <p class="facts__item">barbers</p>
+      </div>
+      <!--/.item-3-->
+      <!--item-3-->
+      <div class="col-sm-6 col-lg-3">
+        <p class="facts__number">30</p>
+        <p class="facts__item">stores</p>
+      </div>
+      <!--/.item-3-->
+    </div>
+  </div>
+</section>
+<!--======end FACTS section======-->
+<!--======begin SERVICES section ======-->
+<section class="services" id="services">
+  <div class="container">
+    <div class="row services-header wow animate__zoomInDown"
+         data-wow-offset="300">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="section-title title-dark">our services</h2>
+        <div class="divider">
+          <div class="divider-icon-wrapper"><span
+                  class="icon-moustache"></span></div>
+        </div>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem accusantium doloremque laudantium,
+                                    totam rem aperiam</p>
+      </div>
+    </div>
+  </div>
+  <div class="services-content">
+    <div class="container-fluid">
+      <div class="services-grid">
+        <div
+                class="services-item-left services-cut wow animate__slideInLeft"
+                data-wow-offset="300">
+          <div class="services-info">
+            <h6 class="services-info__title">Hair cut</h6>
+            <p class="services-info__text">At vero eos et accusamus et
+                                           iusto odio dignissimos ducimus qui blanditiis praesentium
+                                           voluptatum deleniti atque corrupti quos</p>
+          </div>
+          <div class="services-icon animate__animated">
+            <div class="services-icon__wrapper"><span
+                    class="icon-hair-cut"></span></div>
           </div>
         </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="blue-shark" src="assets/img/portfolio/blue-shark.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/blue-shark/" target="_blank">blue-shark</a>
-            </h3>
-            <p class="portfolio-item__description">Blue-Shark is a simple
-                                                   bootstrap-based responsive portfolio template for
-                                                   web-developers and UI/UX designers</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, bootstrap 4, css-grid, gulp, scss, pug,
-                    javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/blue-shark/" target="_blank">live
-                                                                                                            preview</a>
-            </div>
+        <div
+                class="services-item-left services-wash wow animate__slideInLeft"
+                data-wow-delay="300ms" data-wow-offset="300">
+          <div class="services-info">
+            <h6 class="services-info__title">Hair wash</h6>
+            <p class="services-info__text">At vero eos et accusamus et
+                                           iusto odio dignissimos ducimus qui blanditiis praesentium
+                                           voluptatum deleniti atque corrupti quos</p>
+          </div>
+          <div class="services-icon animate__animated">
+            <div class="services-icon__wrapper"><span
+                    class="icon-hair-wash"></span></div>
           </div>
         </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="brandi" src="assets/img/portfolio/brandi.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/brandi/" target="_blank">brandi</a>
-            </h3>
-            <p class="portfolio-item__description">Brandi is a
-                                                   multipurpose responsive landing page template</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, gulp, scss, pug, javascript,
-                    jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/brandi/" target="_blank">live preview</a>
-            </div>
+        <div
+                class="services-item-right services-style wow animate__slideInRight"
+                data-wow-offset="300">
+          <div class="services-icon animate__animated">
+            <div class="services-icon__wrapper"><span
+                    class="icon-hair-styling"></span></div>
+          </div>
+          <div class="services-info">
+            <h6 class="services-info__title">Hair styling</h6>
+            <p class="services-info__text">At vero eos et accusamus et
+                                           iusto odio dignissimos ducimus qui blanditiis praesentium
+                                           voluptatum deleniti atque corrupti quos</p>
           </div>
         </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="forest" src="assets/img/portfolio/forest.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/forest/" target="_blank">forest</a>
-            </h3>
-            <p class="portfolio-item__description">Forest is a simple
-                                                   responsive landing page template for designers agency</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, css-grid, gulp, pug, scss,
-                    javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/forest/" target="_blank">live preview</a>
-            </div>
+        <div
+                class="services-item-right services-shave wow animate__slideInRight"
+                data-wow-delay="300ms" data-wow-offset="300">
+          <div class="services-icon animate__animated">
+            <div class="services-icon__wrapper"><span
+                    class="icon-shave-2"></span></div>
           </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="hydroo" src="assets/img/portfolio/hydroo.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/hydroo/" target="_blank">hydroo</a>
-            </h3>
-            <p class="portfolio-item__description">Hydroo is clean and
-                                                   responsive first page for UI/UX designers agency website</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, gulp, scss, pug, javascript,
-                    jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/hydroo/" target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="marble" src="assets/img/portfolio/marble.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/marble/" target="_blank">marble</a>
-            </h3>
-            <p class="portfolio-item__description">Marble is a simple and
-                                                   responsive home page for designers agency website</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, gulp, pug, scss, jquery</span>
-            </h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/marble/" target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="mofiz" src="assets/img/portfolio/mofiz.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/mofiz/" target="_blank">mofiz</a>
-            </h3>
-            <p class="portfolio-item__description">Mofiz is a multipurpose
-                                                   responsive landing page template</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, gulp, scss, pug, javascript,
-                    jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/mofiz/" target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="treehouse" src="assets/img/portfolio/treehouse.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/treehouse/" target="_blank">treehouse</a>
-            </h3>
-            <p class="portfolio-item__description">Treehouse is responsive
-                                                   portfolio template</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, gulp, pug, scss, jquery,
-                    javascript</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/treehouse/" target="_blank">live
-                                                                                                           preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="web-development-project" src="assets/img/portfolio/web-development-project.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/web-development-project/" target="_blank">web-development-project</a>
-            </h3>
-            <p class="portfolio-item__description">Web-Development-Project
-                                                   is portfolio template for web-developers</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, bootstrap 4, gulp, pug, scss, javascript,
-                    jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/web-development-project/"
-                 target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="razbin" src="assets/img/portfolio/razbin.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/razbin/" target="_blank">razbin</a>
-            </h3>
-            <p class="portfolio-item__description">Razbin is a
-                                                   multipurpose responsive template with blog pages</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, css-grid, gulp, pug, scss,
-                    javacript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/razbin/" target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="nava" src="assets/img/portfolio/nava.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/nava/" target="_blank">nava</a>
-            </h3>
-            <p class="portfolio-item__description">Nava is responsive
-                                                   landing page template</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, flexbox, css-grid, gulp, pug, scss,
-                    javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/nava/" target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="solar" src="assets/img/portfolio/solar.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/solar/" target="_blank">solar</a>
-            </h3>
-            <p class="portfolio-item__description">Solar is a multipurpose
-                                                   responsive landing page template based on customized
-                                                   Bootstrap 4</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, bootstrap 4, flexbox, gulp, pug, scss,
-                    javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/solar/" target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="snotty" src="assets/img/portfolio/snotty.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/snotty/" target="_blank">snotty</a>
-            </h3>
-            <p class="portfolio-item__description">Snotty is a
-                                                   multipurpose responsive landing page template based on
-                                                   customized Bootstrap 4</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, bootstrap 4, flexbox, gulp, pug, scss,
-                    javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/snotty/" target="_blank">live preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="bicycle" src="assets/img/portfolio/bicycle.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/bicycle/" target="_blank">bicycle</a>
-            </h3>
-            <p class="portfolio-item__description">Bicycle is responsive
-                                                   template based on native Flexbox and CSS-Grid</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, css-grid, flexbox, gulp, pug, scss,
-                    javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/bicycle/" target="_blank">live
-                                                                                                         preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="create-apparel" src="assets/img/portfolio/create-apparel.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/create-apparel/" target="_blank">create-apparel</a>
-            </h3>
-            <p class="portfolio-item__description">Create-Apparel is a
-                                                   home page for online shop. Made with Bootstrap 4 with a
-                                                   little bit of CSS-Grid</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, bootstrap 4, css-grid, flexbox, gulp, pug,
-                    scss, javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/create-apparel/" target="_blank">live
-                                                                                                                preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-item__wrapper">
-            <img alt="barber" src="assets/img/portfolio/barber.jpg"></div>
-          <div class="portfolio-item__data">
-            <h3 class="portfolio-item__title">
-              <a href="https://noxx22.github.io/barber/" target="_blank">barber</a>
-            </h3>
-            <p class="portfolio-item__description">Barber is creative,
-                                                   clean, elegant and modern Barber Shop landing page HTML
-                                                   template. This is HTML Template design for Barber Shop,
-                                                   Beauty or Healthcare website landing page. Made with
-                                                   Bootstrap 4 and CSS-Grid</p>
-            <h4 class="portfolio-item__tech">Technologies:&nbsp;&nbsp;
-              <span>html, css, bootstrap 4, css-grid, flexbox, gulp, pug,
-                    scss, javascript, jquery</span></h4>
-            <div class="portfolio-item__inner">
-              <span><svg class="icon icon-binoculars "><use xlink:href="assets/img/symbol/sprite.svg#binoculars"></use></svg></span>
-              <a class="portfolio-item__button" href="https://noxx22.github.io/barber/" target="_blank">live preview</a>
-            </div>
+          <div class="services-info">
+            <h6 class="services-info__title">Shave</h6>
+            <p class="services-info__text">At vero eos et accusamus et
+                                           iusto odio dignissimos ducimus qui blanditiis praesentium
+                                           voluptatum deleniti atque corrupti quos</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--======end PORTFOLIO section======-->
-<!--======begin FOOTER======-->
-<footer class="footer">
+<!--======end SERVICES section ======-->
+<!--======begin APPOINTMENT section======-->
+<section class="appointment" id="appointment"
+         style="background-image: url('assets/img/background/make-section-bg.jpg');">
   <div class="container">
-    <p class="footer__copy"><span>&copy; 2019-2020</span>Made with
-      <svg class="icon icon-heart ">
-        <use xlink:href="assets/img/symbol/sprite.svg#heart"></use>
-      </svg>
-                                                         by
-                                                         noxx22
-    </p>
+    <div class="row appointment-header wow animate__zoomInDown"
+         data-wow-offset="300">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="section-title title-lite">make an appointment</h2>
+        <div class="divider">
+          <div class="divider-icon-wrapper"><span
+                  class="icon-moustache"></span></div>
+        </div>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem accusantium doloremque laudantium,
+                                    totam rem aperiam</p>
+      </div>
+    </div>
+    <div class="appointment-form-outer">
+      <form action="/" method="get">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 offset-lg-2 mb-1 mb-sm-0">
+            <div class="appointment-form-group wow animate__slideInLeft"
+                 data-wow-offset="200"><label class="sr-only"
+                                              for="name">Name</label><input
+                    class="appointment-input form-control" id="name"
+                    maxlength="200" name="name" placeholder="Name" required="required"
+                    type="text"></div>
+            <div class="appointment-form-group wow animate__slideInLeft"
+                 data-wow-delay="200ms" data-wow-offset="200"><label
+                    class="sr-only" for="phone">Phone</label><input
+                    class="appointment-input form-control" id="phone"
+                    maxlength="200" name="phone" placeholder="Phone"
+                    required="required" type="text"></div>
+            <div class="appointment-form-group wow animate__slideInLeft"
+                 data-wow-delay="300ms" data-wow-offset="200"><label
+                    class="sr-only" for="mail-appointment">Mail</label><input
+                    class="appointment-input form-control" id="mail-appointment"
+                    maxlength="200" name="mail-appointment"
+                    placeholder="E-mail" required="required" type="email">
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-1 mb-sm-0">
+            <div class="select-form-group wow animate__slideInRight"
+                 data-wow-offset="200"><label><select id="service"
+                                                      name="service" required="required">
+              <option disabled selected>Service</option>
+              <option>value 1</option>
+              <option>value 2</option>
+              <option>value 3</option>
+              <option>value 4</option>
+              <option>value 5</option>
+            </select></label></div>
+            <div class="select-form-group wow animate__slideInRight"
+                 data-wow-delay="200ms" data-wow-offset="200"><label><select
+                    id="barber" name="barber" required="required">
+              <option disabled selected>Barber</option>
+              <option>value 1</option>
+              <option>value 2</option>
+              <option>value 3</option>
+              <option>value 4</option>
+              <option>value 5</option>
+            </select></label></div>
+            <div
+                    class="appointment-form-group appointment-date-outer wow animate__slideInRight"
+                    data-wow-delay="300ms" data-wow-offset="200"><label
+                    class="sr-only" for="date">Date</label><input
+                    class="form-control appointment-date-input" id="date"
+                    name="date" placeholder="Date" required="required"
+                    type="date"></div>
+          </div>
+          <div class="col-sm-12 col-lg-8 offset-lg-2 mb-1 mb-sm-0">
+            <div class="form-group-textarea wow animate__swing"
+                 data-wow-delay="300ms" data-wow-offset="200"><label
+                    class="sr-only" for="message">Message</label><textarea
+                    class="form-control appointment-textarea" id="message"
+                    maxlength="1000" name="message" placeholder="Message"
+                    required="required"></textarea></div>
+          </div>
+          <div class="col-sm-12 col-lg-8 offset-lg-2">
+            <button
+                    class="btn btn-appointment wow animate__wobble"
+                    data-wow-offset="200" type="submit">make an
+                                                        appointment
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!--======end APPOINTMENT section======-->
+<!--======begin BARBERS section======-->
+<section class="barbers" id="barbers">
+  <div class="container">
+    <div class="row barbers-header wow animate__zoomInDown"
+         data-wow-offset="300">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="section-title title-dark">our barbers</h2>
+        <div class="divider">
+          <div class="divider-icon-wrapper"><span
+                  class="icon-moustache"></span></div>
+            </div>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem accusantium doloremque laudantium,
+                                    totam rem aperiam</p>
+          </div>
+        </div>
+    <!--barbers-carousel-->
+    <div class="barbers-carousel owl-carousel">
+      <!--item-1-->
+      <div class="card barbers-item"><img alt="barber" class="card-img-top" src="assets/img/barber/barber-1.jpg">
+        <div class="card-body barbers-item__body">
+          <h5 class="card-title barbers-item__title">Darrell Gibbs</h5>
+          <ul class="barbers-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-half-alt"></span></li>
+            <li><span class="icon-star-empty"></span></li>
+          </ul>
+          <p class="card-text barbers-item__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium</p>
+            </div>
+          </div>
+      <!--/.item-1-->
+      <!--item-2-->
+      <div class="card barbers-item"><img alt="barber" class="card-img-top" src="assets/img/barber/barber-2.jpg">
+        <div class="card-body barbers-item__body">
+          <h5 class="card-title barbers-item__title">David Clarke</h5>
+          <ul class="barbers-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-empty"></span></li>
+            <li><span class="icon-star-empty"></span></li>
+          </ul>
+          <p class="card-text barbers-item__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium</p>
+        </div>
+      </div>
+      <!--/.item-2-->
+      <!--item-3-->
+      <div class="card barbers-item"><img alt="barber" class="card-img-top" src="assets/img/barber/barber-3.jpg">
+        <div class="card-body barbers-item__body">
+          <h5 class="card-title barbers-item__title">Richard Owens</h5>
+          <ul class="barbers-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-empty"></span></li>
+          </ul>
+          <p class="card-text barbers-item__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium</p>
+        </div>
+      </div>
+      <!--/.item-3-->
+      <!--item-4-->
+      <div class="card barbers-item"><img alt="barber" class="card-img-top" src="assets/img/barber/barber-4.jpg">
+        <div class="card-body barbers-item__body">
+          <h5 class="card-title barbers-item__title">john doe</h5>
+          <ul class="barbers-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-empty"></span></li>
+          </ul>
+          <p class="card-text barbers-item__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium</p>
+        </div>
+      </div>
+      <!--/.item-4-->
+      <!--item-5-->
+      <div class="card barbers-item"><img alt="barber" class="card-img-top" src="assets/img/barber/barber-5.jpg">
+        <div class="card-body barbers-item__body">
+          <h5 class="card-title barbers-item__title">eric doe</h5>
+          <ul class="barbers-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-half-alt"></span></li>
+          </ul>
+          <p class="card-text barbers-item__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium</p>
+        </div>
+      </div>
+      <!--/.item-5-->
+      <!--item-6-->
+      <div class="card barbers-item"><img alt="barber" class="card-img-top" src="assets/img/barber/barber-6.jpg">
+        <div class="card-body barbers-item__body">
+          <h5 class="card-title barbers-item__title">andrew doe</h5>
+          <ul class="barbers-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-empty"></span></li>
+          </ul>
+          <p class="card-text barbers-item__text">Sed ut perspiciatis unde
+                                                  omnis iste natus error sit voluptatem accusantium</p>
+            </div>
+          </div>
+      <!--/.item-6-->
+        </div>
+    <!--/.barbers-carousel-->
+  </div>
+</section>
+<!--======end BARBERS section======-->
+<!--======begin CLIENTS section======-->
+<section class="clients" id="testimonials"
+         style="background-image: url('assets/img/background/clients-bg.jpg');">
+  <div class="container">
+    <div class="row clients-header wow animate__zoomInDown"
+         data-wow-offset="300">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="section-title title-lite">our clients say</h2>
+        <div class="divider">
+          <div class="divider-icon-wrapper"><span
+                  class="icon-moustache"></span></div>
+        </div>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem accusantium doloremque laudantium,
+                                    totam rem aperiam</p>
+      </div>
+    </div>
+    <!--clients-carousel-->
+    <div class="clients-carousel__outer">
+      <div class="clients-carousel owl-carousel">
+        <!--item-1-->
+        <div class="clients-item">
+          <ul class="clients-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-half-alt"></span></li>
+          </ul>
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+              <p class="clients-item__text">Sed ut perspiciatis unde omnis
+                                            iste natus error sit voluptatem accusantium doloremque l
+                                            audantium, totam rem aperiam, eaque ipsa quae ab illo
+                                            inventore veritatis et quasi architecto beatae vitae dicta
+                                            sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                            sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                            magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                                            amet, consectetur,</p>
+            </div>
+          </div>
+          <div class="clients-item__inner">
+            <img alt="client" class="clients-item__image" src="assets/img/client/clients-1.jpg"></div>
+          <div class="clients-item__name">George Morgan</div>
+            </div>
+        <!--/.item-1-->
+        <!--item-2-->
+        <div class="clients-item">
+          <ul class="clients-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+          </ul>
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+              <p class="clients-item__text">Sed ut perspiciatis unde omnis
+                                            iste natus error sit voluptatem accusantium doloremque l
+                                            audantium, totam rem aperiam, eaque ipsa quae ab illo
+                                            inventore veritatis et quasi architecto beatae vitae dicta
+                                            sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                            sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                            magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                                            amet, consectetur,</p>
+            </div>
+          </div>
+          <div class="clients-item__inner">
+            <img alt="client" class="clients-item__image" src="assets/img/client/clients-2.jpg"></div>
+          <div class="clients-item__name">james Doe</div>
+            </div>
+        <!--/.item-2-->
+        <!--item-3-->
+        <div class="clients-item">
+          <ul class="clients-item__ratio">
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star"></span></li>
+            <li><span class="icon-star-half-alt"></span></li>
+          </ul>
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+              <p class="clients-item__text">Sed ut perspiciatis unde omnis
+                                            iste natus error sit voluptatem accusantium doloremque l
+                                            audantium, totam rem aperiam, eaque ipsa quae ab illo
+                                            inventore veritatis et quasi architecto beatae vitae dicta
+                                            sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                            sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                            magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                                            amet, consectetur,</p>
+            </div>
+          </div>
+          <div class="clients-item__inner">
+            <img alt="client" class="clients-item__image" src="assets/img/client/clients-3.jpg"></div>
+          <div class="clients-item__name">Enrico Doe</div>
+            </div>
+        <!--/.item-3-->
+          </div>
+      <div class="clients-nav"></div>
+        </div>
+  </div>
+</section>
+<!--======end CLIENTS section======-->
+<!--======begin GALLERY section======-->
+<section class="gallery" id="portfolio">
+  <div class="container">
+    <div class="row gallery-header wow animate__zoomInDown"
+         data-wow-offset="300">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="section-title title-dark">our gallery</h2>
+        <div class="divider">
+          <div class="divider-icon-wrapper"><span
+                  class="icon-moustache"></span></div>
+        </div>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem accusantium doloremque laudantium,
+                                    totam rem aperiam</p>
+      </div>
+    </div>
+  </div>
+  <div class="gallery-content">
+    <a class="wow animate__flipInY" data-fancybox="gallery" data-wow-offset="300"
+       href="assets/img/gallery/big/gallery-1.jpg"><img alt="gallery image"
+                                                        src="assets/img/gallery/gallery-1.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="100ms" data-wow-offset="300"
+          href="assets/img/gallery/big/gallery-2.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-2.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="200ms" data-wow-offset="300"
+          href="assets/img/gallery/big/gallery-3.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-3.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="300ms" data-wow-offset="300"
+          href="assets/img/gallery/big/gallery-4.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-4.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="400ms" data-wow-offset="300"
+          href="assets/img/gallery/big/gallery-5.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-5.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="500ms" data-wow-offset="200"
+          href="assets/img/gallery/big/gallery-6.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-6.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="600ms" data-wow-offset="200"
+          href="assets/img/gallery/big/gallery-7.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-7.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="700ms" data-wow-offset="200"
+          href="assets/img/gallery/big/gallery-8.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-8.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="800ms" data-wow-offset="200"
+          href="assets/img/gallery/big/gallery-9.jpg"><img alt="gallery image"
+                                                           src="assets/img/gallery/gallery-9.jpg"></a><a
+          class="wow animate__flipInY" data-fancybox="gallery" data-wow-delay="900ms" data-wow-offset="200"
+          href="assets/img/gallery/big/gallery-10.jpg"><img alt="gallery image" src="assets/img/gallery/gallery-10.jpg"></a>
+  </div>
+</section>
+<!--======end GALLERY section======-->
+<!--======begin PRICES section======-->
+<section class="prices" id="prices">
+  <div class="container">
+    <div class="row prices-header wow animate__zoomInDown"
+         data-wow-offset="300">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="section-title title-dark">our pricing</h2>
+        <div class="divider">
+          <div class="divider-icon-wrapper"><span
+                  class="icon-moustache"></span></div>
+            </div>
+        <p class="section-subtitle">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem accusantium doloremque laudantium,
+                                    totam rem aperiam</p>
+          </div>
+        </div>
+    <div class="row">
+      <div
+              class="col-sm-6 col-lg-4 offset-lg-2 mb-5 mb-sm-0 wow animate__slideInLeft"
+              data-wow-offset="300">
+        <div class="prices-item">
+          <div class="prices-item__top">
+            <h5 class="prices-item__title">man</h5>
+          </div>
+          <div class="prices-item__inner">
+            <table class="table table-borderless">
+              <tbody>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Hair cut</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">15$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Hair wash</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">12$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Hair styling</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">20$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Face shave</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">15$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Head shave</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">15$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Head shave</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">15$</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="prices-item__bottom">
+            <a class="prices-item__link" href="#appointment">appointment</a>
+          </div>
+            </div>
+          </div>
+      <div class="col-sm-6 col-lg-4 wow animate__slideInRight"
+           data-wow-offset="300">
+        <div class="prices-item">
+          <div class="prices-item__top">
+            <h5 class="prices-item__title">woman</h5>
+          </div>
+          <div class="prices-item__inner">
+            <table class="table table-borderless">
+              <tbody>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Hair cut</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">20$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Hair wash</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">12$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Hair styling</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">30$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Hair color</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">45$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Styling & Color</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">60$</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="prices-table__text">Styling & Hair Cut</p>
+                </td>
+                <td>
+                  <p class="prices-table__text">45$</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="prices-item__bottom">
+            <a class="prices-item__link" href="#appointment">appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======end PRICES section======-->
+<!--======begin FOOTER======-->
+<footer class="footer w-100">
+  <div class="footer-top"
+       style="background-image: url('assets/img/background/footer-bg.jpg');">
+    <div class="container">
+      <div class="row">
+        <!--item-1-->
+        <div class="col-sm-6 col-lg-3 footer-subscribe mb-5 mb-lg-0">
+          <h5 class="footer-item__title text-center text-lg-left">
+            subscribe</h5>
+          <p class="footer-item__text">At vero eos et accusamus et iusto
+                                       odio dignissimos ducimus qui blanditiis.</p>
+          <div class="footer-subscribe__form">
+            <form action="/" method="get">
+              <div class="footer-subscribe__inner"><label for="mail"><span
+                      class="sr-only">E-mail</span></label><input
+                      class="footer-subscribe__input" id="mail" maxlength="150"
+                      name="mail" placeholder="Your E-mail" required="required"
+                      type="email">
+                <button
+                        class="btn footer-subscribe__button" type="submit"><span
+                        class="footer-subscribe__icon"><i class="icon-paper-plane"></i></span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--/.item-1-->
+        <!--item-2-->
+        <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
+          <h5 class="footer-item__title text-center">working hours</h5>
+          <table class="table-dark table-borderless footer-work">
+            <tbody>
+            <tr>
+              <td>mon</td>
+              <td>9.00 - 18.00</td>
+            </tr>
+            <tr>
+              <td>tue</td>
+              <td>9.00 - 18.00</td>
+            </tr>
+            <tr>
+              <td>wed</td>
+              <td>9.00 - 18.00</td>
+            </tr>
+            <tr>
+              <td>thu</td>
+              <td>9.00 - 18.00</td>
+            </tr>
+            <tr>
+              <td>fri</td>
+              <td>9.00 - 18.00</td>
+            </tr>
+            <tr>
+              <td>sat</td>
+              <td>10.00 - 14.00</td>
+            </tr>
+            <tr>
+              <td>sun</td>
+              <td>output</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--/.item-2-->
+        <!--item-3-->
+        <div class="col-sm-6 col-lg-3 footer-blog mb-5 mb-sm-0">
+          <h5 class="footer-item__title text-center">latest from blog</h5>
+          <div class="footer-post">
+            <h6 class="footer-post__title">
+              <a href="javascript:void(0);">Lorem ipsum dolor</a></h6>
+            <p class="footer-post__text">Sed ut perspiciatis unde omnis
+                                         iste natus error sit voluptatem accusantium doloremque
+                                         laudantium...</p>
+          </div>
+          <div class="footer-post">
+            <h6 class="footer-post__title">
+              <a href="javascript:void(0);">Lorem ipsum dolor</a></h6>
+            <p class="footer-post__text">Sed ut perspiciatis unde omnis
+                                         iste natus error sit voluptatem accusantium doloremque...
+            </p>
+          </div>
+        </div>
+        <!--/.item-3-->
+        <!--item-4-->
+        <div class="col-sm-6 col-lg-3">
+          <h5 class="footer-item__title text-center text-lg-right">
+            instagram</h5>
+          <div class="footer-instagram">
+            <div class="footer-instagram__image-wrapper">
+              <a href="javascript:void(0);"><img alt="image" class="footer-instagram__image"
+                                                 src="assets/img/insta/insta-1.jpg"></a>
+            </div>
+            <div class="footer-instagram__image-wrapper">
+              <a href="javascript:void(0);"><img alt="image" class="footer-instagram__image"
+                                                 src="assets/img/insta/insta-2.jpg"></a>
+            </div>
+            <div class="footer-instagram__image-wrapper">
+              <a href="javascript:void(0);"><img alt="image" class="footer-instagram__image"
+                                                 src="assets/img/insta/insta-3.jpg"></a>
+            </div>
+            <div class="footer-instagram__image-wrapper">
+              <a href="javascript:void(0);"><img alt="image" class="footer-instagram__image"
+                                                 src="assets/img/insta/insta-4.jpg"></a>
+            </div>
+            <div class="footer-instagram__image-wrapper">
+              <a href="javascript:void(0);"><img alt="image" class="footer-instagram__image"
+                                                 src="assets/img/insta/insta-5.jpg"></a>
+            </div>
+            <div class="footer-instagram__image-wrapper">
+              <a href="javascript:void(0);"><img alt="image" class="footer-instagram__image"
+                                                 src="assets/img/insta/insta-6.jpg"></a>
+            </div>
+          </div>
+          <!--/.item-4-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-top-->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-8 footer-copy">
+          <p class="footer-copy__text">Copyright &copy; 2046 Barber.&nbsp;
+          </p>
+          <p class="footer-copy__text">All rights reserved</p>
+        </div>
+        <div class="col-sm-6 col-md-4 footer-social">
+          <ul class="footer-social__nav">
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="javascript:void(0);"><span class="icon-google-plus-g"></span></a>
+            </li>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="javascript:void(0);"><span class="icon-twitter"></span></a>
+            </li>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="javascript:void(0);"><span class="icon-instagram"></span></a>
+            </li>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="javascript:void(0);"><span class="icon-facebook-f"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <!--======end FOOTER======-->
+<!--======begin MODAL======-->
+<div aria-hidden="true" aria-labelledby="centerTitle" class="modal fade" id="siteSearch"
+     role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title ml-auto" id="centerTitle">Site Search</h5>
+        <button aria-label="Close" class="close" data-dismiss="modal"
+                type="button"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-form-outer">
+          <form action="/" method="get">
+            <div class="search-form-group"><input class="search-input"
+                                                  id="s" maxlength="200" name="s" placeholder="Search"
+                                                  required="required" type="search">
+              <button
+                      class="btn" type="submit"><span
+                      class="icon-search"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--======end MODAL======-->
 <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/libs.min.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>
