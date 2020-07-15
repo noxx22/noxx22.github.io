@@ -166,16 +166,43 @@ $(function () {
       $btnTop.fadeOut();
     }
   });
-  $btnTop.on('click', function () {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 900);
+    /*======STICKY NAVIGATION======*/
+
+    var widx = window.matchMedia("(min-width:852px)");
+    $(window).load(function () {
+        if (widx.matches && $(window).scrollTop() > 0) {
+            $('.header').css({
+                'position'        : 'fixed',
+                'top'             : 0,
+                'background-color': '#000000',
+                'padding-top'     : '20px'
+            });
+        }
+    });
+    $(window).on('scroll resize', function () {
+        var scrollWindow = $(this).scrollTop();
+
+        if (scrollWindow > 0 && widx.matches) {
+            $('.header').css({
+                'position'        : 'fixed',
+                'top'             : 0,
+                'background-color': '#000000',
+                'padding-top'     : '20px'
+            });
+        } else {
+            $('.header').css({
+                'position'        : 'absolute',
+                'top'             : 'initial',
+                'background-color': 'transparent',
+                'padding-top'     : '40px'
+            });
+        }
   }); //============SCROLL-TO-ID=============
 
-  $('.header-nav__link').mPageScroll2id({
-      highlightClass    : "header-nav__link--active",
+    $("a[href^='#']").mPageScroll2id({
+        highlightClass  : "header-nav__link--active",
     forceSingleHighlight: false,
-      offset            : - '70'
+        offset          : 60
   }); //==========HAMBURGER==========
 
   var nav = $('.header-nav');
@@ -189,7 +216,7 @@ $(function () {
       nav.slideUp();
     }
   });
-  var wid = window.matchMedia('(max-width: 576px)');
+    var wid = window.matchMedia('(max-width: 852px)');
   $(window).resize(function () {
       if (! wid.matches) {
       nav.removeAttr('style');
