@@ -1,46 +1,46 @@
 $(function () {
-
+    
     /*======PRELOADER======*/
-
+    
     $("#preloader").delay(1000).fadeOut("slow");
     $("body").css({"background-color": "#ffffff"});
-
+    
     /*======ANIMATE NUMBERS======*/
-
+    
     $('.facts__number').counterUp({
-
+        
         delay: 10,
         time : 1500
-
+        
     });
-
+    
     /*======SMOOTH SCROLL======*/
-
+    
     $(".nav-link, a[href='#home'], a[href='#appointment']").mPageScroll2id({
-
+        
         highlightClass      : "nav-link--active",
         forceSingleHighlight: false
-
+        
     });
-
+    
     var $btnTop = $('.btn-top');
-
+    
     $(window).on('scroll', function () {
-
+        
         if ($(window).scrollTop() >= 100) {
-
+            
             $btnTop.fadeIn();
-
+            
         } else {
-
+            
             $btnTop.fadeOut();
-
+            
         }
-
+        
     });
-
+    
     /*======BARBERS-CAROUSEL======*/
-
+    
     $('.barbers-carousel').owlCarousel({
         autoplay          : true,
         autoplayHoverPause: true,
@@ -69,9 +69,9 @@ $(function () {
             }
         }
     });
-
+    
     /*====== CLIENTS-CAROUSEL ======*/
-
+    
     $('.clients-carousel').owlCarousel({
         autoplay          : true,
         autoplayHoverPause: true,
@@ -99,15 +99,17 @@ $(function () {
             }
         }
     });
-
+    
     /*======STICKY NAVIGATION======*/
-
+    
     var widx = window.matchMedia("(min-width:1200px)");
-
-    $(window).load(function () {
-
-        if (widx.matches && $(window).scrollTop() > 100) {
-
+    
+    function stickyNav() {
+        
+        var scrollWindow = $(window).scrollTop();
+        
+        if (scrollWindow > 100 && widx.matches) {
+            
             $('.header-nav').css(
                 {
                     'position'        : 'fixed',
@@ -115,42 +117,30 @@ $(function () {
                     'background-color': '#000000'
                 }
             );
-        }
-    });
-
-    $(window).on('scroll resize', function () {
-
-        var scrollWindow = $(this).scrollTop();
-
-        if (( scrollWindow > 100 ) && widx.matches) {
-
-            $('.header-nav').css(
-                {
-                    'position'        : 'fixed',
-                    'top'             : 0,
-                    'background-color': '#000000'
-                }
-            );
-
+            
         } else {
-
-            $('.header-nav').css({
-
-                'position'        : 'absolute',
-                'top'             : 'initial',
-                'background-color': 'rgba(0, 0, 0, 0.55)'
-
-            });
+            
+            $('.header-nav').removeAttr('style');
+            
         }
+        
+    }
+    
+    stickyNav();
+    
+    $(window).on('scroll resize', function () {
+        
+        stickyNav()
+        
     })
-
+    
 });
 
 var wow = new WOW(
     {
-
+    
         animateClass: 'animate__animated'
-
+    
     }
 );
 wow.init();
