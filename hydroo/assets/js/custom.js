@@ -1,22 +1,23 @@
 "use strict";
 
 $(function () {
-    //======WORKS GALLERY======
+    /*====== WORKS GALLERY ======*/
     $('[data-fancybox="gallery"]').fancybox({
         keyboard        : true,
         arrows          : true,
         animationEffect : "zoom",
         transitionEffect: "fade",
         wheel           : "auto"
-    }); //======BEHIND CAROUSEL======
-
+    });
+    /*====== BEHIND CAROUSEL ======*/
+    
     $(".behind__carousel").owlCarousel({
         loop              : true,
-        margin            : 10,
+        margin            : 15,
         nav               : false,
         dots              : false,
         autoplay          : true,
-        autoplayTimeout   : 3000,
+        autoplayTimeout   : 4000,
         autoplayHoverPause: true,
         smartSpeed        : 1000,
         responsive        : {
@@ -25,28 +26,22 @@ $(function () {
             },
             480: {
                 items : 2,
-                margin: 15
+                margin: 20
             },
             768: {
-                items : 3,
-                margin: 15
-            },
-            852: {
-                items : 3,
-                margin: 15
-            },
-            992: {
                 items : 3,
                 margin: 30
             }
         }
-    }); //======FACTS COUNTER======
-
+    });
+    /*====== FACTS COUNTER ======*/
+    
     $('.facts__counter').counterUp({
         delay: 10,
         time : 1500
-    }); //======PROCESS TABS======
-
+    });
+    /*====== PROCESS TABS ======*/
+    
     $(".tabs_menu li").click(function () {
         if (! $(this).hasClass("active")) {
             var i = $(this).index();
@@ -55,27 +50,29 @@ $(function () {
             $(this).addClass("active");
             $($(".tabs").children(".info")[ i ]).fadeIn(1000).addClass("active");
         }
-    }); //======MISSION ACCORDEON======
-
+    });
+    /*====== MISSION ACCORDEON ======*/
+    
     $(".mission__acc-title").on("click", function () {
         var $this = $(this);
-
+        
         if (! $this.hasClass("active")) {
             $(".mission__acc-desc").slideUp();
             $(".mission__acc-title").removeClass("active");
         }
-
+        
         $this.toggleClass("active");
         $this.next().slideToggle();
-    }); //======TESTIMONIALS CAROUSEL======
-
+    });
+    /*====== TESTIMONIALS CAROUSEL ======*/
+    
     $(".testi__carousel").owlCarousel({
         loop              : true,
         margin            : 10,
         nav               : false,
         dots              : false,
         autoplay          : true,
-        autoplayTimeout   : 3000,
+        autoplayTimeout   : 5000,
         autoplayHoverPause: true,
         smartSpeed        : 1000,
         responsive        : {
@@ -83,8 +80,16 @@ $(function () {
                 items: 1
             }
         }
-    }); //======SCROLL TO TOP==================================
-
+    });
+    /*====== PAGE SCROLL TO ID ======*/
+    
+    $("a[href^='#']").mPageScroll2id({
+        highlightClass      : "nav-link-current",
+        forceSingleHighlight: false,
+        offset              : 90
+    });
+    /*====== SCROLL TO TOP ======*/
+    
     var $btnTop = $('.btn-top');
     $(window).on('scroll', function () {
         if ($(window).scrollTop() >= 100) {
@@ -93,10 +98,68 @@ $(function () {
             $btnTop.fadeOut();
         }
     });
-    $btnTop.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 900);
+    /*====== HAMBURGER ======*/
+    
+    var nav = $('.header-nav');
+    var menu = $('.menu-icon');
+    menu.click(function () {
+        menu.toggleClass('opened');
+        
+        if (menu.hasClass('opened')) {
+            nav.css({
+                'display': 'block'
+            });
+            nav.animate({
+                'right': '0px'
+            }, 500);
+        } else {
+            nav.slideUp(function () {
+                nav.css({
+                    'right': '-280px'
+                });
+            });
+        }
+    });
+    var wid = window.matchMedia('(min-width: 852px)');
+    $(window).resize(function () {
+        if (wid.matches) {
+            nav.removeAttr('style');
+            menu.removeClass('opened');
+        }
+    });
+    
+    /*====== STICKY NAVIGATION ======*/
+    
+    function stickyNav() {
+        var sliderHeight;
+        var contactHeight;
+        var heightSum;
+        var scrollW;
+        var scrollNav;
+        sliderHeight = $('.header__slide').outerHeight();
+        contactHeight = $('.header-top').outerHeight();
+        scrollW = $(window).scrollTop();
+        heightSum = sliderHeight + contactHeight;
+        scrollNav = scrollW - heightSum;
+        
+        if (scrollNav >= 0 && wid.matches) {
+            $('.header-bottom').css({
+                'position'   : 'fixed',
+                'padding-top': '28px',
+                'top'        : 0
+            });
+            $('.header').css({
+                'padding-bottom': '90px'
+            });
+        } else {
+            $('.header-bottom').removeAttr('style');
+            $('.header').removeAttr('style');
+        }
+    }
+    
+    stickyNav();
+    $(window).on("resize scroll", function () {
+        stickyNav();
     });
 });
 new WOW().init();

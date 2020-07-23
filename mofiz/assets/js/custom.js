@@ -165,40 +165,8 @@ $(function () {
     } else {
       $btnTop.fadeOut();
     }
-  });
-    /*======STICKY NAVIGATION======*/
-
-    var widx = window.matchMedia("(min-width:852px)");
-    $(window).load(function () {
-        if (widx.matches && $(window).scrollTop() > 0) {
-            $('.header').css({
-                'position'        : 'fixed',
-                'top'             : 0,
-                'background-color': '#000000',
-                'padding-top'     : '20px'
-            });
-        }
-    });
-    $(window).on('scroll resize', function () {
-        var scrollWindow = $(this).scrollTop();
-
-        if (scrollWindow > 0 && widx.matches) {
-            $('.header').css({
-                'position'        : 'fixed',
-                'top'             : 0,
-                'background-color': '#000000',
-                'padding-top'     : '20px'
-            });
-        } else {
-            $('.header').css({
-                'position'        : 'absolute',
-                'top'             : 'initial',
-                'background-color': 'transparent',
-                'padding-top'     : '40px'
-            });
-        }
   }); //============SCROLL-TO-ID=============
-
+    
     $("a[href^='#']").mPageScroll2id({
         highlightClass  : "header-nav__link--active",
     forceSingleHighlight: false,
@@ -216,13 +184,35 @@ $(function () {
       nav.slideUp();
     }
   });
-    var wid = window.matchMedia('(max-width: 852px)');
+    var wid = window.matchMedia('(min-width: 852px)');
   $(window).resize(function () {
-      if (! wid.matches) {
+      if (wid.matches) {
       nav.removeAttr('style');
       menu.removeClass('opened');
     }
   });
+    
+    /*======STICKY NAVIGATION======*/
+    
+    function stickyOn() {
+        var scrollWindow = $(window).scrollTop();
+        
+        if (scrollWindow > 0 && wid.matches) {
+            $('.header').css({
+                'position'        : 'fixed',
+                'top'             : 0,
+                'background-color': '#000000',
+                'padding-top'     : '20px'
+            });
+        } else {
+            $('.header').removeAttr('style');
+        }
+    }
+    
+    stickyOn();
+    $(window).on('scroll resize', function () {
+        stickyOn();
+    });
 }); //============GOOGLE MAP===============
 
 function initialize() {
