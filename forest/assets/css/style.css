@@ -17,10 +17,6 @@
 # Media Queries
 --------------------------------------------------------------*/
 
-/* stylelint-disable order/properties-alphabetical-order */
-
-/* stylelint-enable */
-
 /*======begin FONTS======*/
 
 @font-face{
@@ -28,7 +24,7 @@
   font-weight: 700;
   font-style: normal;
   
-  src: url('../fonts/LatoBold/LatoBold.woff2') format('woff2'), url('../fonts/LatoBold/LatoBold.woff') format('woff');
+  src: url('../fonts/LatoBold/LatoBold.woff') format('woff'), url('../fonts/LatoBold/LatoBold.woff2') format('woff2');
 }
 
 @font-face{
@@ -36,7 +32,7 @@
   font-weight: 400;
   font-style: normal;
   
-  src: url('../fonts/LatoRegular/LatoRegular.woff2') format('woff2'), url('../fonts/LatoRegular/LatoRegular.woff') format('woff');
+  src: url('../fonts/LatoRegular/LatoRegular.woff') format('woff'), url('../fonts/LatoRegular/LatoRegular.woff2') format('woff2');
 }
 
 @font-face{
@@ -44,7 +40,7 @@
   font-weight: 700;
   font-style: normal;
   
-  src: url('../fonts/MontserratBold/MontserratBold.woff2') format('woff2'), url('../fonts/MontserratBold/MontserratBold.woff') format('woff');
+  src: url('../fonts/MontserratBold/MontserratBold.woff') format('woff'), url('../fonts/MontserratBold/MontserratBold.woff2') format('woff2');
 }
 
 @font-face{
@@ -52,7 +48,7 @@
   font-weight: 400;
   font-style: normal;
   
-  src: url('../fonts/OpenSansRegular/OpenSansRegular.woff2') format('woff2'), url('../fonts/OpenSansRegular/OpenSansRegular.woff') format('woff');
+  src: url('../fonts/OpenSansRegular/OpenSansRegular.woff') format('woff'), url('../fonts/OpenSansRegular/OpenSansRegular.woff2') format('woff2');
 }
 
 @font-face{
@@ -60,7 +56,7 @@
   font-weight: 400;
   font-style: normal;
   
-  src: url('../fonts/RobotoMediumRegular/RobotoMediumRegular.woff2') format('woff2'), url('../fonts/RobotoMediumRegular/RobotoMediumRegular.woff') format('woff');
+  src: url('../fonts/RobotoMediumRegular/RobotoMediumRegular.woff') format('woff'), url('../fonts/RobotoMediumRegular/RobotoMediumRegular.woff2') format('woff2');
 }
 
 @font-face{
@@ -68,7 +64,7 @@
   font-weight: 400;
   font-style: normal;
   
-  src: url('../fonts/RobotoRegular/RobotoRegular.woff2') format('woff2'), url('../fonts/RobotoRegular/RobotoRegular.woff') format('woff');
+  src: url('../fonts/RobotoRegular/RobotoRegular.woff') format('woff'), url('../fonts/RobotoRegular/RobotoRegular.woff2') format('woff2');
 }
 
 @font-face{
@@ -76,7 +72,7 @@
   font-weight: 700;
   font-style: normal;
   
-  src: url('../fonts/PTSansBold/PTSansBold.woff2') format('woff2'), url('../fonts/PTSansBold/PTSansBold.woff') format('woff');
+  src: url('../fonts/PTSansBold/PTSansBold.woff') format('woff'), url('../fonts/PTSansBold/PTSansBold.woff2') format('woff2');
 }
 
 @font-face{
@@ -84,7 +80,7 @@
   font-weight: 400;
   font-style: normal;
   
-  src: url('../fonts/PTSansRegular/PTSansRegular.woff2') format('woff2'), url('../fonts/PTSansRegular/PTSansRegular.woff') format('woff');
+  src: url('../fonts/PTSansRegular/PTSansRegular.woff') format('woff'), url('../fonts/PTSansRegular/PTSansRegular.woff2') format('woff2');
 }
 
 @font-face{
@@ -92,7 +88,7 @@
   font-weight: 700;
   font-style: normal;
   
-  src: url('../fonts/PTSansCaptionBold/PTSansCaptionBold.woff2') format('woff2'), url('../fonts/PTSansCaptionBold/PTSansCaptionBold.woff') format('woff');
+  src: url('../fonts/PTSansCaptionBold/PTSansCaptionBold.woff') format('woff'), url('../fonts/PTSansCaptionBold/PTSansCaptionBold.woff2') format('woff2');
 }
 
 @font-face{
@@ -100,7 +96,7 @@
   font-weight: 700;
   font-style: normal;
   
-  src: url('../fonts/PTSansNarrowBold/PTSansNarrowBold.woff2') format('woff2'), url('../fonts/PTSansNarrowBold/PTSansNarrowBold.woff') format('woff');
+  src: url('../fonts/PTSansNarrowBold/PTSansNarrowBold.woff') format('woff'), url('../fonts/PTSansNarrowBold/PTSansNarrowBold.woff2') format('woff2');
 }
 
 @font-face{
@@ -108,7 +104,7 @@
   font-weight: 400;
   font-style: normal;
   
-  src: url('../fonts/PTSansNarrowRegular/PTSansNarrowRegular.woff2') format('woff2'), url('../fonts/PTSansNarrowRegular/PTSansNarrowRegular.woff') format('woff');
+  src: url('../fonts/PTSansNarrowRegular/PTSansNarrowRegular.woff') format('woff'), url('../fonts/PTSansNarrowRegular/PTSansNarrowRegular.woff2') format('woff2');
 }
 
 /*======end FONTS======*/

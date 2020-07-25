@@ -6,7 +6,7 @@ $(function () {
     var menu = $('.menu-icon');
     menu.click(function () {
         menu.toggleClass('opened');
-
+        
         if (menu.hasClass('opened')) {
             nav.slideDown();
         } else {
@@ -20,12 +20,12 @@ $(function () {
             menu.removeClass('opened');
         }
     }); //======SCROLL-TO-ID======
-
+    
     $('.header-nav__link').mPageScroll2id({
         highlightClass      : "header-nav__link--active",
         forceSingleHighlight: false
     }); //======WORKS-CAROUSEL======
-
+    
     $('.works-carousel').owlCarousel({
         autoplay          : true,
         autoplayHoverPause: true,
@@ -58,7 +58,7 @@ $(function () {
             }
         }
     }); //======TEAM-CAROUSEL======
-
+    
     $('.team-carousel').owlCarousel({
         autoplay          : true,
         autoplayHoverPause: true,
@@ -83,7 +83,7 @@ $(function () {
             }
         }
     }); //======HOVER для ссылки 'SHARE' в карусели
-
+    
     $('.works-share__link').hover(function () {
         $(this).css({
             'background-color': 'cyan'

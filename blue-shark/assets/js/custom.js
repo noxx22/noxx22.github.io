@@ -51,7 +51,7 @@ $(document).ready(function () {
         textAdditionalCss    : 'font-weight: light'
     });
     /*======SMOOTH SCROLL======*/
-
+    
     $(".nav-link, a[href^='#']").mPageScroll2id({
         highlightClass      : "active",
         forceSingleHighlight: false
