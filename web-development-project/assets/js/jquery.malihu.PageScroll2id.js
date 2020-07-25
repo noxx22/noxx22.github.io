@@ -9,17 +9,17 @@
 
 /*
  Copyright 2013  malihu  (email: manos@malihu.gr)
-
+ 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
-
+ 
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
-
+ 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -30,15 +30,15 @@
  */
 
 ;( function ($, window, document, undefined) {
-
+    
     /* plugin namespace, prefix, default selector(s) */
-
+    
     var pluginNS = "mPageScroll2id",
         pluginPfx = "mPS2id",
         defaultSelector = ".m_PageScroll2id,a[rel~='m_PageScroll2id'],.page-scroll-to-id,a[rel~='page-scroll-to-id'],._ps2id",
-
+        
         /* default options */
-
+        
         defaults = {
             /* scroll animation speed in milliseconds: Integer */
             scrollSpeed           : 1000,
@@ -91,9 +91,9 @@
             /* set specific selector(s) that will be excluded from being handled by the plugin: String */
             excludeSelectors      : false
         },
-
+        
         /* vars, constants */
-
+        
         selector,
         opt,
         _init,
@@ -107,26 +107,26 @@
         _totalInstances = 0,
         _liveTimer,
         _speed,
-
+        
         /*
          ---------------
          methods
          ---------------
          */
-
+        
         methods = {
-
+            
             /* plugin initialization method */
-
+            
             init: function (options) {
-
+                
                 /* extend options, store each option in jquery data */
-
+                
                 var options = $.extend(true, {}, defaults, options);
-
+                
                 $(document).data(pluginPfx, options);
                 opt = $(document).data(pluginPfx);
-
+                
                 /* check/set jquery (deprecated) selector property if not defined */
                 if (! this.selector) {
                     var selectorClass = "__" + pluginPfx;
@@ -138,28 +138,28 @@
                     });
                     this.selector = "." + selectorClass;
                 }
-
+                
                 /* live selector */
-
+                
                 if (opt.liveSelector) this.selector += "," + opt.liveSelector;
-
+                
                 /* set selector */
-
+                
                 selector = ( ! selector ) ? this.selector : selector + "," + this.selector;
-
+                
                 if (opt.defaultSelector) {
                     if (typeof $(selector) !== "object" || $(selector).length === 0) {
                         selector = defaultSelector;
                     }
                 }
-
+                
                 /* plugin events */
-
+                
                 if (opt.clickEvents) {
                     $(document)
-
+                        
                         .undelegate("." + pluginPfx)
-
+                        
                         .delegate(selector, "click." + pluginPfx, function (e) {
                             if (functions._isDisabled.call(null)) {
                                 functions._removeClasses.call(null);
@@ -185,11 +185,11 @@
                             }
                         });
                 }
-
+                
                 $(window)
-
+                    
                     .unbind("." + pluginPfx)
-
+                    
                     .bind("scroll." + pluginPfx + " resize." + pluginPfx, function () {
                         if (functions._isDisabled.call(null)) {
                             functions._removeClasses.call(null);
@@ -205,25 +205,25 @@
                             }
                         });
                     });
-
+                
                 /* plugin has initialized */
-
+                
                 _init = true;
-
+                
                 /* setup selectors, target elements, basic plugin classes etc. */
-
+                
                 functions._setup.call(null);
-
+                
                 /*
                  monitor for elements matching the current highlight selector and call plugin setup when found (now and in the future)
                  to manually enable/disable: $(document).data("mPS2id").live=boolean
                  */
-
+                
                 functions._live.call(null);
             },
-
+            
             /* scrollTo method */
-
+            
             scrollTo: function (id, options) {
                 if (functions._isDisabled.call(null)) {
                     functions._removeClasses.call(null);
@@ -251,9 +251,9 @@
                     }
                 }
             },
-
+            
             /* destroy method */
-
+            
             destroy: function () {
                 $(window).unbind("." + pluginPfx);
                 $(document).undelegate("." + pluginPfx).removeData(pluginPfx);
@@ -261,17 +261,17 @@
                 functions._removeClasses.call(null, true);
             }
         },
-
+        
         /*
          ---------------
          functions
          ---------------
          */
-
+        
         functions = {
-
+            
             /* checks if screen size ([x,y]) is below the value(s) set in disablePluginBelow option */
-
+            
             _isDisabled: function () {
                 var e = window, a = "inner",
                     val = opt.disablePluginBelow instanceof Array ? [ opt.disablePluginBelow[ 0 ] || 0, opt.disablePluginBelow[ 1 ] || 0 ] : [ opt.disablePluginBelow || 0, 0 ];
@@ -281,9 +281,9 @@
                 }
                 return e[ a + "Width" ] <= val[ 0 ] || e[ a + "Height" ] <= val[ 1 ];
             },
-
+            
             /* checks if href attribute is valid */
-
+            
             _isValid: function (href, hrefProp) {
                 if (! href) {
                     return;
@@ -293,9 +293,9 @@
                     loc = window.location.toString().split("#")[ 0 ];
                 return href !== "#" && href.indexOf("#") !== - 1 && ( str === "" || decodeURIComponent(str) === decodeURIComponent(loc) );
             },
-
+            
             /* setup selectors, target elements, basic plugin classes etc. */
-
+            
             _setup: function () {
                 var el = functions._highlightSelector(), i = 1, tp = 0;
                 return $(el).each(function () {
@@ -338,15 +338,15 @@
                     }
                 });
             },
-
+            
             /* returns the highlight selector */
-
+            
             _highlightSelector: function () {
                 return ( opt.highlightSelector && opt.highlightSelector !== "" ) ? opt.highlightSelector : selector;
             },
-
+            
             /* finds the target element */
-
+            
             _findTarget: function (str) {
                 var val = ( str.indexOf("#/") !== - 1 ) ? str.split("#/")[ 1 ] : str.split("#")[ 1 ],
                     el = val.indexOf("%") !== - 1 ? $(document.getElementById(val)) : $("#" + val); //fix % in selector
@@ -368,9 +368,9 @@
                 _to[ 1 ] = ( _to[ 1 ] < 0 ) ? 0 : _to[ 1 ];
                 return _to;
             },
-
+            
             /* sets the offset value (pixels, objects etc.) */
-
+            
             _setOffset: function () {
                 if (! _offset) {
                     _offset = ( opt.offset ) ? opt.offset : 0;
@@ -419,9 +419,9 @@
                 }
                 return [ y, x ];
             },
-
+            
             /* finds the element that should be highlighted */
-
+            
             _findHighlight: function (id) {
                 var wLoc = window.location, loc = wLoc.toString().split("#")[ 0 ], locPath = wLoc.pathname;
                 if (loc.indexOf("'") !== - 1) loc = loc.replace("'", "\\'");
@@ -430,9 +430,9 @@
                 locPath = decodeURIComponent(locPath);
                 return $("._" + pluginPfx + "-h[href='#" + id + "'],._" + pluginPfx + "-h[href='" + loc + "#" + id + "'],._" + pluginPfx + "-h[href='" + locPath + "#" + id + "'],._" + pluginPfx + "-h[href='#/" + id + "'],._" + pluginPfx + "-h[href='" + loc + "#/" + id + "'],._" + pluginPfx + "-h[href='" + locPath + "#/" + id + "']");
             },
-
+            
             /* sets plugin classes */
-
+            
             _setClasses: function (c, t, h) {
                 var cc = opt.clickedClass, tc = opt.targetClass, hc = opt.highlightClass;
                 if (c && cc && cc !== "") {
@@ -450,9 +450,9 @@
                     }
                 }
             },
-
+            
             /* extends plugin classes */
-
+            
             _extendClasses: function () {
                 var tc = opt.targetClass,
                     hc = opt.highlightClass,
@@ -477,9 +477,9 @@
                     }
                 }
             },
-
+            
             /* removes plugin classes */
-
+            
             _removeClasses: function (destroy) {
                 $("." + opt.clickedClass).removeClass(opt.clickedClass);
                 $("." + opt.targetClass).removeClass(opt.targetClass + " " + opt.targetClass + "-first " + opt.targetClass + "-last");
@@ -489,9 +489,9 @@
                     $("._" + pluginPfx + "-h").removeClass("_" + pluginPfx + "-h");
                 }
             },
-
+            
             /* checks if target element is in viewport */
-
+            
             _currentTarget: function (t) {
                 var o = opt[ "target_" + t.data(pluginPfx).i ],
                     dataTarget = t.data("ps2id-target"),
@@ -530,9 +530,9 @@
                     return ( val[ 0 ] && val[ 1 ] && val[ 2 ] && val[ 3 ] );
                 }
             },
-
+            
             /* scrolls the page */
-
+            
             _scrollTo: function () {
                 _speed = functions._scrollSpeed.call(null);
                 _to = ( opt.pageEndSmoothScroll ) ? functions._pageEndSmoothScroll.call(null) : _to;
@@ -583,17 +583,17 @@
                         }
                 }
             },
-
+            
             /* sets end of page "smooth scrolling" position */
-
+            
             _pageEndSmoothScroll: function () {
                 var _dh = $(document).height(), _dw = $(document).width(),
                     _wh = $(window).height(), _ww = $(window).width();
                 return [ ( ( _dh - _to[ 0 ] ) < _wh ) ? _dh - _wh : _to[ 0 ], ( ( _dw - _to[ 1 ] ) < _ww ) ? _dw - _ww : _to[ 1 ] ];
             },
-
+            
             /* sets animation speed (link-specific speed via ps2id-speed-VALUE class on link or link's parent) */
-
+            
             _scrollSpeed: function () {
                 var speed = opt.scrollSpeed;
                 if (_clicked && _clicked.length) {
@@ -612,9 +612,9 @@
                 }
                 return parseInt(speed);
             },
-
+            
             /* sets the auto-adjusted animation speed */
-
+            
             _autoScrollSpeed: function () {
                 var _t = $(window).scrollTop(), _l = $(window).scrollLeft(),
                     _h = $(document).height(), _w = $(document).width(),
@@ -624,9 +624,9 @@
                     ];
                 return Math.max.apply(Math, val);
             },
-
+            
             /* user callback functions */
-
+            
             _callbacks: function (c) {
                 if (! opt) {
                     return;
@@ -648,23 +648,23 @@
                         break;
                 }
             },
-
+            
             /* resets/clears vars and constants */
-
+            
             _reset: function () {
                 _axis = _offset = _dataOffset = false;
             },
-
+            
             /* checks if plugin has initialized */
-
+            
             _isInit: function () {
                 if (! _init) {
                     methods.init.apply(this);
                 }
             },
-
+            
             /* live fn */
-
+            
             _live: function () {
                 _liveTimer = setTimeout(function () {
                     if (opt.live) {
@@ -679,9 +679,9 @@
                     functions._live.call(null);
                 }, 1000);
             },
-
+            
             /* extends jquery with custom easings (as jquery ui) */
-
+            
             _easing: function () {
                 $.easing.easeInQuad = $.easing.easeInQuad || function (x) {
                     return x * x;
@@ -771,7 +771,7 @@
                 $.easing.easeInOutBounce = $.easing.easeInOutBounce || function (x) {
                     return x < 0.5 ? ( 1 - __bounceOut(1 - 2 * x) ) / 2 : ( 1 + __bounceOut(2 * x - 1) ) / 2;
                 };
-
+                
                 function __bounceOut(x) {
                     var n1 = 7.5625, d1 = 2.75;
                     if (x < 1 / d1) {
@@ -786,19 +786,19 @@
                 }
             }
         }
-
+    
     /*
      ---------------
      plugin setup
      ---------------
      */
-
+    
     /* extend jquery with custom easings */
-
+    
     functions._easing.call();
-
+    
     /* plugin constructor functions */
-
+    
     $.fn[ pluginNS ] = function (method) {
         if (methods[ method ]) {
             return methods[ method ].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -817,12 +817,12 @@
             $.error("Method " + method + " does not exist");
         }
     };
-
+    
     /*
      allow setting plugin default options.
      example: $.plugin_name.defaults.option_name="option_value";
      */
-
+    
     $[ pluginNS ].defaults = defaults;
-
+    
 } )(jQuery, window, document);
