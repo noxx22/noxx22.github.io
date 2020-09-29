@@ -7,7 +7,7 @@ $(function () {
     "background-color": "#ffffff"
   });
   /*====== COUNTER-UP ======*/
-  
+
   $('.facts-item__data').counterUp({
     delay: 10,
     time : 1500
@@ -15,7 +15,7 @@ $(function () {
 });
 var wow = new WOW({
   animateClass: 'animate__animated' // animation css class (default is animated)
-  
+
 });
 wow.init();
 /*====== TINY-SLIDER ======*/

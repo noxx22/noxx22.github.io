@@ -7,17 +7,17 @@ $(function () {
     "background-color": "#ffffff"
   });
   /*====== MFP-VIDEO ======*/
-  
+
   $('.btn-welcome-video').magnificPopup({
     type: 'iframe'
   });
   /*====== MFP-IMAGES ======*/
-  
+
   $('.gallery-home-slider__overlay a').magnificPopup({
     type: 'image'
   });
   /*====== Jquery Countdown ======*/
-  
+
   $('.event-time__outer').countdown({
     until    : '+73d +00h +00m +10s',
     format   : 'DHMS',
@@ -26,7 +26,7 @@ $(function () {
 });
 var wow = new WOW({
   animateClass: 'animate__animated' // animation css class (default is animated)
-  
+
 });
 wow.init();
 /*====== TINY-SLIDER ======*/

@@ -7,7 +7,7 @@ $(function () {
     "background-color": "#ffffff"
   });
   /*======Gallery Hover======*/
-  
+
   $('.gallery-item__inner').hover(function () {
     $(this).find(':last-child').animate({
       left  : 0,
