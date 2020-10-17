@@ -1,31 +1,27 @@
-/* stylelint-disable order/properties-alphabetical-order */
-
-/* stylelint-enable */
-
 /*===============CSS=====================================*/
 
 @font-face{
     font-family: 'Montserrat';
     font-weight: 700;
     font-style: normal;
-
-    src: url('../fonts/MontserratBold/MontserratBold.woff2') format('woff2'), url('../fonts/MontserratBold/MontserratBold.woff') format('woff');
+  
+  src: url('../fonts/MontserratBold/MontserratBold.woff') format('woff'), url('../fonts/MontserratBold/MontserratBold.woff2') format('woff2');
 }
 
 @font-face{
     font-family: 'Montserrat';
     font-weight: 400;
     font-style: normal;
-
-    src: url('../fonts/MontserratRegular/MontserratRegular.woff2') format('woff2'), url('../fonts/MontserratRegular/MontserratRegular.woff') format('woff');
+  
+  src: url('../fonts/MontserratRegular/MontserratRegular.woff') format('woff'), url('../fonts/MontserratRegular/MontserratRegular.woff2') format('woff2');
 }
 
 @font-face{
     font-family: 'Montserrat';
     font-weight: 600;
     font-style: normal;
-
-    src: url('../fonts/MontserratSemiBoldRegular/MontserratSemiBoldRegular.woff2') format('woff2'), url('../fonts/MontserratSemiBoldRegular/MontserratSemiBoldRegular.woff') format('woff');
+  
+  src: url('../fonts/MontserratSemiBoldRegular/MontserratSemiBoldRegular.woff') format('woff'), url('../fonts/MontserratSemiBoldRegular/MontserratSemiBoldRegular.woff2') format('woff2');
 }
 
 /*======ADJUSTMENT======*/
@@ -396,6 +392,26 @@ ol{
     height: auto;
 }
 
+.skills__web-box{
+  margin-bottom: 40px;
+  padding-top: 30px;
+}
+
+span.skills__label{
+  display: inline-block;
+  
+  margin-right: 30px;
+  margin-bottom: 15px;
+  padding: 6px 10px;
+  
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  
+  color: #110f4c;
+  border-radius: 4px;
+  background-color: pink;
+}
+
 /*======end ABOUT section======*/
 
 /*======begin FOOTER======*/
@@ -643,6 +659,18 @@ ol{
     text-align: left;
 
     color: #363636;
+}
+
+.about__description{
+  margin-bottom: 80px;
+}
+
+.skills__header{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  
+  margin-bottom: 30px;
 }
 
 /*======end TYPOGRAPHY======*/
