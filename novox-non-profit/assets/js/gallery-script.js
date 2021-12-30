@@ -7,12 +7,12 @@ $(function () {
     "background-color": "#ffffff"
   });
   /*======Gallery Hover======*/
-  
+
   $('.gallery-item__inner').hover(function () {
     $(this).find(':last-child').animate({
-      left  : 0,
-      top   : 0,
-      right : 0,
+      left: 0,
+      top: 0,
+      right: 0,
       bottom: 0
     }, 500);
     $(this).find(':last-child').children().animate({
@@ -23,9 +23,9 @@ $(function () {
       opacity: 0
     }, 100, function () {
       $(this).parent().animate({
-        left  : '+=100%',
-        top   : '+=100%',
-        right : '+=100%',
+        left: '+=100%',
+        top: '+=100%',
+        right: '+=100%',
         bottom: '+=100%'
       }, 500);
     });
